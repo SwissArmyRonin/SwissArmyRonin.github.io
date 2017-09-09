@@ -3,11 +3,9 @@
 You know how sometimes you hit a wall while developing, and it starts a long quest through forums and documentation to find the right solution? I decided that I should probably start documenting some of those answers, so I don't have to slay the same dragon twice.
 ![hazskillz_willtravel](img/Haveguncard.png)
 
-## Treasures
+## Work in progress
 
-_Work in progress ..._
-
-<!-- * [Virtual developer environment with Vagrant](VirtualDeveloperEnvironmentWithVagrant.md) -->
+* [Virtual developer environment with Vagrant](VirtualDeveloperEnvironmentWithVagrant.md)
 
 ## Contact
  
