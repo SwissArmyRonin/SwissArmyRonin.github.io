@@ -3,9 +3,11 @@
 You know how sometimes you hit a wall while developing, and it starts a long quest through forums and documentation to find the right solution? I decided that I should probably start documenting some of those answers, so I don't have to slay the same dragon twice.
 ![hazskillz_willtravel](img/Haveguncard.png)
 
-## Work in progress
+## Notes
 
-* [Virtual developer environment with Vagrant](VirtualDeveloperEnvironmentWithVagrant.md)
+* (2017-09-11) [Virtual Angular developer environment with Vagrant](VirtualDeveloperEnvironmentWithVagrant.md)
+
+<!--## Work in progress-->
 
 ## Contact
  
