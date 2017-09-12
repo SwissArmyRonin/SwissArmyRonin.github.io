@@ -1,7 +1,8 @@
 # Have skills, will travel
 
+<div style="float:right"><div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="light" data-vanity="mhvelplund"><a class="LI-simple-link" href='https://dk.linkedin.com/in/mhvelplund?trk=profile-badge'>Mads Hvelplund</a></div></div>
+
 You know how sometimes you hit a wall while developing, and it starts a long quest through forums and documentation to find the right solution? I decided that I should probably start documenting some of those answers, so I don't have to slay the same dragon twice.
-![hazskillz_willtravel](img/Haveguncard.png)
 
 ## Notes
 
@@ -14,6 +15,7 @@ You know how sometimes you hit a wall while developing, and it starts a long que
  
 * Twitter: [@SwissArmyRonin](https://twitter.com/SwissArmyRonin) 
 * StackOverflow [mhvelplund](https://stackoverflow.com/cv/mhvelplund)
-* LinkedIn: [mhvelplund](https://www.linkedin.com/in/mhvelplund/)
 
 [gimmick:Disqus](swissarmyronin-github-io)
+
+<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
