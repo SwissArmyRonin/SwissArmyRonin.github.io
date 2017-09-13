@@ -125,4 +125,6 @@ Later, if I change the Vagrantfile, I can rerun the provisioning with:
 
 That's it for now. I could try to add some of the plugins I use regularly in VS Code, but I would rather have a look at getting my non-preview ISO working, and installing some of those legacy systems that cause me trouble on a weekly basis.
 
+Hint: It might also be practical to create a repository for base boxes: [How to set up a self-hosted "vagrant cloud" with versioned, self-packaged vagrant boxes](https://github.com/hollodotme/Helpers/blob/master/Tutorials/vagrant/self-hosted-vagrant-boxes-with-versioning.md)
+
 [gimmick:Disqus](swissarmyronin-github-io)
