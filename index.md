@@ -8,11 +8,11 @@ You know how sometimes you hit a wall while developing, and it starts a long que
 
 * (2017-09-11) [Virtual Angular developer environment with Vagrant](VirtualDeveloperEnvironmentWithVagrant.md)
 * (2017-09-11) [Misc. Notes](MiscNotes.md)
-
-<!--## Work in progress-->
+* (2017-09-11) [MSSQL Cookbooks](MssqlCookbooks.md)
+<!--* (2017-09-22) [Converting an existing VM to Vagrant](ConvertingAnExistingVMToVagrant.md)-->
 
 ## Contact
- 
+
 * Twitter: [@SwissArmyRonin](https://twitter.com/SwissArmyRonin) 
 * StackOverflow [mhvelplund](https://stackoverflow.com/cv/mhvelplund)
 
