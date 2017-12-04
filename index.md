@@ -6,6 +6,7 @@ You know how sometimes you hit a wall while developing, and it starts a long que
 
 ## Notes
 
+* (2017-12-04) [GPG with Maven](gpg-maven.md)
 * (2017-11-24) [Tomcat HTTPS](TomcatSSL.md)
 * (2017-09-11) [Virtual Angular developer environment with Vagrant](VirtualDeveloperEnvironmentWithVagrant.md)
 * (2017-09-11) [MSSQL Cookbooks](MssqlCookbooks.md)
@@ -15,6 +16,7 @@ You know how sometimes you hit a wall while developing, and it starts a long que
 
 * Twitter: [@SwissArmyRonin](https://twitter.com/SwissArmyRonin) 
 * StackOverflow: [mhvelplund](https://stackoverflow.com/cv/mhvelplund)
+* GitHub: [SwissArmyRonin](https://github.com/SwissArmyRonin) &amp; [mhvelplund](https://github.com/mhvelplund)
 * CV: [English](files/CV_en.pdf) / [Danish](files/CV_dk.pdf)
 
 [gimmick:Disqus](swissarmyronin-github-io)
