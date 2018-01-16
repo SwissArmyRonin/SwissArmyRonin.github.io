@@ -31,3 +31,5 @@ EXEC Foo @Bar = ? WITH RESULT SETS
 In the "Parameters..." section, I also have to name the parameter "@Bar" before mapping it to a suitable input variable.
 
 Source: http://geekswithblogs.net/stun/archive/2009/03/05/mapping-stored-procedure-parameters-in-ssis-ole-db-source-editor.aspx
+
+[gimmick:Disqus](swissarmyronin-github-io)
