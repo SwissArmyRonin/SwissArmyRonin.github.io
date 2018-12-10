@@ -2,6 +2,10 @@
 
 This page contains a collection of unrelated notes pertaining to AWS.
 
+## Cross account roles
+
+Example: https://jackiechen.org/2015/11/03/ec2-instance-cannot-assume-role-in-other-accounts/
+
 ## EC2 instance metadata
 
 Get metadata list:
@@ -34,5 +38,9 @@ Get specific metadata, e.g `instance-id`:
     i-08820e8f284ffa01a
 
 Source: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html
+
+## Lambda
+
+* Deployment management: [Apex](http://apex.run/)
 
 [gimmick:Disqus](swissarmyronin-github-io)
