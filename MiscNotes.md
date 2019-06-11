@@ -2,6 +2,16 @@
 
 This page contains a collection of unrelated notes pertaining to issues I have Googled more than once.
 
+## 260 character path length restriction
+
+To remove path length restriction in Windows 10 anniversary edition, run:
+
+```powershell
+REG ADD HKLM\SYSTEM\CurrentControlSet\Control\FileSystem /v LongPathsEnabled /t REG_DWORD /d 1
+```
+
+Can break old 32 bit apps.
+
 ## Echo multiline string
 
 ```bash
