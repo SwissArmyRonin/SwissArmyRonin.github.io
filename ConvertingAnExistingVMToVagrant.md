@@ -20,6 +20,56 @@ has Virtual Box guest additions, but no SSH keys or Vagrant user account.
         --eula accept --ostype Windows10_64 --vmname RenovaWin10 --cpus 1 \
         --memory 4096
 
+
+## Prep for packaging
+
+I need to prep the image with the requirements for a Vagrant box ([Creating a Base Box](https://www.vagrantup.com/docs/boxes/base.html)):
+
+* _VirtualBox Guest Additions_: these are already installed, but otherwise they are easy to add ([VirtualBox Guest Additions](https://www.virtualbox.org/manual/ch04.html))
+* _"vagrant" user_
+* _Admin account_
+* _Turn off UAC_
+* _Disable complex passwords_
+* _WinRM configuration_
+
+<!--
+* _Disable "Shutdown Tracker"_: not used on windows 10, but otherwise check [here](http://www.thewindowsclub.com/how-to-enable-the-shutdown-event-tracker-in-windows-7).
+* _Disable "Server Manager"_: Not used on windows 10.
+-->
+
+### Vagrant user
+
+TODO: "vagrant" user with insecure key https://github.com/hashicorp/vagrant/blob/master/keys/vagrant.pub
+
+### Admin account
+
+"vagrant" pw for admin account
+
+### Turn off UAC
+
+Turn off UAC https://articulate.com/support/article/how-to-turn-user-account-control-on-or-off-in-windows-10
+
+also 
+
+    reg add HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System /v EnableLUA /d 0 /t REG_DWORD /f /reg:64
+
+
+### Disable complex passwords
+
+https://www.askvg.com/how-to-disable-password-complexity-requirements-in-windows-server-2003-and-2008/
+
+
+### WinRM configuration
+
+    winrm quickconfig -q
+    winrm set winrm/config/winrs @{MaxMemoryPerShellMB="512"}
+    winrm set winrm/config @{MaxTimeoutms="1800000"}
+    winrm set winrm/config/service @{AllowUnencrypted="true"}
+    winrm set winrm/config/service/auth @{Basic="true"}
+    sc config WinRM start= auto
+
+## Packaging
+
 Next step is finding the UUID of the VM.
 
     $ VBoxManage list vms
