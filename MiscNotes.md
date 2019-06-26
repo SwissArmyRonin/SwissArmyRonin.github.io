@@ -2,6 +2,13 @@
 
 This page contains a collection of unrelated notes pertaining to issues I have Googled more than once.
 
+## Export an existing environment to Terraform
+
+```bash
+docker run --rm -iv "${PWD}":/outputs cycloid/terracognita aws --tfstate /outputs/terraform.tfstate \
+  --access-key $AWS_ACCESS_KEY_ID --secret-key $AWS_SECRET_ACCESS_KEY --region eu-west-1 --hcl /outputs/main.tf
+```
+
 ## AWS assume-role script
 
 Install `jq`. Set the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment variables to the user that should assume a role. Set `ROLE_ARN` to the Arn of the role being assumed. Finally, create a "command line" build step.
