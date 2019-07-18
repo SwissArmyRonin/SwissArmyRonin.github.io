@@ -2,7 +2,13 @@
 
 This page contains a collection of unrelated notes pertaining to AWS.
 
-## AWS assume-role script
+## ECS on spot instances
+
+* [Docker, Amazon ECS, and Spot Fleets: A Great Fit Together](https://aws.amazon.com/blogs/aws/docker-amazon-ecs-and-spot-fleets-a-great-fit-together/)
+* [Launching Spot Instances in Your Auto Scaling Group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-launch-spot-instances.html)
+* [Auto Scaling Groups with Multiple Instance Types and Purchase Options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-purchase-options.html)
+
+## Assume-role script
 
 Install `jq`. Set the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment variables to the user that should assume a role. Set `ROLE_ARN` to the Arn of the role being assumed. Finally, create a "command line" build step.
 
