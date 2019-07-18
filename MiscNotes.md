@@ -9,31 +9,6 @@ docker run --rm -iv "${PWD}":/outputs cycloid/terracognita aws --tfstate /output
   --access-key $AWS_ACCESS_KEY_ID --secret-key $AWS_SECRET_ACCESS_KEY --region eu-west-1 --hcl /outputs/main.tf
 ```
 
-## AWS assume-role script
-
-Install `jq`. Set the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment variables to the user that should assume a role. Set `ROLE_ARN` to the Arn of the role being assumed. Finally, create a "command line" build step.
-
-```bash
-CREDENTIALS=$(aws sts assume-role --role-arn $ROLE_ARN --role-session-name teamcity  --duration-seconds 900)
-export AWS_ACCESS_KEY_ID=$(echo $CREDENTIALS | jq -r .Credentials.AccessKeyId)
-export AWS_SECRET_ACCESS_KEY=$(echo $CREDENTIALS | jq -r .Credentials.SecretAccessKey)
-export AWS_SESSION_TOKEN=$(echo $CREDENTIALS | jq -r .Credentials.SessionToken)
-echo Expiration: $(echo $CREDENTIALS | jq -r .Credentials.Expiration)
-```
-
-## Teamcity AWS assume role
-
-Set the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment variables to the user that should assume a role. Set `ROLE_ARN` to the Arn of the role being assumed. Finally, create a "command line" build step that runs in the "alpine:latest" Docker container.
-
-```bash
-apk add jq
-CREDENTIALS=$(aws sts assume-role --role-arn $ROLE_ARN --role-session-name teamcity  --duration-seconds 900)
-mkdir - ~/.aws
-echo "##teamcity[setParameter name='AWS_ACCESS_KEY_ID' value='$(echo $CREDENTIALS | jq -r .Credentials.AccessKeyId)']"
-echo "##teamcity[setParameter name='AWS_SECRET_ACCESS_KEY' value='$(echo $CREDENTIALS | jq -r .Credentials.SecretAccessKey)']"
-echo "##teamcity[setParameter name='AWS_SESSION_TOKEN' value='$(echo $CREDENTIALS | jq -r .Credentials.SessionToken)']"
-```
-
 ## 260 character path length restriction
 
 To remove path length restriction in Windows 10 anniversary edition, run:
@@ -44,36 +19,8 @@ REG ADD HKLM\SYSTEM\CurrentControlSet\Control\FileSystem /v LongPathsEnabled /t 
 
 Can break old 32 bit apps.
 
-## Echo multiline string
-
-```bash
-IFS='' read -r -d '' SCRIPT <<"EOF"
-#!/bin/bash
-ls -lA /
-EOF
-
-echo "$SCRIPT" > listroot.sh
-chmod +x listroot.sh
-```
-
-## Maven release with local deploy
-
-Deploy to the local directory `./dist`:
-
-```
-mvn deploy -DaltDeploymentRepository=repo::default::file:dist
-```
-
-Release and deploy to the local directory `./dist`:
-
-```
-mvn release:prepare
-mvn release:perform -Darguments=-DaltDeploymentRepository=repo::default::file:dist
-```
-
 ## GitHub 
 
-* Maven repository: https://cemerick.com/2010/08/24/hosting-maven-repos-on-github/
 * License overview: https://help.github.com/articles/licensing-a-repository/
 
 ## Free S/MIME certificates
@@ -118,7 +65,6 @@ From "[Using CasPol to Fully Trust a Share](https://blogs.msdn.microsoft.com/sha
 ## Netcopy
 
 Want to copy a file from one *Nix macine to another without the hassle of FTP?
-
 
     DestinationShell# nc -l -p 2020 > file.txt
     SourceShell# cat file.txt | nc dest.ip.address 2020
@@ -191,44 +137,5 @@ Reestablish AD trust with Kerberos:
 
 ## REST Services 
 [Service versioning](http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
-
-## Maven master password
-
-To configure encrypted passwords, create a master password by running mvn -emp or mvn --encrypt-master-password followed by your master password.
-
-```shell
-$ mvn -emp mypassword
-{rsB56BJcqoEHZqEZ0R1VR4TIspmODx1Ln8/PVvsgaGw=}
-```
-
-Maven prints out an encrypted copy of the password to standard out. Copy this encrypted password and paste it into a ~/.m2/settings-security.xml file.
-
-```xml
-<settingsSecurity>
-  <master>{rsB56BJcqoEHZqEZ0R1VR4TIspmODx1Ln8/PVvsgaGw=}</master>
-</settingsSecurity>
-```
-
-After you have created a master password, you can then encrypt passwords for use in your Maven Settings. To encrypt a password with the master password, run mvn -ep or mvn --encrypt-password. Assume that you have a repository manager and you need to send a username of "deployment" and a password of "qualityFIRST". To encrypt this particular password, you would run the following command:
-
-```shell
-$ mvn -ep qualityFIRST
-{uMrbEOEf/VQHnc0W2X49Qab75j9LSTwiM3mg2LCrOzI=}
-```
-
-At this point, copy the encrypted password printed from the output of mvn -ep and paste it into your Maven Settings.
-
-```xml
-<settings>
-  <servers>
-    <server>
-      <id>nexus</id>
-      <username>deployment</username>
-<password>{uMrbEOEf/VQHnc0W2X49Qab75j9LSTwiM3mg2LCrOzI=}</password>
-    </server>
-  </servers>
-  ...
-</settings>
-```
 
 [gimmick:Disqus](swissarmyronin-github-io)
