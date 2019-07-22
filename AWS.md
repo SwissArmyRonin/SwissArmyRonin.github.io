@@ -5,8 +5,10 @@ This page contains a collection of unrelated notes pertaining to AWS.
 ## ECS on spot instances
 
 * [Docker, Amazon ECS, and Spot Fleets: A Great Fit Together](https://aws.amazon.com/blogs/aws/docker-amazon-ecs-and-spot-fleets-a-great-fit-together/)
-* [Launching Spot Instances in Your Auto Scaling Group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-launch-spot-instances.html)
 * [Auto Scaling Groups with Multiple Instance Types and Purchase Options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-purchase-options.html)
+* [Launching Spot Instances in Your Auto Scaling Group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-launch-spot-instances.html)
+* Terraform `mixed_instances_policy` for [`aws_autoscaling_group`](https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html)
+* [ECS Spot Fleet Demo](https://github.com/tongueroo/ecs-spot-demo) (with drain script userdata)
 
 ## Assume-role script
 
