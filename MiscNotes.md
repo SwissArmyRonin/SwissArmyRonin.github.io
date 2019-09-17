@@ -2,6 +2,13 @@
 
 This page contains a collection of unrelated notes pertaining to issues I have Googled more than once.
 
+## Run command as admin
+
+To run a command as admin without the mouse:
+
+* `Win-R` to open file dialog
+* type command name and run with `Ctrl-Shift-Enter`
+
 ## Export an existing environment to Terraform
 
 ```bash

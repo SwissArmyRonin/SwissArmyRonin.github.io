@@ -1,6 +1,18 @@
-# Misc. Notes
+# AWS Notes
 
 This page contains a collection of unrelated notes pertaining to AWS.
+
+## Bulk log retention update in Powershell
+
+This sets log retention to 1 day for all Airship lambdas.
+
+```powershell
+$logGroups=(aws logs describe-log-groups --log-group-name-prefix "/aws/lambda" --query "logGroups[*].logGroupName" --output=text).Split() `
+    | where {$_ -match 'lambda-lookup'} 
+foreach ($logGroupName in $logGroups) {
+    aws logs put-retention-policy --log-group-name $logGroupName --retention-in-days 1
+}
+```
 
 ## ECS on spot instances
 
