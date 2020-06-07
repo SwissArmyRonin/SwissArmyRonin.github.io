@@ -28,4 +28,4 @@ use_vsock=false
   Set-VM -VMName <your_vm_name>  -EnhancedSessionTransportType HvSocket
   ```
 
-Source: [How to install Ubuntu 20.04 on Hyper-V with enhanced session](https://medium.com/@francescotonini/how-to-install-ubuntu-20-04-on-hyper-v-with-enhanced-session-b20a269a5fa7)D
+Source: [How to install Ubuntu 20.04 on Hyper-V with enhanced session](https://medium.com/@francescotonini/how-to-install-ubuntu-20-04-on-hyper-v-with-enhanced-session-b20a269a5fa7)
