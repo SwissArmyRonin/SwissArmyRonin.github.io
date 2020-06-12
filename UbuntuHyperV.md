@@ -29,3 +29,15 @@ use_vsock=false
   ```
 
 Source: [How to install Ubuntu 20.04 on Hyper-V with enhanced session](https://medium.com/@francescotonini/how-to-install-ubuntu-20-04-on-hyper-v-with-enhanced-session-b20a269a5fa7)
+
+## “Authentication required to refresh system repositories”
+
+If this pops up constantly, create a file "/etc/polkit-1/localauthority/50-local.d/46-allow-update-repo.pkla":
+```ini
+[Allow Package Management all Users]
+Identity=unix-user:*
+Action=org.freedesktop.packagekit.system-sources-refresh
+ResultAny=yes
+ResultInactive=yes
+ResultActive=yes
+```
