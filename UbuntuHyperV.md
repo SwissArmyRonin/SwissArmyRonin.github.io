@@ -13,11 +13,12 @@ Setup a quick Ubuntu workstation with support for extended sessions.
   wget https://tinyurl.com/linuxvmtoools 
   sudo chmod +x linuxvmtoools
   sudo ./linuxvmtoools
-sudo apt install vim
+  sudo apt install vim
+  ```
 ```
 * Edit `/etc/xrdp/xrdp.ini`to add:
 
-```ini
+​```ini
 port=vsock://-1:3389
 use_vsock=false
 ```
@@ -41,3 +42,5 @@ ResultAny=yes
 ResultInactive=yes
 ResultActive=yes
 ```
+
+[gimmick:Disqus](swissarmyronin-github-io)

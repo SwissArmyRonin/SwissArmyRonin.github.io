@@ -126,3 +126,5 @@ SELECT * FROM FGetSlowExecutions(@Threshold) ORDER BY MsPerRow DESC
 SELECT * FROM FGetSlowPackages(@Threshold) ORDER BY MsPerRow DESC
 GO
 ```
+
+[gimmick:Disqus](swissarmyronin-github-io)

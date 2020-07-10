@@ -9,3 +9,5 @@
 ## Desktop integration
 
 [Single Sign-On for Desktop and Mobile Applications using SAML and OAuth](https://developer.salesforce.com/page/Single_Sign-On_for_Desktop_and_Mobile_Applications_using_SAML_and_OAuth)
+
+[gimmick:Disqus](swissarmyronin-github-io)
