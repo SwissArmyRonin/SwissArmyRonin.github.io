@@ -28,11 +28,14 @@ npx gitignore node
 npm init -y
 ```
 
-[gimmick:Disqus](swissarmyronin-github-io)
-
-
-
 ## Turn callback functions to promises
 
-https://www.freecodecamp.org/news/how-to-make-a-promise-out-of-a-callback-function-in-javascript-d8ec35d1f981/
+[How to make a Promise out of a Callback function in JavaScript](https://www.freecodecamp.org/news/how-to-make-a-promise-out-of-a-callback-function-in-javascript-d8ec35d1f981/)
 
+
+## Use node for shell scripting
+
+[How to run shell script file or command using Nodejs?](https://medium.com/stackfame/how-to-run-shell-script-file-or-command-using-nodejs-b9f2455cb6b7)
+
+
+[gimmick:Disqus](swissarmyronin-github-io)
