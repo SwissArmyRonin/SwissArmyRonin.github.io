@@ -4,6 +4,7 @@ You know how sometimes you hit a wall while developing, and that starts a long q
 
 ## Notes
 
+- (2021-12-14) [JSON/YAML](JsonYaml.md)
 - (2021-12-02) [Misc. Notes](MiscNotes.md)
 - (2021-04-18) [Node.js](Node.md)
 - (2021-04-15) [Bash scripting](BashScripting.md)
@@ -13,7 +14,6 @@ You know how sometimes you hit a wall while developing, and that starts a long q
 - (2019-09-18) [Examples of stored procedures/functions](StoredProcedureExamples.md)
 - (2019-07-18) [Maven](Maven.md)
 - (2018-08-27) [Assembler](Assembler.md)
-- (2018-08-10) [JSON/YAML](JsonYaml.md)
 - (2018-02-01) [CSS links](CoolCSSLinks.md)
 - (2018-01-16) [MSSQL Cookbooks](MssqlCookbooks.md)
 - (2018-01-16) [SSIS Notes](SsisNotes.md)
