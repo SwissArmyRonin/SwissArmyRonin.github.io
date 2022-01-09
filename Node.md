@@ -6,7 +6,7 @@ Source: [Set up your Node.js development environment with WSL 2](https://docs.mi
 
 ```bash
 # Get Node version manager. Check for newer release at https://github.com/nvm-sh/nvm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 nvm install node  # Install the newest node
 nvm install --lts # Install the current LTS version
 
@@ -18,6 +18,8 @@ npm set init.license "MIT"
 npm set init.version "1.0.0"
 ```
 
+_Make sure that neither path for node and npm hit the ones installed locally by NVM!_
+
 ## Setup new project
 
 Initialize a project with:
@@ -26,16 +28,17 @@ Initialize a project with:
 npx license MIT
 npx gitignore node
 npm init -y
+
+# for typescript add ...
+npm i typescript --save-dev
+npx tsc --init
 ```
 
-## Turn callback functions to promises
+## Misc.
 
-[How to make a Promise out of a Callback function in JavaScript](https://www.freecodecamp.org/news/how-to-make-a-promise-out-of-a-callback-function-in-javascript-d8ec35d1f981/)
-
-
-## Use node for shell scripting
-
-[How to run shell script file or command using Nodejs?](https://medium.com/stackfame/how-to-run-shell-script-file-or-command-using-nodejs-b9f2455cb6b7)
-
+- [Make a Promise out of a Callback function in JavaScript](https://www.freecodecamp.org/news/how-to-make-a-promise-out-of-a-callback-function-in-javascript-d8ec35d1f981/)
+- Use node for shell scripting: [google/zx](https://github.com/google/zx)
+- [Set up a new TypeScript project](https://www.digitalocean.com/community/tutorials/typescript-new-project)
+- [How to Build an AWS Lambda Function in Typescript](files/How_to_Build_an_AWS_Lambda_Function_in_Typescript.pdf) (src: [scotch.io](https://web.archive.org/web/20201031135018/https://scotch.io/@nwayve/how-to-build-a-lambda-function-in-typescript))
 
 [gimmick:Disqus](swissarmyronin-github-io)
