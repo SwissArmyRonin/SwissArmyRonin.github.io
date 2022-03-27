@@ -1,5 +1,45 @@
 # Docker
 
+## GUI apps
+
+Source: https://www.trickster.dev/post/running-gui-apps-within-docker-containers/
+
+Create `docker-compose.yml`:
+
+```yaml
+version: '2'
+services:
+  firefox:
+    image: jlesage/firefox
+    environment:
+      - DISPLAY=novnc:0
+    depends_on:
+      - novnc
+    networks:
+      - x11
+  novnc:
+    image: theasp/novnc:latest
+    environment:
+      # Adjust to your screen size
+      - DISPLAY_WIDTH=1600
+      - DISPLAY_HEIGHT=968
+      - RUN_XTERM=no
+    ports:
+      - "8080:8080"
+    networks:
+      - x11
+networks:
+  x11:
+```
+
+Run:
+
+```shell
+docker-compose up
+```
+
+Open http://localhost:8080/vnc_auto.html
+
 ## Run a rust command
 
 The parameter `--user "$(id -u)":"$(id -g)"` makes the current user the owner of the generated artifacts, avoiding `root` as owner.
