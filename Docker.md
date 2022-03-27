@@ -30,7 +30,8 @@ services:
       - RUN_XTERM=no
     ports: [ "8080:8080" ]
     networks: [ "x11" ]
-networks: { "x11": null }
+networks:
+  x11:
 ```
 
 Run:
