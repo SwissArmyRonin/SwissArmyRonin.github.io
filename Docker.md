@@ -4,38 +4,39 @@
 
 Source: https://www.trickster.dev/post/running-gui-apps-within-docker-containers/
 
+Create `Dockerfile`:
+
+```dockerfile
+FROM ubuntu:latest
+RUN apt-get update && apt-get install -y libxext-dev libxrender-dev libxtst-dev firefox
+CMD firefox 
+```
+
 Create `docker-compose.yml`:
 
 ```yaml
 version: '2'
 services:
   firefox:
-    image: jlesage/firefox
-    environment:
-      - DISPLAY=novnc:0
-    depends_on:
-      - novnc
-    networks:
-      - x11
+    build: .
+    environment: [ "DISPLAY=novnc:0" ]
+    depends_on: [ "novnc" ]
+    networks: [ "x11" ]
   novnc:
     image: theasp/novnc:latest
     environment:
-      # Adjust to your screen size
       - DISPLAY_WIDTH=1600
       - DISPLAY_HEIGHT=968
       - RUN_XTERM=no
-    ports:
-      - "8080:8080"
-    networks:
-      - x11
-networks:
-  x11:
+    ports: [ "8080:8080" ]
+    networks: [ "x11" ]
+networks: { "x11": null }
 ```
 
 Run:
 
 ```shell
-docker-compose up
+docker-compose up -d
 ```
 
 Open http://localhost:8080/vnc_auto.html
