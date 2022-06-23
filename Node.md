@@ -25,13 +25,15 @@ _Make sure that neither path for node and npm hit the ones installed locally by 
 Initialize a project with:
 
 ```bash
-npx license MIT
-npx gitignore node
+npx --yes license MIT
+npx --yes gitignore node
 npm init -y
 
 # for typescript add ...
 npm i typescript --save-dev
-npx tsc --init
+npx --yes tsc --init
+echo "console.log('Hello World');" > index.ts
+tsc && node index.js
 ```
 
 ## Misc.
