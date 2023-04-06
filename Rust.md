@@ -1,5 +1,102 @@
 # Rust
 
+## Cargo plugins
+
+### Explore further
+
+#### cargo-diet
+
+<https://crates.io/crates/cargo-diet>
+
+Trims crate size before publishing.
+
+#### cargo-get
+
+<https://crates.io/crates/cargo-get>
+
+Extract version information from Cargo.toml files for CI.
+
+#### cargo-cache
+
+<https://crates.io/crates/cargo-cache>
+
+Install: `cargo install cargo-cache`
+Run: `cargo cache`
+
+Cleans up the local Cargo cache. Useful.
+
+#### cargo-udeps
+
+<https://crates.io/crates/cargo-udeps>
+
+Install: `cargo install cargo-udeps --locked`
+Run: `cargo +nightly udeps`
+
+Finds unused dependencies.
+
+* +remove cruft
+* -might have false positives
+
+#### cargo-deb
+
+<https://crates.io/crates/cargo-deb>
+
+Build Debian packages from Cargo projects. Looks super useful.
+
+#### cargo-make
+
+<https://crates.io/crates/cargo-make>
+
+Looks interesting. It allows you to run scripts with cargo in a manner like Ant. Might be an antipattern though ...
+
+### Maybe later
+
+#### cargo-msrv
+
+<https://crates.io/crates/cargo-msrv>
+
+Install: `cargo install cargo-msrv`
+
+Find the minimum supported rust version for a crate.
+
+#### cargo-nextest
+
+<https://crates.io/crates/cargo-nextest>
+
+Install: `cargo install cargo-nextest --locked`
+
+- +slightly faster
+- +pretty output
+- -one test succeeded in normal cargo test but had to be modified in cargo-nextest?
+
+#### cargo-auditable
+
+Meh ... embeds dependency manifest in binary. Allows you to check later with audit if an installed binary has know vulnerabilities.
+
+#### cargo-deny
+
+<https://crates.io/crates/cargo-deny>
+
+- -overlaps with audit on advisories
+- -alarmist
+
+### Nah
+
+#### cargo-audit (for fix)
+
+Check for vulnerable dependencies. THe fix command is useless.
+
+#### cargo-semver-checks
+
+Great idea but seems pretty useless at the moment.
+
+<https://crates.io/crates/cargo-semver-checks>
+
+`cargo semver-checks check-release --baseline-rev main`
+
+- +can check for breaking changes in CI
+- -doesn't work from workspaces.
+
 ## Self signed CA problem
 
 Sometimes you need to access a system with a self-signed root CA via SSL, and you might get errors like:
