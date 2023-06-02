@@ -1,5 +1,9 @@
 # Bash scripting
 
+## What's hogging the port?
+
+ss  -lptn 'sport = :9080'
+
 ## Parse parameters
 
 Source: [Using getopts to process long and short command line options](https://stackoverflow.com/a/7948533/511976)
