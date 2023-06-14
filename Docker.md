@@ -1,5 +1,9 @@
 # Docker
 
+## Dive
+
+[Dive](https://github.com/wagoodman/dive): A tool for exploring each layer in a docker image.
+
 ## GUI apps
 
 Source: https://www.trickster.dev/post/running-gui-apps-within-docker-containers/
