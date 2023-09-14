@@ -85,7 +85,7 @@ The Windows 10 template does not include Chocolatey, so i added ``"./scripts/cho
       }
     ],
 
-Hint: See "[windows_10_chocolatey.json](examples/windows_10_chocolatey.json)" and "[vagrantfile-windows_10_chocolatey.template](examples/vagrantfile-windows_10_chocolatey.template)".
+Hint: See "[windows_10_chocolatey.json](windows_10_chocolatey.json)" and "[vagrantfile-windows_10_chocolatey.template](vagrantfile-windows_10_chocolatey.template)".
 
 Then I ran:
 

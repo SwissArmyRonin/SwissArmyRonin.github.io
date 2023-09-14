@@ -1,5 +1,22 @@
 # Git
 
+## Find big files
+
+Find out if large binary files are lurking in the history. Lists all blobs with commit by ascending size:
+
+```shell
+git rev-list --objects --all |
+  git cat-file --batch-check='%(objecttype) %(objectname) %(objectsize) %(rest)' |
+  sed -n 's/^blob //p' |
+  sort --numeric-sort --key=2 |
+  cut -c 1-12,41- |
+  $(command -v gnumfmt || echo numfmt) --field=2 --to=iec-i --suffix=B --padding=7 -- \
+  round=nearest
+```
+Src: https://stackoverflow.com/a/42544963/511976
+
+Delete them with `git-filter-repo` (src: https://stackoverflow.com/a/61602985/511976).
+
 ## Git helpers
 
 UI: [github.com/mhvelplund/git-bash](https://github.com/mhvelplund/git-bash).
