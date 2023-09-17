@@ -1,5 +1,12 @@
 # Git
 
+## Summarize changes
+
+```shell
+git diff @{2023-09-10}.. -- docs/src
+git whatchanged --since="last Sunday" -p -- docs/src
+```
+
 ## Find big files
 
 Find out if large binary files are lurking in the history. Lists all blobs with commit by ascending size:
