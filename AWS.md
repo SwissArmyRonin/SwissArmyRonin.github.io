@@ -2,6 +2,46 @@
 
 This page contains a collection of unrelated notes pertaining to AWS.
 
+## Assume-role script
+
+Install `jq`. Set the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`, or the `AWS_PROFILE` environment variables to the user that should assume a role. 
+Set `ROLE_ARN` to the Arn of the role being assumed. Finally, create a "command line" build step.
+
+```bash
+CREDENTIALS=$(aws sts assume-role --role-arn $ROLE_ARN --role-session-name teamcity  --duration-seconds 900)
+export AWS_ACCESS_KEY_ID=$(echo $CREDENTIALS | jq -r .Credentials.AccessKeyId)
+export AWS_SECRET_ACCESS_KEY=$(echo $CREDENTIALS | jq -r .Credentials.SecretAccessKey)
+export AWS_SESSION_TOKEN=$(echo $CREDENTIALS | jq -r .Credentials.SessionToken)
+echo Expiration: $(echo $CREDENTIALS | jq -r .Credentials.Expiration)
+```
+
+or 
+
+```bash
+#!/bin/bash
+
+ROLE_ARN=$1
+
+if [ -z $ROLE_ARN ]; then
+   echo 'Usage: $(assume-role arn:aws:iam::123456789012:role/my-role)'
+   exit 1
+fi
+
+if [ ! -z $DEBUG ]; then
+   [ ! -z $AWS_PROFILE ] && echo "AWS_PROFILE=$AWS_PROFILE" >&2
+   [ ! -z $AWS_ACCESS_KEY_ID ] && echo "AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID" >&2
+   [ ! -z $AWS_SECRET_ACCESS_KEY ] && echo "AWS_SECRET_ACCESS_KEY=***" >&2
+   [ ! -z $AWS_SESSION_TOKEN ] && echo "AWS_SESSION_TOKEN=***" >&2
+fi
+
+SESSION_NAME=${ROLE_ARN#*/}
+for VAR in $(aws sts assume-role --role-arn $ROLE_ARN --role-session $SESSION_NAME |
+   jq '.Credentials|{AWS_ACCESS_KEY_ID:.AccessKeyId,AWS_SECRET_ACCESS_KEY:.SecretAccessKey,AWS_SESSION_TOKEN:.SessionToken}' |
+   jq -r 'to_entries[] | [.key,.value] | join("=")'); do
+   echo export $VAR
+done
+```
+
 ## Bulk log retention update in Powershell
 
 This sets log retention to 1 day for all Airship lambdas.
@@ -22,17 +62,6 @@ foreach ($logGroupName in $logGroups) {
 * Terraform `mixed_instances_policy` for [`aws_autoscaling_group`](https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html)
 * [ECS Spot Fleet Demo](https://github.com/tongueroo/ecs-spot-demo) (with drain script userdata)
 
-## Assume-role script
-
-Install `jq`. Set the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment variables to the user that should assume a role. Set `ROLE_ARN` to the Arn of the role being assumed. Finally, create a "command line" build step.
-
-```bash
-CREDENTIALS=$(aws sts assume-role --role-arn $ROLE_ARN --role-session-name teamcity  --duration-seconds 900)
-export AWS_ACCESS_KEY_ID=$(echo $CREDENTIALS | jq -r .Credentials.AccessKeyId)
-export AWS_SECRET_ACCESS_KEY=$(echo $CREDENTIALS | jq -r .Credentials.SecretAccessKey)
-export AWS_SESSION_TOKEN=$(echo $CREDENTIALS | jq -r .Credentials.SessionToken)
-echo Expiration: $(echo $CREDENTIALS | jq -r .Credentials.Expiration)
-```
 
 ## Teamcity AWS assume role
 
