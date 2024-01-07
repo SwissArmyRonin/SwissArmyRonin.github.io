@@ -7,10 +7,6 @@ This page contains a collection of unrelated notes pertaining to issues I have G
 * Maven repository: https://cemerick.com/2010/08/24/hosting-maven-repos-on-github/
 * License overview: https://help.github.com/articles/licensing-a-repository/
 
-## YAML
-
-Extra features: https://blog.daemonl.com/2016/02/yaml.html
-
 ## Free S/MIME certificates
 
 [Actalis](https://extrassl.actalis.it/portal/uapub/freemail?lang=en) provides free S/MIME certifcates for non-commercial use.
@@ -127,8 +123,6 @@ Reestablish AD trust with Kerberos:
 ## REST Services 
 [Service versioning](http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
 
-[gimmick:Disqus](swissarmyronin-github-io)
-
 ## Maven master password
 
 To configure encrypted passwords, create a master password by running mvn -emp or mvn --encrypt-master-password followed by your master password.
@@ -167,3 +161,5 @@ At this point, copy the encrypted password printed from the output of mvn -ep an
   ...
 </settings>
 ```
+
+[gimmick:Disqus](swissarmyronin-github-io)
