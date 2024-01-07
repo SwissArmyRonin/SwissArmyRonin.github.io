@@ -14,7 +14,8 @@ You know how sometimes you hit a wall while developing, and it starts a long que
 ## Contact
 
 * Twitter: [@SwissArmyRonin](https://twitter.com/SwissArmyRonin) 
-* StackOverflow [mhvelplund](https://stackoverflow.com/cv/mhvelplund)
+* StackOverflow: [mhvelplund](https://stackoverflow.com/cv/mhvelplund)
+* CV: [English](files/CV_en.pdf) / [Danish](files/CV_dk.pdf)
 
 [gimmick:Disqus](swissarmyronin-github-io)
 
