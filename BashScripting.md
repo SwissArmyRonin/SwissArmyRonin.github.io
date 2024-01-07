@@ -1,5 +1,9 @@
 # Bash scripting
 
+# Bash Strict Mode
+
+[Unofficial Strict Mode](http://redsymbol.net/articles/unofficial-bash-strict-mode/)
+
 # Working with processes
 
 Check if a process is running:

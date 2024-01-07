@@ -4,10 +4,10 @@ You know how sometimes you hit a wall while developing, and that starts a long q
 
 ## Notes
 
+* (2019-12-17) [Bash scripting](BashScripting.md)
 * (2019-11-05) [AWS](AWS.md)
 * (2019-09-18) [Examples of stored procedures/functions](StoredProcedureExamples.md)
 * (2019-09-17) [Misc. Notes](MiscNotes.md)
-* (2019-07-22) [Bash scripting](BashScripting.md)
 * (2019-07-18) [Maven](Maven.md)
 * (2018-08-27) [Assembly](Assembly.md)
 * (2018-08-10) [JSON/YAML](JsonYaml.md)
