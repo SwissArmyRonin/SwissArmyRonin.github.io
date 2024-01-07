@@ -4,7 +4,7 @@ You know how sometimes you hit a wall while developing, and it starts a long que
 
 ## Notes
 
-* (2019-06-24) [Misc. Notes](MiscNotes.md)
+* (2019-06-26) [Misc. Notes](MiscNotes.md)
 * (2018-09-15) [AWS](AWS.md)
 * (2018-08-27) [Assembly](Assembly.md)
 * (2018-08-10) [JSON/YAML](JsonYaml.md)
