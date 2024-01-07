@@ -43,3 +43,5 @@ prefix the command with "winpty", eg:
     openssl s_client -connect localhost:8443 -tls1
     openssl s_client -connect localhost:8443 -tls1_1
     openssl s_client -connect localhost:8443 -tls1_2
+
+[gimmick:Disqus](swissarmyronin-github-io)

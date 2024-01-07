@@ -4,7 +4,8 @@ You know how sometimes you hit a wall while developing, and that starts a long q
 
 ## Notes
 
-* (2020-06-12) [Ubuntu in Hyper-V](UbuntuHyperV.md)
+* (2020-07-06) [Node.js](Node.md)
+* (2020-06-07) [Ubuntu in Hyper-V](UbuntuHyperV.md)
 * (2020-02-07) [Misc. Notes](MiscNotes.md)
 * (2019-12-17) [Bash scripting](BashScripting.md)
 * (2019-11-05) [AWS](AWS.md)
