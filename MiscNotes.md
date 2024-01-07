@@ -2,6 +2,14 @@
 
 This page contains a collection of unrelated notes pertaining to issues I have Googled more than once.
 
+## "God mode"
+
+In Windows, create a folder on the desktop and rename it to: 
+
+```
+GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}
+```
+
 ## Recommend VS Code plugin
 
 Create a file .vscode/extensions.json with a recommendation array of extension ids, e.g.:
