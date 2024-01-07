@@ -2,6 +2,15 @@
 
 <!-- toc -->
 
+## Fancy Fish-like Bash
+
+Install [`ble.sh`](https://github.com/akinomyoga/ble.sh):
+```shell
+git clone --recursive https://github.com/akinomyoga/ble.sh.git
+make -C ble.sh
+source ble.sh/out/ble.sh
+```
+
 ## What's hogging the port?
 
 ss  -lptn 'sport = :9080'

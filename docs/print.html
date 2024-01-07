@@ -171,12 +171,12 @@
 <p>You know how sometimes you hit a wall while developing, and that starts a long quest through forums and documentation to find the right solution? I decided that I should probably start documenting some of those answers, so I don't have to slay the same dragon twice.</p>
 <h2 id="notes"><a class="header" href="#notes">Notes</a></h2>
 <ul>
+<li>(2023-09-23) <a href="BashScripting.html">Bash scripting</a></li>
 <li>(2023-09-15) <a href="Git.html">Git</a></li>
 <li>(2023-09-14) <a href="VS%20Code.html">VS Code</a></li>
 <li>(2023-09-02) <a href="ObsidianNotes.html">Obsidian</a></li>
 <li>(2023-06-14) <a href="Docker.html">Docker</a></li>
 <li>(2023-06-02) <a href="Python.html">Python</a></li>
-<li>(2022-06-02) <a href="BashScripting.html">Bash scripting</a></li>
 <li>(2023-04-06) <a href="Rust.html">Rust</a></li>
 <li>(2023-01-27) <a href="AWS.html">AWS</a></li>
 <li>(2022-12-07) <a href="Certificates.html">OpenSSL</a></li>
@@ -796,6 +796,7 @@ i-08820e8f284ffa01a
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="bash-scripting"><a class="header" href="#bash-scripting">Bash scripting</a></h1>
 <ul>
+<li><a href="BashScripting.html#fancy-fish-like-bash">Fancy Fish-like Bash</a></li>
 <li><a href="BashScripting.html#whats-hogging-the-port">What's hogging the port?</a></li>
 <li><a href="BashScripting.html#parse-parameters">Parse parameters</a></li>
 <li><a href="BashScripting.html#beep-when-done">Beep when done</a></li>
@@ -803,6 +804,12 @@ i-08820e8f284ffa01a
 <li><a href="BashScripting.html#working-with-processes">Working with processes</a></li>
 <li><a href="BashScripting.html#echo-multiline-string">Echo multiline string</a></li>
 </ul>
+<h2 id="fancy-fish-like-bash"><a class="header" href="#fancy-fish-like-bash">Fancy Fish-like Bash</a></h2>
+<p>Install <a href="https://github.com/akinomyoga/ble.sh"><code>ble.sh</code></a>:</p>
+<pre><code class="language-shell">git clone --recursive https://github.com/akinomyoga/ble.sh.git
+make -C ble.sh
+source ble.sh/out/ble.sh
+</code></pre>
 <h2 id="whats-hogging-the-port"><a class="header" href="#whats-hogging-the-port">What's hogging the port?</a></h2>
 <p>ss  -lptn 'sport = :9080'</p>
 <h2 id="parse-parameters"><a class="header" href="#parse-parameters">Parse parameters</a></h2>

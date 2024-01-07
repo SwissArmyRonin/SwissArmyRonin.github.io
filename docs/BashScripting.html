@@ -168,6 +168,7 @@
                     <main>
                         <h1 id="bash-scripting"><a class="header" href="#bash-scripting">Bash scripting</a></h1>
 <ul>
+<li><a href="#fancy-fish-like-bash">Fancy Fish-like Bash</a></li>
 <li><a href="#whats-hogging-the-port">What's hogging the port?</a></li>
 <li><a href="#parse-parameters">Parse parameters</a></li>
 <li><a href="#beep-when-done">Beep when done</a></li>
@@ -175,6 +176,12 @@
 <li><a href="#working-with-processes">Working with processes</a></li>
 <li><a href="#echo-multiline-string">Echo multiline string</a></li>
 </ul>
+<h2 id="fancy-fish-like-bash"><a class="header" href="#fancy-fish-like-bash">Fancy Fish-like Bash</a></h2>
+<p>Install <a href="https://github.com/akinomyoga/ble.sh"><code>ble.sh</code></a>:</p>
+<pre><code class="language-shell">git clone --recursive https://github.com/akinomyoga/ble.sh.git
+make -C ble.sh
+source ble.sh/out/ble.sh
+</code></pre>
 <h2 id="whats-hogging-the-port"><a class="header" href="#whats-hogging-the-port">What's hogging the port?</a></h2>
 <p>ss  -lptn 'sport = :9080'</p>
 <h2 id="parse-parameters"><a class="header" href="#parse-parameters">Parse parameters</a></h2>
