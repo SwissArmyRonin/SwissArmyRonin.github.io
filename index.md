@@ -1,7 +1,5 @@
 # Have skills, will travel
 
-<div style="float:right"><div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="light" data-vanity="mhvelplund"><a class="LI-simple-link" href='https://dk.linkedin.com/in/mhvelplund?trk=profile-badge'>Mads Hvelplund</a></div></div>
-
 You know how sometimes you hit a wall while developing, and it starts a long quest through forums and documentation to find the right solution? I decided that I should probably start documenting some of those answers, so I don't have to slay the same dragon twice.
 
 ## Notes
@@ -17,10 +15,15 @@ You know how sometimes you hit a wall while developing, and it starts a long que
 
 ## Contact
 
-* Twitter: [@SwissArmyRonin](https://twitter.com/SwissArmyRonin) 
+* LinkedIn: [mhvelplund](https://dk.linkedin.com/in/mhvelplund)
 * StackOverflow: [mhvelplund](https://stackoverflow.com/cv/mhvelplund)
 * GitHub: [SwissArmyRonin](https://github.com/SwissArmyRonin) &amp; [mhvelplund](https://github.com/mhvelplund)
+* Twitter: [@SwissArmyRonin](https://twitter.com/SwissArmyRonin)
 * CV: [English](files/CV_en.pdf) / [Danish](files/CV_dk.pdf)
+
+<div style="float:right">
+[![](img/AWS_Certified_Logo_SAA_294x230_Color.png)](files/AWS Certified Solutions Architect - Associate certificate.pdf)
+</div>
 
 [gimmick:Disqus](swissarmyronin-github-io)
 
