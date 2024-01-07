@@ -1,5 +1,10 @@
 # Node.js
 
+## Test server for OpenAPI specs
+
+A Node package that returns the examples from the API as responses: <https://www.npmjs.com/package/@openapi-generator-plus/typescript-express-example-server-generator>.
+
+
 ## Installing node.js
 
 Source: [Set up your Node.js development environment with WSL 2](https://docs.microsoft.com/en-us/windows/nodejs/setup-on-wsl2)
