@@ -23,10 +23,11 @@ You know how sometimes you hit a wall while developing, and it starts a long que
 * Twitter: [@SwissArmyRonin](https://twitter.com/SwissArmyRonin)
 * CV: [English](files/CV_en.pdf) / [Danish](files/CV_dk.pdf)
 
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="a87b3f45-aa9b-4875-9744-74a02c0727a4"></div>
 <div style="float:right">
 [![](img/AWS_Certified_Logo_SAA_294x230_Color.png)](files/AWS Certified Solutions Architect - Associate certificate.pdf)
 </div>
-
 [gimmick:Disqus](swissarmyronin-github-io)
 
 <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+<script type="text/javascript" async src="//cdn.youracclaim.com/assets/utilities/embed.js"></script>
