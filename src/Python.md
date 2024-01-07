@@ -12,6 +12,7 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 Invoke-WebRequest -UseBasicParsing -Uri "https://raw.githubusercontent.com/pyenv-win/pyenv-win/master/pyenv-win/install-pyenv-win.ps1" -OutFile "./install-pyenv-win.ps1"; &"./install-pyenv-win.ps1"
 ```
 
+Add `<HOME_DIR>\.pyenv\pyenv-win\bin` to PATH
 
 1. `pyenv --version` to check if the installation was successful.    
 2. Run `pyenv install -l` to check a list of Python versions supported by pyenv-win

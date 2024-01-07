@@ -4,9 +4,10 @@ You know how sometimes you hit a wall while developing, and that starts a long q
 
 ## Notes
 
+- (2024-01-07) [Jupyter & Rust](JupyterRust.md)
+- (2024-01-07) [Python](Python.md)
 - (2024-01-05) [Misc. Notes](MiscNotes.md)
 - (2023-12-09) [Node.js & TypeScript](Node.md)
-- (2023-10-14) [Python](Python.md)
 - (2023-09-23) [Bash scripting](BashScripting.md)
 - (2023-09-15) [Git](Git.md)
 - (2023-09-14) [VS Code](VS%20Code.md)
