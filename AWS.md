@@ -22,20 +22,16 @@ or
 
 ROLE_ARN=$1
 
-if [ -z $ROLE_ARN ]; then
-   echo 'Usage: $(assume-role arn:aws:iam::123456789012:role/my-role)'
-   exit 1
-fi
-
-if [ ! -z $DEBUG ]; then
-   [ ! -z $AWS_PROFILE ] && echo "AWS_PROFILE=$AWS_PROFILE" >&2
-   [ ! -z $AWS_ACCESS_KEY_ID ] && echo "AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID" >&2
-   [ ! -z $AWS_SECRET_ACCESS_KEY ] && echo "AWS_SECRET_ACCESS_KEY=***" >&2
-   [ ! -z $AWS_SESSION_TOKEN ] && echo "AWS_SESSION_TOKEN=***" >&2
-fi
+[ -z $(which aws) ] && echo "The 'aws' command was not found." &&  exit 1
+[ -z $(which jq) ] && echo "The 'jq' command was not found." && exit 1
+[ -z $ROLE_ARN ] && echo 'Usage: $(assume-role arn:aws:iam::123456789012:role/my-role)' && exit 1
+[ ! -z $AWS_PROFILE ] && echo "AWS_PROFILE=$AWS_PROFILE" >&2
+[ ! -z $AWS_ACCESS_KEY_ID ] && echo "AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID" >&2
+[ ! -z $AWS_SECRET_ACCESS_KEY ] && echo "AWS_SECRET_ACCESS_KEY=***" >&2
+[ ! -z $AWS_SESSION_TOKEN ] && echo "AWS_SESSION_TOKEN=***" >&2
 
 SESSION_NAME=${ROLE_ARN#*/}
-for VAR in $(aws sts assume-role --role-arn $ROLE_ARN --role-session $SESSION_NAME |
+for VAR in $(aws sts assume-role --role-arn $ROLE_ARN --role-session $SESSION_NAME --output json | 
    jq '.Credentials|{AWS_ACCESS_KEY_ID:.AccessKeyId,AWS_SECRET_ACCESS_KEY:.SecretAccessKey,AWS_SESSION_TOKEN:.SessionToken}' |
    jq -r 'to_entries[] | [.key,.value] | join("=")'); do
    echo export $VAR
