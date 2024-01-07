@@ -67,9 +67,9 @@ Find the minimum supported rust version for a crate.
 
 Install: `cargo install cargo-nextest --locked`
 
-- +slightly faster
-- +pretty output
-- -one test succeeded in normal cargo test but had to be modified in cargo-nextest?
+* +slightly faster
+* +pretty output
+* -one test succeeded in normal cargo test but had to be modified in cargo-nextest?
 
 #### cargo-auditable
 
@@ -79,8 +79,8 @@ Meh ... embeds dependency manifest in binary. Allows you to check later with aud
 
 <https://crates.io/crates/cargo-deny>
 
-- -overlaps with audit on advisories
-- -alarmist
+* -overlaps with audit on advisories
+* -alarmist
 
 ### Nah
 
@@ -96,8 +96,8 @@ Great idea but seems pretty useless at the moment.
 
 `cargo semver-checks check-release --baseline-rev main`
 
-- +can check for breaking changes in CI
-- -doesn't work from workspaces.
+* +can check for breaking changes in CI
+* -doesn't work from workspaces.
 
 ## Self signed CA problem
 
@@ -139,6 +139,3 @@ This should replace the system CA with your ammended CA.
 
 * Official [aws-lambda-rust-runtime](https://github.com/awslabs/aws-lambda-rust-runtime)
 * [Using Rust Lambdas in Production](https://www.cvpartner.com/blog/using-rust-lambdas-in-production)
-
-
-

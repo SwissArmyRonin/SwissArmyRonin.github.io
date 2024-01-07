@@ -12,5 +12,3 @@ json-schema-generator --pretty env-config.json -o schema.json
 ```
 
 <!-- npx http-server -p 9876 --cors -c-1 -->
-
-

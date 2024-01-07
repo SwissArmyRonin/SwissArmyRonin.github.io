@@ -10,7 +10,7 @@ This page contains a collection of unrelated notes pertaining to issues I have G
 
 In Windows, create a folder on the desktop and rename it to:
 
-```
+```text
 GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}
 ```
 
@@ -26,7 +26,7 @@ Create a file .vscode/extensions.json with a recommendation array of extension i
 
 ## Terraform docs for 0.12+
 
-```
+```shell
 docker run --rm \
   -v $(pwd):/data \
   cytopia/terraform-docs \
@@ -73,7 +73,7 @@ Can break old 32 bit apps.
 
 Add a line to the RDP file with the text (or change the existing one):
 
-```
+```text
 enablecredsspsupport:i:0
 ```
 
@@ -91,7 +91,9 @@ Download [JSmooth](http://jsmooth.sourceforge.net/). Only works if `JAVA_HOME` i
 
 Let's say I get a SecurityException when running my .NET console application from "\\vmware-host\Shared Folders". In this case, simply open a developer prompt and type:
 
-    CasPol.exe -m -ag 1.2 -url "file://\\vmware-host\Shared Folders/*" FullTrust
+```powershell
+CasPol.exe -m -ag 1.2 -url "file://\\vmware-host\Shared Folders/*" FullTrust
+```
 
 From "[Using CasPol to Fully Trust a Share](https://blogs.msdn.microsoft.com/shawnfa/2004/12/30/using-caspol-to-fully-trust-a-share/)".
 
@@ -99,8 +101,17 @@ From "[Using CasPol to Fully Trust a Share](https://blogs.msdn.microsoft.com/sha
 
 Want to copy a file from one \*Nix macine to another without the hassle of FTP?
 
-    DestinationShell# nc -l -p 2020 > file.txt
-    SourceShell# cat file.txt | nc dest.ip.address 2020
+DestinationShell:
+
+```shell
+nc -l -p 2020 > file.txt
+```
+
+SourceShell:
+
+```shell
+ cat file.txt | nc dest.ip.address 2020
+```
 
 ## TWiki syntax high-lighting
 
@@ -118,7 +129,9 @@ Legacy projects are hoary with cruft. Find it and remove it with ...
 
 Signing a .NET binary post build is easy with a X.509 certificate. Heres how to sign `MyApp.exe` with `mycert.pfx`:
 
-    signtool.exe sign /v /f "mycert.pfx" -t "http://timestamp.verisign.com/scripts/timstamp.dll" "MyApp.exe"
+```powershell
+signtool.exe sign /v /f "mycert.pfx" -t "<http://timestamp.verisign.com/scripts/timstamp.dll>" "MyApp.exe"
+```
 
 ## Custom Security Contexts in Jersey
 
@@ -128,17 +141,21 @@ Signing a .NET binary post build is easy with a X.509 certificate. Heres how to 
 
 Sometimes you have a Linux server that uses PAM/ActiveDirectory to validate logins. If the connection to the AD lapses for some reason, you can find yourself locked out. These steps fix that.
 
-Boot into singleuser mode, hold shift duirng startup and choose `advanced options -> recoverymode -> drop to root shell` from the Grub menu.
+Boot into single-user mode, hold shift during startup and choose `advanced options -> recoverymode -> drop to root shell` from the Grub menu.
 
-Remount harddisk in RW mode:
+Remount hard disk in RW mode:
 
-    mount -o remount,rw /
+```shell
+mount -o remount,rw /
+```
 
 Reestablish AD trust with Kerberos:
 
-    kinit xxx@MY-DOM
+```shell
+kinit xxx@MY-DOM
+```
 
-... hvor `xxx` is an AD browser account on the `MY-DOM` domain.
+... where `xxx` is an AD browser account on the `MY-DOM` domain.
 
 ## .NET Core notes
 

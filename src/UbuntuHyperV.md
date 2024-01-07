@@ -18,13 +18,13 @@ Setup a quick Ubuntu workstation with support for extended sessions.
   sudo apt install vim
   ```
 
-* Edit `/etc/xrdp/xrdp.ini`to add:
+* Edit `/etc/xrdp/xrdp.ini` to add:
 
   ​```ini
   port=vsock://-1:3389
   use_vsock=false
   ```
-  
+
 * Shutdown VM and admin Powershell
 * Run in PS:
 

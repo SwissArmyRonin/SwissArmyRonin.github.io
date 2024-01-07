@@ -67,6 +67,6 @@ docker run \
 
 Generate a good starting point for a Dcokerfile.
 
-```
+```shell
 docker history --no-trunc --format '{{.CreatedBy}}' qemu | grep -v '#(nop)' | tac
 ```
