@@ -4,10 +4,10 @@ You know how sometimes you hit a wall while developing, and that starts a long q
 
 ## Notes
 
+- (2022-01-09) [Node.js & TypeScript](Node.md)
 - (2022-01-04) [OAuth2](OAuth2.md)
 - (2021-12-14) [JSON/YAML](JsonYaml.md)
 - (2021-12-02) [Misc. Notes](MiscNotes.md)
-- (2021-04-18) [Node.js](Node.md)
 - (2021-04-15) [Bash scripting](BashScripting.md)
 - (2021-04-13) [Git](Git.md)
 - (2020-06-07) [Ubuntu in Hyper-V](UbuntuHyperV.md)
