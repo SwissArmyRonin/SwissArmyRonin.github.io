@@ -4,6 +4,7 @@ You know how sometimes you hit a wall while developing, and that starts a long q
 
 ## Notes
 
+- (2022-12-07) [OpenSSL](Certificates.md)
 - (2022-11-23) [Rust](Rust.md)
 - (2022-06-23) [Node.js & TypeScript](Node.md)
 - (2022-06-16) [Git](Git.md)
