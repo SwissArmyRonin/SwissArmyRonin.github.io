@@ -1,7 +1,5 @@
 # Git
 
-General Git related notes.
-
 ## Git helpers
 
 Install [github.com/mhvelplund/git-bash](https://github.com/mhvelplund/git-bash).

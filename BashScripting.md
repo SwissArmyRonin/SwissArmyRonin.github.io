@@ -1,5 +1,12 @@
 # Bash scripting
 
+
+# Beep when done
+
+```shell
+./run_long.sh; echo -e "\a"
+```
+
 # Bash Strict Mode
 
 [Unofficial Strict Mode](http://redsymbol.net/articles/unofficial-bash-strict-mode/)
@@ -18,9 +25,9 @@ ps -p $PID >&-
 * `$?` the return code of the last job that finished
 * `wait $PID` blocks until the task completes
 
-## Echo multiline string
+# Echo multiline string
 
-The example creates a small executable  script that dumps the contents of the root dir.
+The example creates a small executable script that dumps the contents of the root dir.
 
 <!--
 ```bash
