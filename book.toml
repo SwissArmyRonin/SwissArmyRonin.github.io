@@ -1,0 +1,16 @@
+[book]
+authors      = ["Mads Hvelplund"]
+description  = "Things I had to Google twice ..."
+language     = "en"
+multilingual = false
+src          = "src"
+title        = "SwissArmyRonin"
+
+[build]
+build-dir      = "docs"
+create-missing = false
+
+# https://github.com/badboy/mdbook-toc
+[preprocessor.toc]
+command  = "mdbook-toc"
+renderer = ["html"]

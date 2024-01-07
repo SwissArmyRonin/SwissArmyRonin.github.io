@@ -1,0 +1,1455 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>SwissArmyRonin</title>
+        <meta name="robots" content="noindex" />
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="Things I had to Google twice ...">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> What's new</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> JS</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="VirtualDeveloperEnvironmentWithVagrant.html"><strong aria-hidden="true">2.1.</strong> Angular dev. env.</a></li><li class="chapter-item expanded "><a href="Node.html"><strong aria-hidden="true">2.2.</strong> Node.js & TypeScript</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Misc.</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="Assembler.html"><strong aria-hidden="true">3.1.</strong> Assembler</a></li><li class="chapter-item expanded "><a href="AWS.html"><strong aria-hidden="true">3.2.</strong> AWS</a></li><li class="chapter-item expanded "><a href="BashScripting.html"><strong aria-hidden="true">3.3.</strong> Bash scripting</a></li><li class="chapter-item expanded "><a href="CoolCSSLinks.html"><strong aria-hidden="true">3.4.</strong> CSS links</a></li><li class="chapter-item expanded "><a href="Docker.html"><strong aria-hidden="true">3.5.</strong> Docker</a></li><li class="chapter-item expanded "><a href="StoredProcedureExamples.html"><strong aria-hidden="true">3.6.</strong> Examples of stored procedures/functions</a></li><li class="chapter-item expanded "><a href="Git.html"><strong aria-hidden="true">3.7.</strong> Git</a></li><li class="chapter-item expanded "><a href="gpg-maven.html"><strong aria-hidden="true">3.8.</strong> GPG with Maven</a></li><li class="chapter-item expanded "><a href="JsonYaml.html"><strong aria-hidden="true">3.9.</strong> JSON/YAML</a></li><li class="chapter-item expanded "><a href="Maven.html"><strong aria-hidden="true">3.10.</strong> Maven</a></li><li class="chapter-item expanded "><a href="MiscNotes.html"><strong aria-hidden="true">3.11.</strong> Misc. Notes</a></li><li class="chapter-item expanded "><a href="MssqlCookbooks.html"><strong aria-hidden="true">3.12.</strong> MSSQL Cookbooks</a></li><li class="chapter-item expanded "><a href="OAuth2.html"><strong aria-hidden="true">3.13.</strong> OAuth2</a></li><li class="chapter-item expanded "><a href="ObsidianNotes.html"><strong aria-hidden="true">3.14.</strong> Obsidian</a></li><li class="chapter-item expanded "><a href="Certificates.html"><strong aria-hidden="true">3.15.</strong> OpenSSL</a></li><li class="chapter-item expanded "><a href="Python.html"><strong aria-hidden="true">3.16.</strong> Python</a></li><li class="chapter-item expanded "><a href="Rust.html"><strong aria-hidden="true">3.17.</strong> Rust</a></li><li class="chapter-item expanded "><a href="SsisNotes.html"><strong aria-hidden="true">3.18.</strong> SSIS Notes</a></li><li class="chapter-item expanded "><a href="TomcatSSL.html"><strong aria-hidden="true">3.19.</strong> Tomcat HTTPS</a></li><li class="chapter-item expanded "><a href="UbuntuHyperV.html"><strong aria-hidden="true">3.20.</strong> Ubuntu in Hyper-V</a></li><li class="chapter-item expanded "><a href="VS Code.html"><strong aria-hidden="true">3.21.</strong> VS Code</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">SwissArmyRonin</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="have-skills-will-travel"><a class="header" href="#have-skills-will-travel">Have skills, will travel</a></h1>
+<p>You know how sometimes you hit a wall while developing, and that starts a long quest through forums and documentation to find the right solution? I decided that I should probably start documenting some of those answers, so I don't have to slay the same dragon twice.</p>
+<h2 id="notes"><a class="header" href="#notes">Notes</a></h2>
+<ul>
+<li>(2023-09-15) <a href="Git.html">Git</a></li>
+<li>(2023-09-14) <a href="VS%20Code.html">VS Code</a></li>
+<li>(2023-09-02) <a href="ObsidianNotes.html">Obsidian</a></li>
+<li>(2023-06-14) <a href="Docker.html">Docker</a></li>
+<li>(2023-06-02) <a href="Python.html">Python</a></li>
+<li>(2022-06-02) <a href="BashScripting.html">Bash scripting</a></li>
+<li>(2023-04-06) <a href="Rust.html">Rust</a></li>
+<li>(2023-01-27) <a href="AWS.html">AWS</a></li>
+<li>(2022-12-07) <a href="Certificates.html">OpenSSL</a></li>
+<li>(2022-06-23) <a href="Node.html">Node.js &amp; TypeScript</a></li>
+<li>(2022-06-14) <a href="MiscNotes.html">Misc. Notes</a></li>
+<li>(2022-01-04) <a href="OAuth2.html">OAuth2</a></li>
+<li>(2021-12-14) <a href="JsonYaml.html">JSON/YAML</a></li>
+<li>(2020-06-07) <a href="UbuntuHyperV.html">Ubuntu in Hyper-V</a></li>
+<li>(2019-09-18) <a href="StoredProcedureExamples.html">Examples of stored procedures/functions</a></li>
+<li>(2019-07-18) <a href="Maven.html">Maven</a></li>
+<li>(2018-08-27) <a href="Assembler.html">Assembler</a></li>
+<li>(2018-02-01) <a href="CoolCSSLinks.html">CSS links</a></li>
+<li>(2018-01-16) <a href="MssqlCookbooks.html">MSSQL Cookbooks</a></li>
+<li>(2018-01-16) <a href="SsisNotes.html">SSIS Notes</a></li>
+<li>(2017-12-04) <a href="gpg-maven.html">GPG with Maven</a></li>
+<li>(2017-11-24) <a href="TomcatSSL.html">Tomcat HTTPS</a></li>
+<li>(2017-09-11) <a href="VirtualDeveloperEnvironmentWithVagrant.html">Virtual Angular developer environment with Vagrant</a></li>
+</ul>
+<h2 id="contact"><a class="header" href="#contact">Contact</a></h2>
+<ul>
+<li>LinkedIn: <a href="https://www.linkedin.com/in/mhvelplund">mhvelplund</a></li>
+<li>StackOverflow: <a href="https://stackoverflow.com/cv/mhvelplund">mhvelplund</a></li>
+<li>GitHub: <a href="https://github.com/SwissArmyRonin">SwissArmyRonin</a> &amp; <a href="https://github.com/mhvelplund">mhvelplund</a></li>
+<li>Twitter/X: 🚫 (<em>Friends don't let friends support Elon Musk.</em>)</li>
+</ul>
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="a87b3f45-aa9b-4875-9744-74a02c0727a4"></div>
+<div style="float:right">
+<a href="files/AWS Certified Solutions Architect - Associate certificate.pdf"><img src="img/AWS_Certified_Logo_SAA_294x230_Color.png" alt=""></a>
+</div>
+<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+<script type="text/javascript" async src="//cdn.youracclaim.com/assets/utilities/embed.js"></script>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="virtual-angular-developer-environment-with-vagrant"><a class="header" href="#virtual-angular-developer-environment-with-vagrant">Virtual Angular developer environment with Vagrant</a></h1>
+<ul>
+<li><a href="VirtualDeveloperEnvironmentWithVagrant.html#overview">Overview</a></li>
+<li><a href="VirtualDeveloperEnvironmentWithVagrant.html#the-goal">The goal</a></li>
+<li><a href="VirtualDeveloperEnvironmentWithVagrant.html#tools">Tools</a></li>
+<li><a href="VirtualDeveloperEnvironmentWithVagrant.html#creating-a-base-box">Creating a base box</a></li>
+<li><a href="VirtualDeveloperEnvironmentWithVagrant.html#configure-the-vagrant-box">Configure the Vagrant box</a></li>
+</ul>
+<h2 id="overview"><a class="header" href="#overview">Overview</a></h2>
+<p><em>2023-09-17: Not anymore!</em> 🙂</p>
+<p>In my work, I unfortunately have to maintain some legacy applications that don't play nice with newer version of Visual Studio and MSSQL. An obvious solution was to use virtual machines for each environment, and after 5 minutes of Googling for things like &quot;vagrant windows development&quot; I came across this two-part article: <a href="http://www.developer.com/net/virtualize-your-windows-development-environments-with-vagrant-packer-and-chocolatey-part-1.html">Virtualize Your Windows Development Environments with Vagrant, Packer, and Chocolatey</a>.</p>
+<p>Note: This tutorial ends up with a box running a preview of Windows 10 Enterprise edition, which may be fine, but I also tried using my own full edition of Windows 10. This failed later because the XML file for unattended setup didn't match. I guess I'll look into that later.</p>
+<h2 id="the-goal"><a class="header" href="#the-goal">The goal</a></h2>
+<p>To get started I'm going to make something simple where I can find all the packages I need with <a href="https://chocolatey.org">Chocolatey</a>. </p>
+<p>I settled on building a development machine for Angular development.</p>
+<p>Base box:</p>
+<ul>
+<li>Windows 10</li>
+<li>Chocolatey</li>
+</ul>
+<p>Vagrant addons:</p>
+<ul>
+<li>VS Code</li>
+<li>Chrome</li>
+<li>Git</li>
+<li>Node.js (for npm)</li>
+</ul>
+<h2 id="tools"><a class="header" href="#tools">Tools</a></h2>
+<p>To make my Angualr dev machine I need some tools:</p>
+<ul>
+<li><a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a> [5.1.26]:
+This is the virtual machine host that will be running my Vagrant images.</li>
+<li><a href="https://www.vagrantup.com/downloads.html">Vagrant</a> [2.0.0]:
+This is the tool that manages the virtual machines</li>
+<li><a href="https://www.packer.io/downloads.html">Packer</a> [1.0.4]:
+I need this to build my Vagrant base box.</li>
+</ul>
+<p>I install VirtualBox and Vagrant in the given order using the default options and locations. Vagrant requires a restart.</p>
+<p>&quot;Packer&quot; is just an executable, so for now I just unzip it and place it in my system path.</p>
+<h2 id="creating-a-base-box"><a class="header" href="#creating-a-base-box">Creating a base box</a></h2>
+<p>Following the original article, I clone the example repository
+(<a href="https://github.com/joefitzgerald/packer-windows.git">joefitzgerald/packer-windows</a>).</p>
+<p>After cloning &quot;packer-windows&quot; I open a command line in the new directory.</p>
+<p>The Windows 10 template does not include Chocolatey, so i added <code>&quot;./scripts/chocolatey.ps1&quot;,</code> to the provisioners section of &quot;windows_10.json&quot; (it's important that it's before the compact script):</p>
+<pre><code>&quot;provisioners&quot;: [
+  {
+    &quot;type&quot;: &quot;shell&quot;,
+    &quot;remote_path&quot;: &quot;/tmp/script.bat&quot;,
+    &quot;execute_command&quot;: &quot;{{.Vars}} cmd /c C:/Windows/Temp/script.bat&quot;,
+    &quot;scripts&quot;: [
+      &quot;./scripts/vm-guest-tools.bat&quot;,
+      &quot;./scripts/vagrant-ssh.bat&quot;,
+      &quot;./scripts/disable-auto-logon.bat&quot;,
+      &quot;./scripts/enable-rdp.bat&quot;,
+      &quot;./scripts/compile-dotnet-assemblies.bat&quot;
+    ]
+  },
+  {
+    &quot;type&quot;: &quot;powershell&quot;,
+    &quot;script&quot;: &quot;./scripts/chocolatey.ps1&quot;
+  },
+  {
+    &quot;type&quot;: &quot;shell&quot;,
+    &quot;remote_path&quot;: &quot;/tmp/script.bat&quot;,
+    &quot;execute_command&quot;: &quot;{{.Vars}} cmd /c C:/Windows/Temp/script.bat&quot;,
+    &quot;script&quot;: &quot;./scripts/compact.bat&quot;
+  }
+],
+</code></pre>
+<p>Hint: See &quot;<a href="examples/windows_10_chocolatey.json">windows_10_chocolatey.json</a>&quot; and &quot;<a href="examples/vagrantfile-windows_10_chocolatey.template">vagrantfile-windows_10_chocolatey.template</a>&quot;.</p>
+<p>Then I ran:</p>
+<pre><code>packer build windows_10_chocolatey.json
+</code></pre>
+<p>This took a while ... like 4 hours. The worst thing was that the process seeming stalled after 30 minutes while running &quot;SDelete&quot;. Luckily, I left it running and eventually I had a new Vagrant box file in the &quot;packer-windows&quot; dir, called &quot;windows_10_virtualbox.box&quot;.</p>
+<p>I moved the box file to &quot;c:\HashCorp&quot; and started a new command line in that directory, where I ran:</p>
+<pre><code>vagrant box add windows10 windows_10_virtualbox.box
+</code></pre>
+<h2 id="configure-the-vagrant-box"><a class="header" href="#configure-the-vagrant-box">Configure the Vagrant box</a></h2>
+<p>With the base box defined, it's time to make images based on it. First I made a directory to store the virtual machine image. In the new directory I ran: </p>
+<pre><code>vagrant init windows10
+</code></pre>
+<p>This creates a Vagrant file.</p>
+<p>I edit the Vagrantfile to install some extra packages by adding the following at the bottom before the <code>end</code> keyword:</p>
+<pre><code>config.vm.provision &quot;shell&quot;, inline: &lt;&lt;-SHELL
+  choco install -y googlechrome visualstudiocode nodejs.install git.install
+SHELL
+</code></pre>
+<p>Afterwards I run:</p>
+<pre><code>vagrant up
+vagrant rdp
+</code></pre>
+<p>Username: <code>.\vagrant</code>
+Password: <code>vagrant</code></p>
+<p>Later, if I change the Vagrantfile, I can rerun the provisioning with:</p>
+<pre><code>vagrant reload --provision
+</code></pre>
+<p>That's it for now. I could try to add some of the plugins I use regularly in VS Code, but I would rather have a look at getting my non-preview ISO working, and installing some of those legacy systems that cause me trouble on a weekly basis.</p>
+<p>Hint: It might also be practical to create a repository for base boxes: <a href="https://github.com/hollodotme/Helpers/blob/master/Tutorials/vagrant/self-hosted-vagrant-boxes-with-versioning.md">How to set up a self-hosted &quot;vagrant cloud&quot; with versioned, self-packaged vagrant boxes</a></p>
+<!-- https://scotch.io/tutorials/how-to-create-a-vagrant-base-box-from-an-existing-one -->
+<div style="break-before: page; page-break-before: always;"></div><h1 id="nodejs"><a class="header" href="#nodejs">Node.js</a></h1>
+<h2 id="test-server-for-openapi-specs"><a class="header" href="#test-server-for-openapi-specs">Test server for OpenAPI specs</a></h2>
+<p>A Node package that returns the examples from the API as responses: <a href="https://www.npmjs.com/package/@openapi-generator-plus/typescript-express-example-server-generator">https://www.npmjs.com/package/@openapi-generator-plus/typescript-express-example-server-generator</a>.</p>
+<h2 id="installing-nodejs"><a class="header" href="#installing-nodejs">Installing node.js</a></h2>
+<p>Source: <a href="https://docs.microsoft.com/en-us/windows/nodejs/setup-on-wsl2">Set up your Node.js development environment with WSL 2</a></p>
+<pre><code class="language-shell"># Get Node version manager. Check for newer release at https://github.com/nvm-sh/nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+nvm install node  # Install the newest node
+nvm install --lts # Install the current LTS version
+
+# Set some defaults form npm init. See current settings with &quot;npm config list | grep init&quot;
+npm set init.author.name &quot;Mads Hvelplund&quot;
+npm set init.author.email &quot;mads@swissarmyronin.dx&quot;
+npm set init.author.url &quot;https://your-url.com&quot;
+npm set init.license &quot;MIT&quot;
+npm set init.version &quot;1.0.0&quot;
+</code></pre>
+<p><em>Make sure that neither path for node and npm hit the ones installed locally by NVM!</em></p>
+<h2 id="setup-new-project"><a class="header" href="#setup-new-project">Setup new project</a></h2>
+<p>Initialize a project with:</p>
+<pre><code class="language-shell">npx --yes license MIT
+npx --yes gitignore node
+npm init -y
+
+# for typescript add ...
+npm i typescript --save-dev
+npx --yes tsc --init
+echo &quot;console.log('Hello World');&quot; &gt; index.ts
+tsc &amp;&amp; node index.js
+</code></pre>
+<h2 id="misc"><a class="header" href="#misc">Misc</a></h2>
+<ul>
+<li><a href="https://www.freecodecamp.org/news/how-to-make-a-promise-out-of-a-callback-function-in-javascript-d8ec35d1f981/">Make a Promise out of a Callback function in JavaScript</a></li>
+<li>Use node for shell scripting: <a href="https://github.com/google/zx">google/zx</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/typescript-new-project">Set up a new TypeScript project</a></li>
+<li><a href="files/How_to_Build_an_AWS_Lambda_Function_in_Typescript.pdf">How to Build an AWS Lambda Function in Typescript</a> (src: <a href="https://web.archive.org/web/20201031135018/https://scotch.io/@nwayve/how-to-build-a-lambda-function-in-typescript">scotch.io</a>)</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="assembly"><a class="header" href="#assembly">Assembly</a></h1>
+<p>Compilers written in Assembly for Lisp, Forth and C: https://github.com/mhvelplund/stage0/tree/master/stage2</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="aws-notes"><a class="header" href="#aws-notes">AWS Notes</a></h1>
+<ul>
+<li><a href="AWS.html#assume-role-script">Assume-role script</a></li>
+<li><a href="AWS.html#bulk-log-retention-update-in-powershell">Bulk log retention update in Powershell</a></li>
+<li><a href="AWS.html#ecs-on-spot-instances">ECS on spot instances</a></li>
+<li><a href="AWS.html#teamcity-aws-assume-role">Teamcity AWS assume role</a></li>
+<li><a href="AWS.html#cross-account-roles">Cross account roles</a></li>
+<li><a href="AWS.html#ec2-instance-metadata">EC2 instance metadata</a></li>
+<li><a href="AWS.html#lambda">Lambda</a></li>
+</ul>
+<hr />
+<p>This page contains a collection of unrelated notes pertaining to AWS.</p>
+<h2 id="assume-role-script"><a class="header" href="#assume-role-script">Assume-role script</a></h2>
+<p>Set the <code>AWS_ACCESS_KEY_ID</code> and <code>AWS_SECRET_ACCESS_KEY</code>, or the <code>AWS_PROFILE</code> environment variables to the user that should assume a role.
+Set <code>ROLE_ARN</code> to the Arn of the role being assumed. Finally, create a &quot;command line&quot; build step.</p>
+<pre><code class="language-shell">export $(printf &quot;AWS_ACCESS_KEY_ID=%s AWS_SECRET_ACCESS_KEY=%s AWS_SESSION_TOKEN=%s&quot; \
+    $(aws sts assume-role \
+        --role-arn &quot;${ROLE_ARN}&quot; \
+        --role-session-name &quot;${USER}&quot; \
+        --query &quot;Credentials.[AccessKeyId,SecretAccessKey,SessionToken]&quot; \
+        --output text))
+</code></pre>
+<h2 id="bulk-log-retention-update-in-powershell"><a class="header" href="#bulk-log-retention-update-in-powershell">Bulk log retention update in Powershell</a></h2>
+<p>This sets log retention to 1 day for all Airship lambdas.</p>
+<pre><code class="language-powershell">$logGroups=(aws logs describe-log-groups --log-group-name-prefix &quot;/aws/lambda&quot; --query &quot;logGroups[*].logGroupName&quot; --output=text).Split() `
+    | where {$_ -match 'lambda-lookup'} 
+foreach ($logGroupName in $logGroups) {
+    aws logs put-retention-policy --log-group-name $logGroupName --retention-in-days 1
+}
+</code></pre>
+<h2 id="ecs-on-spot-instances"><a class="header" href="#ecs-on-spot-instances">ECS on spot instances</a></h2>
+<ul>
+<li><a href="https://aws.amazon.com/blogs/aws/docker-amazon-ecs-and-spot-fleets-a-great-fit-together/">Docker, Amazon ECS, and Spot Fleets: A Great Fit Together</a></li>
+<li><a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-purchase-options.html">Auto Scaling Groups with Multiple Instance Types and Purchase Options</a></li>
+<li><a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-launch-spot-instances.html">Launching Spot Instances in Your Auto Scaling Group</a></li>
+<li>Terraform <code>mixed_instances_policy</code> for <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html"><code>aws_autoscaling_group</code></a></li>
+<li><a href="https://github.com/tongueroo/ecs-spot-demo">ECS Spot Fleet Demo</a> (with drain script userdata)</li>
+</ul>
+<h2 id="teamcity-aws-assume-role"><a class="header" href="#teamcity-aws-assume-role">Teamcity AWS assume role</a></h2>
+<p>Set the <code>AWS_ACCESS_KEY_ID</code> and <code>AWS_SECRET_ACCESS_KEY</code> environment variables to the user that should assume a role. Set <code>ROLE_ARN</code> to the Arn of the role being assumed. Finally, create a &quot;command line&quot; build step that runs in the &quot;alpine:latest&quot; Docker container.</p>
+<pre><code class="language-shell">apk add jq
+CREDENTIALS=$(aws sts assume-role --role-arn $ROLE_ARN --role-session-name teamcity  --duration-seconds 900)
+mkdir - ~/.aws
+echo &quot;##teamcity[setParameter name='AWS_ACCESS_KEY_ID' value='$(echo $CREDENTIALS | jq -r .Credentials.AccessKeyId)']&quot;
+echo &quot;##teamcity[setParameter name='AWS_SECRET_ACCESS_KEY' value='$(echo $CREDENTIALS | jq -r .Credentials.SecretAccessKey)']&quot;
+echo &quot;##teamcity[setParameter name='AWS_SESSION_TOKEN' value='$(echo $CREDENTIALS | jq -r .Credentials.SessionToken)']&quot;
+</code></pre>
+<h2 id="cross-account-roles"><a class="header" href="#cross-account-roles">Cross account roles</a></h2>
+<p>Example: <a href="https://jackiechen.org/2015/11/03/ec2-instance-cannot-assume-role-in-other-accounts/">https://jackiechen.org/2015/11/03/ec2-instance-cannot-assume-role-in-other-accounts/</a></p>
+<h2 id="ec2-instance-metadata"><a class="header" href="#ec2-instance-metadata">EC2 instance metadata</a></h2>
+<p>Get metadata list:</p>
+<pre><code class="language-text">$ wget -q -O- http://169.254.169.254/latest/meta-data
+ami-id
+ami-launch-index
+ami-manifest-path
+block-device-mapping/
+hostname
+iam/
+instance-action
+instance-id
+instance-type
+local-hostname
+local-ipv4
+mac
+metrics/
+network/
+placement/
+profile
+public-keys/
+reservation-id
+security-groups
+services/
+</code></pre>
+<p>Get specific metadata, e.g <code>instance-id</code>:</p>
+<pre><code class="language-text">$ wget -q -O- http://169.254.169.254/latest/meta-data/instance-id
+i-08820e8f284ffa01a
+</code></pre>
+<p>Source: <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html</a></p>
+<h2 id="lambda"><a class="header" href="#lambda">Lambda</a></h2>
+<ul>
+<li>Deployment management: <a href="http://apex.run/">Apex</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="bash-scripting"><a class="header" href="#bash-scripting">Bash scripting</a></h1>
+<ul>
+<li><a href="BashScripting.html#whats-hogging-the-port">What's hogging the port?</a></li>
+<li><a href="BashScripting.html#parse-parameters">Parse parameters</a></li>
+<li><a href="BashScripting.html#beep-when-done">Beep when done</a></li>
+<li><a href="BashScripting.html#bash-strict-mode">Bash Strict Mode</a></li>
+<li><a href="BashScripting.html#working-with-processes">Working with processes</a></li>
+<li><a href="BashScripting.html#echo-multiline-string">Echo multiline string</a></li>
+</ul>
+<h2 id="whats-hogging-the-port"><a class="header" href="#whats-hogging-the-port">What's hogging the port?</a></h2>
+<p>ss  -lptn 'sport = :9080'</p>
+<h2 id="parse-parameters"><a class="header" href="#parse-parameters">Parse parameters</a></h2>
+<p>Source: <a href="https://stackoverflow.com/a/7948533/511976">Using getopts to process long and short command line options</a></p>
+<pre><code class="language-shell"># NOTE: This requires GNU getopt.  On Mac OS X and FreeBSD, you have to install this
+# separately; see below.
+TEMP=$(getopt -o vdm: --long verbose,debug,memory:,debugfile:,minheap:,maxheap: \
+              -n 'javawrap' -- &quot;$@&quot;)
+
+if [ $? != 0 ] ; then echo &quot;Terminating...&quot; &gt;&amp;2 ; exit 1 ; fi
+
+# Note the quotes around '$TEMP': they are essential!
+eval set -- &quot;$TEMP&quot;
+
+VERBOSE=false
+DEBUG=false
+MEMORY=
+DEBUGFILE=
+JAVA_MISC_OPT=
+while true; do
+  case &quot;$1&quot; in
+    -v | --verbose ) VERBOSE=true; shift ;;
+    -d | --debug ) DEBUG=true; shift ;;
+    -m | --memory ) MEMORY=&quot;$2&quot;; shift 2 ;;
+    --debugfile ) DEBUGFILE=&quot;$2&quot;; shift 2 ;;
+    --minheap )
+      JAVA_MISC_OPT=&quot;$JAVA_MISC_OPT -XX:MinHeapFreeRatio=$2&quot;; shift 2 ;;
+    --maxheap )
+      JAVA_MISC_OPT=&quot;$JAVA_MISC_OPT -XX:MaxHeapFreeRatio=$2&quot;; shift 2 ;;
+    -- ) shift; break ;;
+    * ) break ;;
+  esac
+done
+</code></pre>
+<h2 id="beep-when-done"><a class="header" href="#beep-when-done">Beep when done</a></h2>
+<pre><code class="language-shell">./run_long.sh; echo -e &quot;\a&quot;
+</code></pre>
+<h2 id="bash-strict-mode"><a class="header" href="#bash-strict-mode">Bash Strict Mode</a></h2>
+<p><a href="http://redsymbol.net/articles/unofficial-bash-strict-mode/">Unofficial Strict Mode</a></p>
+<h2 id="working-with-processes"><a class="header" href="#working-with-processes">Working with processes</a></h2>
+<p>Check if a process is running:</p>
+<pre><code class="language-shell">ps -p $PID &gt;&amp;-
+</code></pre>
+<p>... returns 0 if the process id exists, and 1 otherwise</p>
+<ul>
+<li><code>$!</code> the PID of the last background job run</li>
+<li><code>$?</code> the return code of the last job that finished</li>
+<li><code>wait $PID</code> blocks until the task completes</li>
+</ul>
+<h2 id="echo-multiline-string"><a class="header" href="#echo-multiline-string">Echo multiline string</a></h2>
+<p>The example creates a small executable script that dumps the contents of the root dir.</p>
+<!--
+```shell
+IFS='' read -r -d '' SCRIPT <<"EOF"
+#!/bin/bash
+ls -lA /
+EOF
+
+echo "$SCRIPT" > listroot.sh
+chmod +x listroot.sh
+```
+
+or ..
+-->
+<pre><code class="language-shell">cat &lt;&lt;EOL &gt; listroot.sh
+#!/bin/bash
+ls -lA /
+EOL
+chmod +x listroot.sh
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="lots-of-css-effects"><a class="header" href="#lots-of-css-effects">Lots of CSS effects</a></h1>
+<p><a href="https://www.rankred.com/amazing-css3-effects/">https://www.rankred.com/amazing-css3-effects/</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="docker"><a class="header" href="#docker">Docker</a></h1>
+<ul>
+<li><a href="Docker.html#dive">Dive</a></li>
+<li><a href="Docker.html#gui-apps">GUI apps</a></li>
+<li><a href="Docker.html#run-a-rust-command">Run a rust command</a></li>
+<li><a href="Docker.html#extract-dockerfile">Extract Dockerfile</a></li>
+</ul>
+<h2 id="dive"><a class="header" href="#dive">Dive</a></h2>
+<p><a href="https://github.com/wagoodman/dive">Dive</a>: A tool for exploring each layer in a docker image.</p>
+<h2 id="gui-apps"><a class="header" href="#gui-apps">GUI apps</a></h2>
+<p>Source: <a href="https://www.trickster.dev/post/running-gui-apps-within-docker-containers/">https://www.trickster.dev/post/running-gui-apps-within-docker-containers/</a></p>
+<p>Create <code>Dockerfile</code>:</p>
+<pre><code class="language-dockerfile">FROM ubuntu:latest
+RUN apt-get update &amp;&amp; apt-get install -y libxext-dev libxrender-dev libxtst-dev firefox
+CMD firefox 
+</code></pre>
+<p>Create <code>docker-compose.yml</code>:</p>
+<pre><code class="language-yaml">version: '2'
+services:
+  firefox:
+    build: .
+    environment: [ &quot;DISPLAY=novnc:0&quot; ]
+    depends_on: [ &quot;novnc&quot; ]
+    networks: [ &quot;x11&quot; ]
+  novnc:
+    image: theasp/novnc:latest
+    environment:
+      - DISPLAY_WIDTH=1600
+      - DISPLAY_HEIGHT=968
+      - RUN_XTERM=no
+    ports: [ &quot;8080:8080&quot; ]
+    networks: [ &quot;x11&quot; ]
+networks:
+  x11:
+</code></pre>
+<p>Run:</p>
+<pre><code class="language-shell">docker-compose up -d
+</code></pre>
+<p>Open <a href="http://localhost:8080/vnc_auto.html">http://localhost:8080/vnc_auto.html</a></p>
+<h2 id="run-a-rust-command"><a class="header" href="#run-a-rust-command">Run a rust command</a></h2>
+<p>The parameter <code>--user &quot;$(id -u)&quot;:&quot;$(id -g)&quot;</code> makes the current user the owner of the generated artifacts, avoiding <code>root</code> as owner.</p>
+<pre><code class="language-shell">LAMBDA_ARCH=&quot;linux/arm64&quot; # set this to either linux/arm64 for ARM functions, or linux/amd64 for x86 functions.
+RUST_TARGET=&quot;aarch64-unknown-linux-gnu&quot; # corresponding with the above, set this to aarch64 or x86_64 -unknown-linux-gnu for ARM or x86 functions.
+RUST_VERSION=&quot;latest&quot; # Set this to a specific version of rust you want to compile for, or to latest if you want the latest stable version.
+docker run \
+  --platform ${LAMBDA_ARCH} \
+  --rm --user &quot;$(id -u)&quot;:&quot;$(id -g)&quot; \
+  -v &quot;${PWD}&quot;:/usr/src/myapp -w /usr/src/myapp rust:${RUST_VERSION} \
+  cargo build -p lambda_runtime --example basic --release --target ${RUST_TARGET} # This line can be any cargo command
+</code></pre>
+<h2 id="extract-dockerfile"><a class="header" href="#extract-dockerfile">Extract Dockerfile</a></h2>
+<p>Generate a good starting point for a Dcokerfile.</p>
+<pre><code>docker history --no-trunc --format '{{.CreatedBy}}' qemu | grep -v '#(nop)' | tac
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="examples-of-stored-proceduresfunctions"><a class="header" href="#examples-of-stored-proceduresfunctions">Examples of stored procedures/functions</a></h1>
+<ul>
+<li><a href="StoredProcedureExamples.html#whoisactive">WhoIsActive</a></li>
+<li><a href="StoredProcedureExamples.html#stored-procedure-with-shared-temp-table">Stored procedure with shared temp table</a></li>
+<li><a href="StoredProcedureExamples.html#functions">Functions</a></li>
+</ul>
+<hr />
+<p>These are based on scanning some tables and aggreagating data. The details are unimportant, but both methods achieve roughly the same result.</p>
+<h2 id="whoisactive"><a class="header" href="#whoisactive">WhoIsActive</a></h2>
+<p>WhoIsActive is a useful stored procedure (<a href="whoisactive.zip">FILE</a> <em>Feb. 1st, 2018</em>).</p>
+<p>Find Blocking leaders</p>
+<pre><code>EXEC sp_WhoIsActive      @find_block_leaders = 1
+</code></pre>
+<p>Returns the same data as in comment header</p>
+<pre><code>EXEC sp_WhoIsActive    @help = 1
+</code></pre>
+<p>Outer ad-hoc query, query plans, full stored procedure or batch</p>
+<pre><code>EXEC sp_whoisactive @get_outer_command = 1,@get_plans=1,@get_full_inner_text=1
+</code></pre>
+<p>Get Locks per request . XML format</p>
+<pre><code>EXEC sp_WhoIsActive    @get_locks = 1
+</code></pre>
+<p>Get waits of all waits pending on a request</p>
+<pre><code>EXEC sp_WhoIsActive     @get_task_info = 2
+</code></pre>
+<p>Source: <a href="https://web.archive.org/web/20230129152246/https://www.sqlserver-dba.com/2015/09/sp_whoisactive-utility-for-sql-server-troubleshooting.html">link</a></p>
+<h2 id="stored-procedure-with-shared-temp-table"><a class="header" href="#stored-procedure-with-shared-temp-table">Stored procedure with shared temp table</a></h2>
+<p>Creates two procedures (dropping existing variants). The second procedure uses the output from the first.</p>
+<pre><code class="language-sql">IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'GetSlowExecutions') AND type IN ( N'P', N'PC' ))
+DROP PROCEDURE GetSlowExecutions
+GO
+
+CREATE PROCEDURE GetSlowExecutions
+	@ThresholdSeconds BIGINT   
+AS   
+    SET NOCOUNT ON;  
+	SELECT ExecutionId, (ExecutionDurationSec * 1000) / NumberOfRowsInserted AS MsPerRow, ExecutionDurationSec / 60 AS Minutes, PackageName, 
+		Status, Destination, NumberOfRowsInserted	
+	FROM (
+		SELECT xd.ExecutionDurationSec, x.PackageName, xd.ExecutionId, xd.Status, xd.Destination, xd.NumberOfRowsInserted, 
+			xd.NumberOfRowsSelected, xd.StartTime, xd.EndTime
+		FROM Audit.ExecutionDetail AS xd 
+		INNER JOIN Audit.Execution AS x ON xd.ExecutionId = x.ExecutionId
+		WHERE xd.ExecutionDurationSec &gt; 0
+	) AS x
+	WHERE (NumberOfRowsInserted &gt; 0) AND (ExecutionDurationSec &gt; @ThresholdSeconds)
+	ORDER BY MsPerRow DESC;
+GO
+
+IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'GetSlowPackages') AND type IN ( N'P', N'PC' ))
+DROP PROCEDURE GetSlowPackages
+GO
+
+-- packages that contain executions where every insert takes a long time and the overall 
+-- execution time is greater than @ThresholdSeconds
+CREATE PROCEDURE GetSlowPackages
+	@ThresholdSeconds BIGINT   
+AS   
+    SET NOCOUNT ON;  
+	CREATE TABLE #Result (
+		ExecutionId BIGINT, MsPerRow INT, Minutes INT, PackageName VARCHAR(255),
+		Status VARCHAR(255), Destination VARCHAR(255), NumberOfRowsInserted INT
+	);
+	INSERT #Result EXECUTE GetSlowExecutions @ThresholdSeconds;
+	SELECT MAX(MsPerRow) AS MsPerRow, PackageName
+	FROM #Result AS sq
+	GROUP BY PackageName
+	ORDER BY MsPerRow DESC;
+	DROP TABLE #Result;
+GO
+
+DECLARE @Threshold INT = 600;
+EXECUTE GetSlowExecutions @Threshold
+EXECUTE GetSlowPackages @Threshold
+GO
+</code></pre>
+<h2 id="functions"><a class="header" href="#functions">Functions</a></h2>
+<p>As before, two functions, where the latter uses the first's output.</p>
+<pre><code class="language-sql">IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'FGetSlowExecutions') AND type = N'IF')
+DROP FUNCTION FGetSlowExecutions
+GO
+
+CREATE FUNCTION FGetSlowExecutions (@ThresholdSeconds int)
+RETURNS TABLE AS
+RETURN (
+	SELECT ExecutionId, (ExecutionDurationSec * 1000) / NumberOfRowsInserted AS MsPerRow, ExecutionDurationSec / 60 AS Minutes, PackageName, 
+		Status, Destination, NumberOfRowsInserted	
+	FROM (
+		SELECT xd.ExecutionDurationSec, x.PackageName, xd.ExecutionId, xd.Status, xd.Destination, xd.NumberOfRowsInserted, 
+			xd.NumberOfRowsSelected, xd.StartTime, xd.EndTime
+		FROM Audit.ExecutionDetail AS xd 
+		INNER JOIN Audit.Execution AS x ON xd.ExecutionId = x.ExecutionId
+		WHERE xd.ExecutionDurationSec &gt; 0
+	) AS x
+	WHERE NumberOfRowsInserted &gt; 0 AND ExecutionDurationSec &gt; @ThresholdSeconds
+)
+GO
+
+IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'FGetSlowPackages') AND type = N'IF')
+DROP FUNCTION FGetSlowPackages
+GO
+
+CREATE FUNCTION FGetSlowPackages (@ThresholdSeconds int)
+RETURNS TABLE AS
+RETURN (
+	SELECT MAX(MsPerRow) AS MsPerRow, PackageName
+	FROM FGetSlowExecutions(@ThresholdSeconds)
+	GROUP BY PackageName
+)
+GO
+
+DECLARE @Threshold INT = 600;
+SELECT * FROM FGetSlowExecutions(@Threshold) ORDER BY MsPerRow DESC
+SELECT * FROM FGetSlowPackages(@Threshold) ORDER BY MsPerRow DESC
+GO
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="git"><a class="header" href="#git">Git</a></h1>
+<ul>
+<li><a href="Git.html#summarize-changes">Summarize changes</a></li>
+<li><a href="Git.html#find-big-files">Find big files</a></li>
+<li><a href="Git.html#git-helpers">Git helpers</a></li>
+<li><a href="Git.html#move-files-from-one-repository-to-another-preserving-git-history">Move files from one repository to another, preserving git history</a></li>
+<li><a href="Git.html#move-a-feature-branch-from-one-product-to-another">Move a feature branch from one product to another</a></li>
+<li><a href="Git.html#working-with-multiple-git-repositories">Working with multiple git repositories</a></li>
+<li><a href="Git.html#temp-git-ignore">Temp. Git ignore</a></li>
+</ul>
+<h2 id="summarize-changes"><a class="header" href="#summarize-changes">Summarize changes</a></h2>
+<pre><code class="language-shell">git diff @{2023-09-10}.. -- docs/src
+git whatchanged --since=&quot;last Sunday&quot; -p -- docs/src
+</code></pre>
+<h2 id="find-big-files"><a class="header" href="#find-big-files">Find big files</a></h2>
+<p>Find out if large binary files are lurking in the history. Lists all blobs with commit by ascending size:</p>
+<pre><code class="language-shell">git rev-list --objects --all |
+  git cat-file --batch-check='%(objecttype) %(objectname) %(objectsize) %(rest)' |
+  sed -n 's/^blob //p' |
+  sort --numeric-sort --key=2 |
+  cut -c 1-12,41- |
+  $(command -v gnumfmt || echo numfmt) --field=2 --to=iec-i --suffix=B --padding=7 -- \
+  round=nearest
+</code></pre>
+<p>Src: <a href="https://stackoverflow.com/a/42544963/511976">https://stackoverflow.com/a/42544963/511976</a></p>
+<p>Delete them with <code>git-filter-repo</code> (src: <a href="https://stackoverflow.com/a/61602985/511976">https://stackoverflow.com/a/61602985/511976</a>).</p>
+<h2 id="git-helpers"><a class="header" href="#git-helpers">Git helpers</a></h2>
+<p>UI: <a href="https://github.com/mhvelplund/git-bash">github.com/mhvelplund/git-bash</a>.</p>
+<p>Credentials: <a href="https://techexpertise.medium.com/storing-git-credentials-with-git-credential-helper-33d22a6b5ce7">Storing Git Credentials with Git Credential Helper</a></p>
+<h2 id="move-files-from-one-repository-to-another-preserving-git-history"><a class="header" href="#move-files-from-one-repository-to-another-preserving-git-history">Move files from one repository to another, preserving git history</a></h2>
+<p>Excellent article <a href="https://medium.com/@ayushya/move-directory-from-one-repository-to-another-preserving-git-history-d210fa049d4b">here</a>.</p>
+<h2 id="move-a-feature-branch-from-one-product-to-another"><a class="header" href="#move-a-feature-branch-from-one-product-to-another">Move a feature branch from one product to another</a></h2>
+<p>If, by accident, one has created a feature <code>foo</code> from the wrong product
+version branch (eg.: <code>tmtand-3.1/develop</code>) and it really should have started
+from another product version branch (eg.: <code>tmtand-3.2/develop</code>)), then it's
+easy to rebase the feature on the proper product version with:</p>
+<pre><code class="language-shell">git rebase --onto target-branch source-branch
+</code></pre>
+<p>So in the case above, that would be:</p>
+<pre><code class="language-shell">git checkout tmtand-3.1/feature/foo
+git rebase --onto tmtand-3.2/develop tmtand-3.1/develop
+</code></pre>
+<h2 id="working-with-multiple-git-repositories"><a class="header" href="#working-with-multiple-git-repositories">Working with multiple git repositories</a></h2>
+<p>If your product consists of specific versions across multiple repositories,
+there are multiple options for managing that. I prefer
+<a href="http://gitslave.sourceforge.net">Gitslave</a> or <code>gits</code>.</p>
+<h2 id="temp-git-ignore"><a class="header" href="#temp-git-ignore">Temp. Git ignore</a></h2>
+<p>So, to temporarily ignore changes in a certain file, run:</p>
+<pre><code class="language-shell">git update-index --assume-unchanged &lt;file&gt;
+</code></pre>
+<p>Then when you want to track changes again:</p>
+<pre><code class="language-shell">git update-index --no-assume-unchanged &lt;file&gt;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="gpg-with-maven"><a class="header" href="#gpg-with-maven">GPG with Maven</a></h1>
+<p>To sign Maven artifacts add the following to the POM;</p>
+<pre><code class="language-xml">&lt;plugin&gt;
+    &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+    &lt;artifactId&gt;maven-gpg-plugin&lt;/artifactId&gt;
+    &lt;version&gt;1.5&lt;/version&gt;
+    &lt;executions&gt;
+    &lt;execution&gt;
+        &lt;id&gt;sign-artifacts&lt;/id&gt;
+        &lt;phase&gt;verify&lt;/phase&gt;
+        &lt;goals&gt;
+        &lt;goal&gt;sign&lt;/goal&gt;
+        &lt;/goals&gt;
+    &lt;/execution&gt;
+    &lt;/executions&gt;
+&lt;/plugin&gt;
+</code></pre>
+<p>The passphrase for the default key should go in a property in the POM, or preferably, in the &quot;~/.m2/settings.xml&quot; file.</p>
+<pre><code class="language-xml">...
+&lt;properties&gt;
+  &lt;gpg.passphrase&gt;secretpassword&lt;/gpg.passphrase&gt;
+&lt;/properties&gt;
+...
+</code></pre>
+<p>This signs using the default local key, and uses the &quot;gpg&quot;-command for signing. There are more options in the <a href="http://maven.apache.org/plugins/maven-gpg-plugin/sign-mojo.html">documentation</a>.</p>
+<h2 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h2>
+<p>Signing can fail with the message:</p>
+<pre><code class="language-shell">gpg: signing failed: Inappropriate ioctl for device
+</code></pre>
+<p>This is because the local GPG install wants to ask for the userpassword with a popup. Override by executing:</p>
+<pre><code class="language-shell">export GPG_TTY=$(tty)
+</code></pre>
+<h2 id="gpg-cheat-sheet"><a class="header" href="#gpg-cheat-sheet">GPG cheat sheet</a></h2>
+<p>There is a nice GPG cheatsheet <a href="http://irtfweb.ifa.hawaii.edu/~lockhart/gpg/">here</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="jsonyaml"><a class="header" href="#jsonyaml">JSON/YAML</a></h1>
+<p>Modifying JSON in-line with <a href="https://web.archive.org/web/20221206203605/http://engineering.monsanto.com/2015/05/22/jq-change-json/">jq</a></p>
+<p>Extra features in <a href="https://blog.daemonl.com/2016/02/yaml.html">YAML</a></p>
+<h2 id="making-a-custom-schema"><a class="header" href="#making-a-custom-schema">Making a custom schema</a></h2>
+<pre><code class="language-shell">npm install -g json-schema-generator
+json-schema-generator --pretty env-config.json -o schema.json
+</code></pre>
+<!-- npx http-server -p 9876 --cors -c-1 -->
+<div style="break-before: page; page-break-before: always;"></div><h1 id="maven"><a class="header" href="#maven">Maven</a></h1>
+<ul>
+<li><a href="Maven.html#update-all-pom-versions-in-a-repo">Update all pom versions in a repo</a></li>
+<li><a href="Maven.html#maven-release-with-local-deploy">Maven release with local deploy</a></li>
+<li><a href="Maven.html#maven-repo-on-github">Maven repo on GitHub</a></li>
+<li><a href="Maven.html#maven-master-password">Maven master password</a></li>
+</ul>
+<h2 id="update-all-pom-versions-in-a-repo"><a class="header" href="#update-all-pom-versions-in-a-repo">Update all pom versions in a repo</a></h2>
+<pre><code class="language-shell">mvn versions:set -DnewVersion=1.4-SNAPSHOT
+</code></pre>
+<h2 id="maven-release-with-local-deploy"><a class="header" href="#maven-release-with-local-deploy">Maven release with local deploy</a></h2>
+<p>Deploy to the local directory <code>./dist</code>:</p>
+<pre><code class="language-shell">mvn deploy -DaltDeploymentRepository=repo::default::file:dist
+</code></pre>
+<p>Release and deploy to the local directory <code>./dist</code>:</p>
+<pre><code class="language-shell">mvn release:prepare
+mvn release:perform -Darguments=-DaltDeploymentRepository=repo::default::file:dist
+</code></pre>
+<h2 id="maven-repo-on-github"><a class="header" href="#maven-repo-on-github">Maven repo on GitHub</a></h2>
+<p><a href="https://web.archive.org/web/20170413050638/https://cemerick.com/2010/08/24/hosting-maven-repos-on-github/">Hosting maven repos on GitHub</a></p>
+<h2 id="maven-master-password"><a class="header" href="#maven-master-password">Maven master password</a></h2>
+<p>To configure encrypted passwords, create a master password by running mvn -emp or mvn --encrypt-master-password followed by your master password.</p>
+<pre><code class="language-shell">$ mvn -emp mypassword
+{rsB56BJcqoEHZqEZ0R1VR4TIspmODx1Ln8/PVvsgaGw=}
+</code></pre>
+<p>Maven prints out an encrypted copy of the password to standard out. Copy this encrypted password and paste it into a ~/.m2/settings-security.xml file.</p>
+<pre><code class="language-xml">&lt;settingsSecurity&gt;
+  &lt;master&gt;{rsB56BJcqoEHZqEZ0R1VR4TIspmODx1Ln8/PVvsgaGw=}&lt;/master&gt;
+&lt;/settingsSecurity&gt;
+</code></pre>
+<p>After you have created a master password, you can then encrypt passwords for use in your Maven Settings. To encrypt a password with the master password, run mvn -ep or mvn --encrypt-password. Assume that you have a repository manager and you need to send a username of &quot;deployment&quot; and a password of &quot;qualityFIRST&quot;. To encrypt this particular password, you would run the following command:</p>
+<pre><code class="language-shell">$ mvn -ep qualityFIRST
+{uMrbEOEf/VQHnc0W2X49Qab75j9LSTwiM3mg2LCrOzI=}
+</code></pre>
+<p>At this point, copy the encrypted password printed from the output of mvn -ep and paste it into your Maven Settings.</p>
+<pre><code class="language-xml">&lt;settings&gt;
+  &lt;servers&gt;
+    &lt;server&gt;
+      &lt;id&gt;nexus&lt;/id&gt;
+      &lt;username&gt;deployment&lt;/username&gt;
+&lt;password&gt;{uMrbEOEf/VQHnc0W2X49Qab75j9LSTwiM3mg2LCrOzI=}&lt;/password&gt;
+    &lt;/server&gt;
+  &lt;/servers&gt;
+  ...
+&lt;/settings&gt;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="misc-notes"><a class="header" href="#misc-notes">Misc. Notes</a></h1>
+<ul>
+<li><a href="MiscNotes.html#god-mode">&quot;God mode&quot;</a></li>
+<li><a href="MiscNotes.html#recommend-vs-code-plugin">Recommend VS Code plugin</a></li>
+<li><a href="MiscNotes.html#terraform-docs-for-012">Terraform docs for 0.12+</a></li>
+<li><a href="MiscNotes.html#decompiler-plugin-java">Decompiler plugin Java</a></li>
+<li><a href="MiscNotes.html#run-command-as-admin">Run command as admin</a></li>
+<li><a href="MiscNotes.html#export-an-existing-environment-to-terraform">Export an existing environment to Terraform</a></li>
+<li><a href="MiscNotes.html#260-character-path-length-restriction">260 character path length restriction</a></li>
+<li><a href="MiscNotes.html#github">GitHub</a></li>
+<li><a href="MiscNotes.html#free-smime-certificates">Free S/MIME certificates</a></li>
+<li><a href="MiscNotes.html#allow-changing-the-password-on-first-login-via-rdp">Allow changing the password on first login via RDP</a></li>
+<li><a href="MiscNotes.html#removing-bloat-ware-from-a-new-windows-machine">Removing bloat ware from a new Windows machine</a></li>
+<li><a href="MiscNotes.html#turn-a-jar-file-into-an-executable">Turn a JAR file into an executable</a></li>
+<li><a href="MiscNotes.html#securityexception-on-binaries-running-from-a-network-share">SecurityException on binaries running from a network share</a></li>
+<li><a href="MiscNotes.html#netcopy">Netcopy</a></li>
+<li><a href="MiscNotes.html#twiki-syntax-high-lighting">TWiki syntax high-lighting</a></li>
+<li><a href="MiscNotes.html#cruft-detection">Cruft detection</a></li>
+<li><a href="MiscNotes.html#codesigning">Codesigning</a></li>
+<li><a href="MiscNotes.html#custom-security-contexts-in-jersey">Custom Security Contexts in Jersey</a></li>
+<li><a href="MiscNotes.html#linux--pam">Linux &amp; PAM</a></li>
+<li><a href="MiscNotes.html#net-core-notes">.NET Core notes</a></li>
+<li><a href="MiscNotes.html#rest-services">REST Services</a></li>
+</ul>
+<hr />
+<p>This page contains a collection of unrelated notes pertaining to issues I have Googled more than once.</p>
+<h2 id="god-mode"><a class="header" href="#god-mode">&quot;God mode&quot;</a></h2>
+<p>In Windows, create a folder on the desktop and rename it to:</p>
+<pre><code>GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}
+</code></pre>
+<h2 id="recommend-vs-code-plugin"><a class="header" href="#recommend-vs-code-plugin">Recommend VS Code plugin</a></h2>
+<p>Create a file .vscode/extensions.json with a recommendation array of extension ids, e.g.:</p>
+<pre><code class="language-json">{
+ &quot;recommendations&quot;: [&quot;ms-vscode.csharp&quot;, &quot;ms-mssql.mssql&quot;]
+}
+</code></pre>
+<h2 id="terraform-docs-for-012"><a class="header" href="#terraform-docs-for-012">Terraform docs for 0.12+</a></h2>
+<pre><code>docker run --rm \
+  -v $(pwd):/data \
+  cytopia/terraform-docs \
+  terraform-docs-012 --sort-inputs-by-required --with-aggregate-type-defaults md . &gt; README.md
+</code></pre>
+<h2 id="decompiler-plugin-java"><a class="header" href="#decompiler-plugin-java">Decompiler plugin Java</a></h2>
+<p><a href="https://mchr3k.github.io/jdeclipse-realign/">Mchr3k - JDEclipse-Realign</a></p>
+<h2 id="run-command-as-admin"><a class="header" href="#run-command-as-admin">Run command as admin</a></h2>
+<p>To run a command as admin without the mouse:</p>
+<ul>
+<li><code>Win-R</code> to open file dialog</li>
+<li>type command name and run with <code>Ctrl-Shift-Enter</code></li>
+</ul>
+<h2 id="export-an-existing-environment-to-terraform"><a class="header" href="#export-an-existing-environment-to-terraform">Export an existing environment to Terraform</a></h2>
+<pre><code class="language-shell">docker run --rm -iv &quot;${PWD}&quot;:/outputs cycloid/terracognita aws --tfstate /outputs/terraform.tfstate \
+  --access-key $AWS_ACCESS_KEY_ID --secret-key $AWS_SECRET_ACCESS_KEY --region eu-west-1 --hcl /outputs/main.tf
+</code></pre>
+<h2 id="260-character-path-length-restriction"><a class="header" href="#260-character-path-length-restriction">260 character path length restriction</a></h2>
+<p>To remove path length restriction in Windows 10 anniversary edition, run:</p>
+<pre><code class="language-powershell">REG ADD HKLM\SYSTEM\CurrentControlSet\Control\FileSystem /v LongPathsEnabled /t REG_DWORD /d 1
+</code></pre>
+<p>Can break old 32 bit apps.</p>
+<h2 id="github"><a class="header" href="#github">GitHub</a></h2>
+<ul>
+<li>License overview: <a href="https://help.github.com/articles/licensing-a-repository/">https://help.github.com/articles/licensing-a-repository/</a></li>
+</ul>
+<h2 id="free-smime-certificates"><a class="header" href="#free-smime-certificates">Free S/MIME certificates</a></h2>
+<p><a href="https://extrassl.actalis.it/portal/uapub/freemail?lang=en">Actalis</a> provides free S/MIME certifcates for non-commercial use.</p>
+<h2 id="allow-changing-the-password-on-first-login-via-rdp"><a class="header" href="#allow-changing-the-password-on-first-login-via-rdp">Allow changing the password on first login via RDP</a></h2>
+<p>Add a line to the RDP file with the text (or change the existing one):</p>
+<pre><code>enablecredsspsupport:i:0
+</code></pre>
+<p>Afterwards, delete the line again. <a href="https://technet.microsoft.com/en-us/library/ff393716">Technet</a> has a good explanation.</p>
+<h2 id="removing-bloat-ware-from-a-new-windows-machine"><a class="header" href="#removing-bloat-ware-from-a-new-windows-machine">Removing bloat ware from a new Windows machine</a></h2>
+<p><a href="http://osherove.com/blog/2017/9/29/removing-bloatware-from-a-new-windows-machine.html">Removing bloat ware from a new Windows machine</a></p>
+<h2 id="turn-a-jar-file-into-an-executable"><a class="header" href="#turn-a-jar-file-into-an-executable">Turn a JAR file into an executable</a></h2>
+<p>Download <a href="http://jsmooth.sourceforge.net/">JSmooth</a>. Only works if <code>JAVA_HOME</code> is set to a working JRE.</p>
+<h2 id="securityexception-on-binaries-running-from-a-network-share"><a class="header" href="#securityexception-on-binaries-running-from-a-network-share">SecurityException on binaries running from a network share</a></h2>
+<p>Let's say I get a SecurityException when running my .NET console application from &quot;\vmware-host\Shared Folders&quot;. In this case, simply open a developer prompt and type:</p>
+<pre><code>CasPol.exe -m -ag 1.2 -url &quot;file://\\vmware-host\Shared Folders/*&quot; FullTrust
+</code></pre>
+<p>From &quot;<a href="https://blogs.msdn.microsoft.com/shawnfa/2004/12/30/using-caspol-to-fully-trust-a-share/">Using CasPol to Fully Trust a Share</a>&quot;.</p>
+<h2 id="netcopy"><a class="header" href="#netcopy">Netcopy</a></h2>
+<p>Want to copy a file from one *Nix macine to another without the hassle of FTP?</p>
+<pre><code>DestinationShell# nc -l -p 2020 &gt; file.txt
+SourceShell# cat file.txt | nc dest.ip.address 2020
+</code></pre>
+<h2 id="twiki-syntax-high-lighting"><a class="header" href="#twiki-syntax-high-lighting">TWiki syntax high-lighting</a></h2>
+<p>TWiki sucks. But it sucks harder without syntax higlighting of snipptes. This plugin fixes that: <a href="http://twiki.org/cgi-bin/view/Plugins/DpSyntaxHighlighterPlugin">DpSyntaxHighlighterPlugin</a></p>
+<h2 id="cruft-detection"><a class="header" href="#cruft-detection">Cruft detection</a></h2>
+<p>Legacy projects are hoary with cruft. Find it and remove it with ...</p>
+<ul>
+<li><a href="http://classpathhelper.sourceforge.net">Classpath Helper</a></li>
+<li><a href="http://www.ucdetector.org">UCDetector: Unnecessary Code Detector</a></li>
+<li><a href="http://tattletale.jboss.org">Tattletale</a></li>
+</ul>
+<h2 id="codesigning"><a class="header" href="#codesigning">Codesigning</a></h2>
+<p>Signing a .NET binary post build is easy with a X.509 certificate. Heres how to sign <code>MyApp.exe</code> with <code>mycert.pfx</code>:</p>
+<pre><code>signtool.exe sign /v /f &quot;mycert.pfx&quot; -t &quot;http://timestamp.verisign.com/scripts/timstamp.dll&quot; &quot;MyApp.exe&quot;
+</code></pre>
+<h2 id="custom-security-contexts-in-jersey"><a class="header" href="#custom-security-contexts-in-jersey">Custom Security Contexts in Jersey</a></h2>
+<p><a href="https://simplapi.wordpress.com/2015/09/19/jersey-jax-rs-securitycontext-in-action/">Jersey (JAX-RS) SecurityContext in action</a></p>
+<h2 id="linux--pam"><a class="header" href="#linux--pam">Linux &amp; PAM</a></h2>
+<p>Sometimes you have a Linux server that uses PAM/ActiveDirectory to validate logins. If the connection to the AD lapses for some reason, you can find yourself locked out. These steps fix that.</p>
+<p>Boot into singleuser mode, hold shift duirng startup and choose <code>advanced options -&gt; recoverymode -&gt; drop to root shell</code> from the Grub menu.</p>
+<p>Remount harddisk in RW mode:</p>
+<pre><code>mount -o remount,rw /
+</code></pre>
+<p>Reestablish AD trust with Kerberos:</p>
+<pre><code>kinit xxx@MY-DOM
+</code></pre>
+<p>... hvor <code>xxx</code> is an AD browser account on the <code>MY-DOM</code> domain.</p>
+<h2 id="net-core-notes"><a class="header" href="#net-core-notes">.NET Core notes</a></h2>
+<ul>
+<li><a href="https://www.microsoft.com/net/core">.NET Core download</a></li>
+<li><a href="https://docs.asp.net/en/latest">Documentation</a></li>
+<li><a href="http://dotnetthoughts.net/how-to-setup-https-on-kestrel">How to setup Https on Kestrel</a></li>
+<li><a href="http://stackify.com/using-both-xproj-and-csproj-with-net-core">Using both xproj and csproj with .NET Core</a></li>
+</ul>
+<h2 id="rest-services"><a class="header" href="#rest-services">REST Services</a></h2>
+<p><a href="http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx">Service versioning</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="mssql-cookbooks"><a class="header" href="#mssql-cookbooks">MSSQL Cookbooks</a></h1>
+<ul>
+<li><a href="MssqlCookbooks.html#expensive-queries">Expensive queries</a></li>
+<li><a href="MssqlCookbooks.html#find-the-most-fragmented-indexes">Find the most fragmented indexes</a></li>
+<li><a href="MssqlCookbooks.html#large-tables">Large tables</a></li>
+<li><a href="MssqlCookbooks.html#open-connections">Open connections</a></li>
+<li><a href="MssqlCookbooks.html#statistics">Statistics</a>
+<ul>
+<li><a href="MssqlCookbooks.html#info-about-the-last-stats-update">Info about the last stats update</a></li>
+<li><a href="MssqlCookbooks.html#update-the-stats-for-an-index-on-a-table">Update the stats for an index on a table</a></li>
+<li><a href="MssqlCookbooks.html#update-all-stats-in-a-schema">Update all stats in a schema</a></li>
+<li><a href="MssqlCookbooks.html#split_string-before-sql-server-2016">SPLIT_STRING before SQL Server 2016</a></li>
+</ul>
+</li>
+</ul>
+<hr />
+<p>Some useful MSSQL queries for daily maintenance.</p>
+<h2 id="expensive-queries"><a class="header" href="#expensive-queries">Expensive queries</a></h2>
+<pre><code class="language-sql">SELECT TOP 10 SUBSTRING(qt.TEXT, (qs.statement_start_offset/2)+1, ((CASE qs.statement_end_offset
+WHEN -1 THEN DATALENGTH(qt.TEXT)
+ELSE qs.statement_end_offset
+END - qs.statement_start_offset)/2)+1),
+qs.execution_count,
+qs.total_logical_reads,
+qs.last_logical_reads,
+qs.total_logical_writes,
+qs.last_logical_writes,
+qs.total_worker_time,
+qs.last_worker_time,
+qs.total_elapsed_time/1000000 total_elapsed_time_in_S,
+qs.last_elapsed_time/1000000 last_elapsed_time_in_S,
+qs.last_execution_time,
+qp.query_plan
+FROM sys.dm_exec_query_stats qs
+CROSS APPLY sys.dm_exec_sql_text
+(
+   qs.sql_handle
+)
+qt
+CROSS APPLY sys.dm_exec_query_plan(qs.plan_handle) qp
+ORDER BY qs.total_logical_reads DESC -- logical reads
+-- ORDER BY qs.total_logical_writes DESC -- logical writes
+-- ORDER BY qs.total_worker_time DESC -- CPU time
+</code></pre>
+<h2 id="find-the-most-fragmented-indexes"><a class="header" href="#find-the-most-fragmented-indexes">Find the most fragmented indexes</a></h2>
+<pre><code class="language-sql">SELECT dbschemas.[name] as 'Schema', dbtables.[name] as 'Table', dbindexes.[name] as 'Index', indexstats.avg_fragmentation_in_percent, indexstats.page_count
+FROM sys.dm_db_index_physical_stats (DB_ID(), NULL, NULL, NULL, NULL) AS indexstats
+INNER JOIN sys.tables dbtables on dbtables.[object_id] = indexstats.[object_id]
+INNER JOIN sys.schemas dbschemas on dbtables.[schema_id] = dbschemas.[schema_id]
+INNER JOIN sys.indexes AS dbindexes ON dbindexes.[object_id] = indexstats.[object_id]
+AND indexstats.index_id = dbindexes.index_id
+WHERE indexstats.database_id = DB_ID() --AND dbtables.[name] like 'WastePickup%'
+ORDER BY indexstats.avg_fragmentation_in_percent desc
+</code></pre>
+<h2 id="large-tables"><a class="header" href="#large-tables">Large tables</a></h2>
+<pre><code class="language-sql">SELECT
+    t.NAME AS TableName,
+    i.name as indexName,
+    p.[Rows],
+    sum(a.total_pages) as TotalPages,
+    sum(a.used_pages) as UsedPages,
+    sum(a.data_pages) as DataPages,
+    (sum(a.total_pages) * 8) / 1024 as TotalSpaceMB,
+    (sum(a.used_pages) * 8) / 1024 as UsedSpaceMB,
+    (sum(a.data_pages) * 8) / 1024 as DataSpaceMB
+FROM
+    sys.tables t
+INNER JOIN
+    sys.indexes i ON t.OBJECT_ID = i.object_id
+INNER JOIN
+    sys.partitions p ON i.object_id = p.OBJECT_ID AND i.index_id = p.index_id
+INNER JOIN
+    sys.allocation_units a ON p.partition_id = a.container_id
+WHERE
+    t.NAME NOT LIKE 'dt%' AND
+    i.OBJECT_ID &gt; 255 AND
+    i.index_id &lt;= 1
+GROUP BY
+    t.NAME, i.object_id, i.index_id, i.name, p.[Rows]
+ORDER BY
+--    object_name(i.object_id)
+  Rows desc
+</code></pre>
+<h2 id="open-connections"><a class="header" href="#open-connections">Open connections</a></h2>
+<pre><code class="language-sql">SELECT DB_NAME(dbid) as DBName, COUNT(dbid) as NumberOfConnections, loginame as LoginName
+FROM sys.sysprocesses
+WHERE dbid &gt; 0
+--AND status &lt;&gt; 'sleeping'
+GROUP BY dbid, loginame
+</code></pre>
+<h2 id="statistics"><a class="header" href="#statistics">Statistics</a></h2>
+<h3 id="info-about-the-last-stats-update"><a class="header" href="#info-about-the-last-stats-update">Info about the last stats update</a></h3>
+<pre><code class="language-sql">SELECT t.name AS Table_Name, i.name AS Index_Name, i.type_desc AS Index_Type ,
+STATS_DATE(i.object_id,i.index_id) AS Date_Updated
+FROM sys.indexes i
+JOIN sys.tables t ON t.object_id = i.object_id
+WHERE i.type &gt; 0
+ORDER BY Date_Updated ASC
+--t.name ASC ,i.type_desc ASC ,i.name ASC
+</code></pre>
+<h3 id="update-the-stats-for-an-index-on-a-table"><a class="header" href="#update-the-stats-for-an-index-on-a-table">Update the stats for an index on a table</a></h3>
+<pre><code class="language-sql">UPDATE STATISTICS table_name index_name
+</code></pre>
+<h3 id="update-all-stats-in-a-schema"><a class="header" href="#update-all-stats-in-a-schema">Update all stats in a schema</a></h3>
+<p>NB: This can take a long time (in excess of 20 minutes)</p>
+<pre><code class="language-sql">EXEC sp_updatestats
+</code></pre>
+<h3 id="split_string-before-sql-server-2016"><a class="header" href="#split_string-before-sql-server-2016">SPLIT_STRING before SQL Server 2016</a></h3>
+<pre><code class="language-sql">CREATE FUNCTION STRING_SPLIT ( 
+    @string NVARCHAR(MAX), 
+    @delimiter CHAR(1) 
+) 
+RETURNS @output TABLE([value] NVARCHAR(MAX)) 
+BEGIN 
+    DECLARE @start INT, @end INT 
+    SELECT @start = 1, @end = CHARINDEX(@delimiter, @string) 
+    WHILE @start &lt; LEN(@string) + 1 BEGIN 
+        IF @end = 0  
+            SET @end = LEN(@string) + 1
+       
+        INSERT INTO @output ([value])  
+        VALUES(SUBSTRING(@string, @start, @end - @start)) 
+        SET @start = @end + 1 
+        SET @end = CHARINDEX(@delimiter, @string, @start)        
+    END 
+    RETURN 
+END
+</code></pre>
+<p>Source: <a href="http://www.sqlservercentral.com/blogs/querying-microsoft-sql-server/2013/09/19/how-to-split-a-string-by-delimited-char-in-sql-server/">http://www.sqlservercentral.com/blogs/querying-microsoft-sql-server/2013/09/19/how-to-split-a-string-by-delimited-char-in-sql-server/</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="oauth2"><a class="header" href="#oauth2">OAuth2</a></h1>
+<h2 id="introductions"><a class="header" href="#introductions">Introductions</a></h2>
+<ul>
+<li><a href="https://developer.okta.com/blog/2019/10/21/illustrated-guide-to-oauth-and-oidc">An Illustrated Guide to OAuth and OpenID Connect</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2">An Introduction to OAuth 2 | DigitalOcean</a></li>
+</ul>
+<h2 id="more-crunchy-info"><a class="header" href="#more-crunchy-info">More crunchy info</a></h2>
+<ul>
+<li><a href="https://developer.salesforce.com/page/Single_Sign-On_for_Desktop_and_Mobile_Applications_using_SAML_and_OAuth">Single Sign-On for Desktop and Mobile Applications using SAML and OAuth</a></li>
+<li><a href="https://www.mutuallyhuman.com/blog/choosing-an-sso-strategy-saml-vs-oauth2/">SAML vs. OAuth2</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="obsidian"><a class="header" href="#obsidian">Obsidian</a></h1>
+<p><a href="https://obsidian.md/">Obsidian</a> is a good tool for making Markdown wikis.</p>
+<h2 id="useful-plugins"><a class="header" href="#useful-plugins">Useful plugins</a></h2>
+<ul>
+<li><a href="https://github.com/ozntel/obsidian-link-converter">Link Converter</a>: convert links on pages between Obsidian's format and Markdown format.</li>
+<li><a href="https://github.com/blacksmithgu/obsidian-dataview">Dataview</a> Make tables of data sourced from tagged pages.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="certificates"><a class="header" href="#certificates">Certificates</a></h1>
+<ul>
+<li><a href="Certificates.html#get-remote-certificate">Get remote certificate</a></li>
+<li><a href="Certificates.html#add-new-ca-trust">Add new CA trust</a></li>
+<li><a href="Certificates.html#create-a-signed-certificate">Create a signed certificate</a></li>
+<li><a href="Certificates.html#create-an-self-signed-certificate">Create an self-signed certificate</a></li>
+<li><a href="Certificates.html#significance-of-name">Significance of &quot;name&quot;</a></li>
+<li><a href="Certificates.html#misc">Misc</a></li>
+<li><a href="Certificates.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+<h2 id="get-remote-certificate"><a class="header" href="#get-remote-certificate">Get remote certificate</a></h2>
+<pre><code class="language-shell">HOST=&quot;ecr.datalab-poc.corp.aws.novonordisk.com&quot;
+echo -n | openssl s_client -showcerts -connect $HOST:${PORTNUMBER:-443}
+</code></pre>
+<h2 id="add-new-ca-trust"><a class="header" href="#add-new-ca-trust">Add new CA trust</a></h2>
+<p>Works on Amazon Linux:</p>
+<pre><code class="language-shell">cp swissarmyronin.crt /etc/pki/ca-trust/source/anchors/.
+update-ca-trust extract
+</code></pre>
+<p>For more info: <code>man update-ca-trust</code>.</p>
+<h2 id="create-a-signed-certificate"><a class="header" href="#create-a-signed-certificate">Create a signed certificate</a></h2>
+<pre><code class="language-shell">## Create keys
+openssl req -newkey rsa:2048 -nodes -keyout key.pem -x509 -days 3650
+
+## Create CSR
+openssl req -new -sha256 -key key.pem -out certificate.csr
+
+## ... get the CSR signed ...
+
+## Download signed certificate.pem and verify it
+openssl x509 -text -noout -in certificate.pem
+
+## Combine private key with signed public key
+openssl pkcs12 -inkey key.pem -in certificate.pem -export -out certificate.p12 -name tomcat
+</code></pre>
+<h2 id="create-an-self-signed-certificate"><a class="header" href="#create-an-self-signed-certificate">Create an self-signed certificate</a></h2>
+<pre><code class="language-shell">## Create keys
+openssl req -newkey rsa:2048 -nodes -keyout key.pem -x509 -days 3650 -out certificate.pem
+
+## Verify the certificate        
+openssl x509 -text -noout -in certificate.pem
+
+## Combine private and public key
+openssl pkcs12 -inkey key.pem -in certificate.pem -export -out certificate.p12 -name tomcat
+</code></pre>
+<h2 id="significance-of-name"><a class="header" href="#significance-of-name">Significance of &quot;name&quot;</a></h2>
+<p>&quot;-name tomcat&quot; sets the alias of the key in the p12 keystore´. This is needed to reference the
+key from Tomcat's connector configuration.</p>
+<h2 id="misc-1"><a class="header" href="#misc-1">Misc</a></h2>
+<p>If running openssl on Windows it sometimes freezes during the last step. If that happens,
+prefix the command with &quot;winpty&quot;, eg:</p>
+<pre><code class="language-shell">winpty openssl pkcs12 -inkey key.pem -in certificate.pem -export -out certificate.p12 -name tomcat
+</code></pre>
+<h2 id="troubleshooting-1"><a class="header" href="#troubleshooting-1">Troubleshooting</a></h2>
+<pre><code class="language-shell">openssl s_client -connect localhost:8443 -tls1
+openssl s_client -connect localhost:8443 -tls1_1
+openssl s_client -connect localhost:8443 -tls1_2
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="python"><a class="header" href="#python">Python</a></h1>
+<p>A simple walktrhough of the interaction between sync and async: <a href="https://www.aeracode.org/2018/02/19/python-async-simplified">https://www.aeracode.org/2018/02/19/python-async-simplified</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="rust"><a class="header" href="#rust">Rust</a></h1>
+<ul>
+<li><a href="Rust.html#cargo-plugins">Cargo plugins</a>
+<ul>
+<li><a href="Rust.html#explore-further">Explore further</a>
+<ul>
+<li><a href="Rust.html#cargo-diet">cargo-diet</a></li>
+<li><a href="Rust.html#cargo-get">cargo-get</a></li>
+<li><a href="Rust.html#cargo-cache">cargo-cache</a></li>
+<li><a href="Rust.html#cargo-udeps">cargo-udeps</a></li>
+<li><a href="Rust.html#cargo-deb">cargo-deb</a></li>
+<li><a href="Rust.html#cargo-make">cargo-make</a></li>
+</ul>
+</li>
+<li><a href="Rust.html#maybe-later">Maybe later</a>
+<ul>
+<li><a href="Rust.html#cargo-msrv">cargo-msrv</a></li>
+<li><a href="Rust.html#cargo-nextest">cargo-nextest</a></li>
+<li><a href="Rust.html#cargo-auditable">cargo-auditable</a></li>
+<li><a href="Rust.html#cargo-deny">cargo-deny</a></li>
+</ul>
+</li>
+<li><a href="Rust.html#nah">Nah</a>
+<ul>
+<li><a href="Rust.html#cargo-audit-for-fix">cargo-audit (for fix)</a></li>
+<li><a href="Rust.html#cargo-semver-checks">cargo-semver-checks</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="Rust.html#self-signed-ca-problem">Self signed CA problem</a></li>
+<li><a href="Rust.html#lambda-links">Lambda links</a></li>
+</ul>
+<h2 id="cargo-plugins"><a class="header" href="#cargo-plugins">Cargo plugins</a></h2>
+<h3 id="explore-further"><a class="header" href="#explore-further">Explore further</a></h3>
+<h4 id="cargo-diet"><a class="header" href="#cargo-diet">cargo-diet</a></h4>
+<p><a href="https://crates.io/crates/cargo-diet">https://crates.io/crates/cargo-diet</a></p>
+<p>Trims crate size before publishing.</p>
+<h4 id="cargo-get"><a class="header" href="#cargo-get">cargo-get</a></h4>
+<p><a href="https://crates.io/crates/cargo-get">https://crates.io/crates/cargo-get</a></p>
+<p>Extract version information from Cargo.toml files for CI.</p>
+<h4 id="cargo-cache"><a class="header" href="#cargo-cache">cargo-cache</a></h4>
+<p><a href="https://crates.io/crates/cargo-cache">https://crates.io/crates/cargo-cache</a></p>
+<p>Install: <code>cargo install cargo-cache</code>
+Run: <code>cargo cache</code></p>
+<p>Cleans up the local Cargo cache. Useful.</p>
+<h4 id="cargo-udeps"><a class="header" href="#cargo-udeps">cargo-udeps</a></h4>
+<p><a href="https://crates.io/crates/cargo-udeps">https://crates.io/crates/cargo-udeps</a></p>
+<p>Install: <code>cargo install cargo-udeps --locked</code>
+Run: <code>cargo +nightly udeps</code></p>
+<p>Finds unused dependencies.</p>
+<ul>
+<li>+remove cruft</li>
+<li>-might have false positives</li>
+</ul>
+<h4 id="cargo-deb"><a class="header" href="#cargo-deb">cargo-deb</a></h4>
+<p><a href="https://crates.io/crates/cargo-deb">https://crates.io/crates/cargo-deb</a></p>
+<p>Build Debian packages from Cargo projects. Looks super useful.</p>
+<h4 id="cargo-make"><a class="header" href="#cargo-make">cargo-make</a></h4>
+<p><a href="https://crates.io/crates/cargo-make">https://crates.io/crates/cargo-make</a></p>
+<p>Looks interesting. It allows you to run scripts with cargo in a manner like Ant. Might be an antipattern though ...</p>
+<h3 id="maybe-later"><a class="header" href="#maybe-later">Maybe later</a></h3>
+<h4 id="cargo-msrv"><a class="header" href="#cargo-msrv">cargo-msrv</a></h4>
+<p><a href="https://crates.io/crates/cargo-msrv">https://crates.io/crates/cargo-msrv</a></p>
+<p>Install: <code>cargo install cargo-msrv</code></p>
+<p>Find the minimum supported rust version for a crate.</p>
+<h4 id="cargo-nextest"><a class="header" href="#cargo-nextest">cargo-nextest</a></h4>
+<p><a href="https://crates.io/crates/cargo-nextest">https://crates.io/crates/cargo-nextest</a></p>
+<p>Install: <code>cargo install cargo-nextest --locked</code></p>
+<ul>
+<li>+slightly faster</li>
+<li>+pretty output</li>
+<li>-one test succeeded in normal cargo test but had to be modified in cargo-nextest?</li>
+</ul>
+<h4 id="cargo-auditable"><a class="header" href="#cargo-auditable">cargo-auditable</a></h4>
+<p>Meh ... embeds dependency manifest in binary. Allows you to check later with audit if an installed binary has know vulnerabilities.</p>
+<h4 id="cargo-deny"><a class="header" href="#cargo-deny">cargo-deny</a></h4>
+<p><a href="https://crates.io/crates/cargo-deny">https://crates.io/crates/cargo-deny</a></p>
+<ul>
+<li>-overlaps with audit on advisories</li>
+<li>-alarmist</li>
+</ul>
+<h3 id="nah"><a class="header" href="#nah">Nah</a></h3>
+<h4 id="cargo-audit-for-fix"><a class="header" href="#cargo-audit-for-fix">cargo-audit (for fix)</a></h4>
+<p>Check for vulnerable dependencies. THe fix command is useless.</p>
+<h4 id="cargo-semver-checks"><a class="header" href="#cargo-semver-checks">cargo-semver-checks</a></h4>
+<p>Great idea but seems pretty useless at the moment.</p>
+<p><a href="https://crates.io/crates/cargo-semver-checks">https://crates.io/crates/cargo-semver-checks</a></p>
+<p><code>cargo semver-checks check-release --baseline-rev main</code></p>
+<ul>
+<li>+can check for breaking changes in CI</li>
+<li>-doesn't work from workspaces.</li>
+</ul>
+<h2 id="self-signed-ca-problem"><a class="header" href="#self-signed-ca-problem">Self signed CA problem</a></h2>
+<p>Sometimes you need to access a system with a self-signed root CA via SSL, and you might get errors like:</p>
+<pre><code>No response received: error trying to connect: error:1416F086:SSL
+routines:tls_process_server_certificate:certificate verify failed:ssl/statem/statem_clnt.c:1919:: 
+self signed certificate in certificate chain
+</code></pre>
+<p>If you don't own the system you are running on, but are seeing issues with self-signed certificates in the trust chain of a site you are connecting to, try this:</p>
+<p>Copy a version of the system's CA setup to a local file, e.g.:</p>
+<pre><code class="language-shell">cp /etc/ssl/certs/ca-certificates.crt $HOME/ca-certificates.crt
+</code></pre>
+<p>Add the CA you want to trust to the end of the new file. The cert snippet should look something like:</p>
+<pre><code>-----BEGIN CERTIFICATE-----
+MIIGTzCCBDegAwIBAgIQWAoyV+tzprJIl8dVQmA0CjANBgkqhkiG9w0BAQsFADBf
+... base64 encoded nonsense ...
+HSsB3yggN5bqCpTpSDGKsWU30sZ1152T/KaVwwCfzZ3e5jc=
+-----END CERTIFICATE-----
+</code></pre>
+<p>Now export the new CA as an env var:</p>
+<pre><code>export SSL_CERT_FILE=$HOME/ca-certificates.crt
+</code></pre>
+<p>This should replace the system CA with your ammended CA.</p>
+<h2 id="lambda-links"><a class="header" href="#lambda-links">Lambda links</a></h2>
+<ul>
+<li>Official <a href="https://github.com/awslabs/aws-lambda-rust-runtime">aws-lambda-rust-runtime</a></li>
+<li><a href="https://www.cvpartner.com/blog/using-rust-lambdas-in-production">Using Rust Lambdas in Production</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ssis-notes"><a class="header" href="#ssis-notes">SSIS Notes</a></h1>
+<p>Some random notes about the challenges of SSIS.</p>
+<h2 id="calling-stored-procedures-from-ole-db-source"><a class="header" href="#calling-stored-procedures-from-ole-db-source">Calling stored procedures from OLE DB Source</a></h2>
+<p>Calling parameterized stored procedures from an OLE DB Source uses a non intuitive interface.</p>
+<p>Assuming I want to call an SP called &quot;Foo&quot; with an integer parameter &quot;@Bar&quot; that returns a tuple of &quot;{Int, NVarChar(255)}&quot;, I would normally call the SP with</p>
+<pre><code class="language-sql">EXEC Foo ?
+</code></pre>
+<p>... where ? is a string.</p>
+<p>However, SSIS will fail to map the query parameters and output correctly.</p>
+<p>Instead I must set the script to:</p>
+<pre><code class="language-sql">EXEC Foo @Bar = ? WITH RESULT SETS 
+(
+ ( 
+  [Baz] INT,
+  [Lur] VARCHAR(255)
+ ) 
+)
+</code></pre>
+<p>In the &quot;Parameters...&quot; section, I also have to name the parameter &quot;@Bar&quot; before mapping it to a suitable input variable.</p>
+<p>Source: <a href="http://geekswithblogs.net/stun/archive/2009/03/05/mapping-stored-procedure-parameters-in-ssis-ole-db-source-editor.aspx">http://geekswithblogs.net/stun/archive/2009/03/05/mapping-stored-procedure-parameters-in-ssis-ole-db-source-editor.aspx</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="tomcat-https"><a class="header" href="#tomcat-https">Tomcat HTTPS</a></h1>
+<ul>
+<li><a href="TomcatSSL.html#make-a-keystore-with-a-self-signed-key">Make a keystore with a self-signed key</a></li>
+<li><a href="TomcatSSL.html#using-an-existing-certifcate-in-pkcs12-format">Using an existing certifcate in PKCS#12 format</a></li>
+<li><a href="TomcatSSL.html#test-ssl">Test SSL</a></li>
+</ul>
+<h2 id="make-a-keystore-with-a-self-signed-key"><a class="header" href="#make-a-keystore-with-a-self-signed-key">Make a keystore with a self-signed key</a></h2>
+<p>Tomcat uses a keystore to access the SSL certifcate. For development servers,
+the easiest method is to just make a new self-signed certifcate using &quot;keytool&quot;
+from the JDK:</p>
+<pre><code>$ keytool -genkey -keyalg RSA -alias tomcat -keystore $CATALINA_HOME/conf/keystore.jks -storepass changeit -keypass changeit -validity 9999 -keysize 2048
+What is your first and last name?
+  [Unknown]:  localhost
+What is the name of your organizational unit?
+  [Unknown]:
+What is the name of your organization?
+  [Unknown]:
+What is the name of your City or Locality?
+  [Unknown]:
+What is the name of your State or Province?
+  [Unknown]:
+What is the two-letter country code for this unit?
+  [Unknown]:
+Is CN=localhost, OU=Unknown, O=Unknown, L=Unknown, ST=Unknown, C=Unknown correct?
+  [no]:  yes
+</code></pre>
+<p>&quot;First and last name should be the hostname of the virtual host you plan to use
+&quot;it for, which is localhost in this case.</p>
+<p>Remember to use a different password than &quot;changeit&quot; for the store and key. This
+tutorial assumes that they are the same.</p>
+<p>Next, ad the following connector to <code>$CATALINA_HOME/conf/server.xml</code>:</p>
+<pre><code class="language-xml">&lt;Connector protocol=&quot;org.apache.coyote.http11.Http11Nio2Protocol&quot;
+  sslImplementationName=&quot;org.apache.tomcat.util.net.jsse.JSSEImplementation&quot;
+  port=&quot;8443&quot; maxThreads=&quot;200&quot; scheme=&quot;https&quot; secure=&quot;true&quot; SSLEnabled=&quot;true&quot;
+  keystoreFile=&quot;conf/keystore.jks&quot; keystorePass=&quot;changeit&quot; keystoreType=&quot;JKS&quot;
+  keyAlias=&quot;tomcat&quot; clientAuth=&quot;false&quot; sslProtocol=&quot;TLS&quot;/&gt;
+</code></pre>
+<h2 id="using-an-existing-certifcate-in-pkcs12-format"><a class="header" href="#using-an-existing-certifcate-in-pkcs12-format">Using an existing certifcate in PKCS#12 format</a></h2>
+<p>If there is an existing certifcate in PKCS#12 for (*.p12 or *.pfx), 
+copy it to the Tomcat server's &quot;conf&quot; dir. The following assumes it's called &quot;keystore.p12&quot;.</p>
+<p>Once the certificate is in the conf-dir, we need to find the alias for the key.</p>
+<pre><code>keytool -list -storetype pkcs12 -keystore keystore.p12 -v
+</code></pre>
+<p>... the output should resemble the following:</p>
+<pre><code>Keystore type: PKCS12
+Keystore provider: SunJSSE
+
+Your keystore contains 1 entry
+
+Alias name: {69010cf9-776d-4c4d-8ff8-4f5ae6b8cbc4}
+Creation date: Nov 23, 2017
+Entry type: PrivateKeyEntry
+Certificate chain length: 2
+Certificate[1]:
+Owner: CN=example.org, O=Internet Widgits Pty Ltd, ST=Some-State, C=DK
+Issuer: EMAILADDRESS=noreply@example.org, CN=Example Root Certificate, O=Example Inc.
+Serial number: 8efdc8df1da50d75
+Valid from: Mon Nov 30 11:13:11 CET 2015 until: Thu Apr 16 12:13:11 CEST 2043
+Certificate fingerprints:
+...
+</code></pre>
+<p>From the output we can see that the alias for the key is: <code>{69010cf9-776d-4c4d-8ff8-4f5ae6b8cbc4}</code></p>
+<p>Now we can add the connector to server.xml:</p>
+<pre><code class="language-xml">&lt;Connector protocol=&quot;org.apache.coyote.http11.Http11Nio2Protocol&quot;
+  sslImplementationName=&quot;org.apache.tomcat.util.net.jsse.JSSEImplementation&quot;
+  port=&quot;8443&quot; maxThreads=&quot;200&quot; scheme=&quot;https&quot; secure=&quot;true&quot; SSLEnabled=&quot;true&quot;
+  keystoreFile=&quot;conf/keystore.p12&quot; keystorePass=&quot;changeit&quot; keystoreType=&quot;PKCS12&quot;
+  keyAlias=&quot;{69010cf9-776d-4c4d-8ff8-4f5ae6b8cbc4}&quot; clientAuth=&quot;false&quot; sslProtocol=&quot;TLS&quot;/&gt;
+</code></pre>
+<h2 id="test-ssl"><a class="header" href="#test-ssl">Test SSL</a></h2>
+<p>After adding the connector, the server now runs SSL on port 8443, e.g. <code>https://localhost:8443</code></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ubuntu-in-hyper-v"><a class="header" href="#ubuntu-in-hyper-v">Ubuntu in Hyper-V</a></h1>
+<p>note: Don't do this. Just use WSL2. Hyper-V is unstable.</p>
+<p>Setup a quick Ubuntu workstation with support for extended sessions.</p>
+<ul>
+<li>
+<p>Quick-Create an Ubuntu 20 machine</p>
+<ul>
+<li><em>Don't</em> enable auto-login</li>
+<li>Keyboard should be win-keys</li>
+</ul>
+</li>
+<li>
+<p>Run in the VM:</p>
+<pre><code class="language-shell"># wget https://raw.githubusercontent.com/Microsoft/linux-vm-tools/master/ubuntu/18.04/install.sh
+wget https://tinyurl.com/linuxvmtoools 
+sudo chmod +x linuxvmtoools
+sudo ./linuxvmtoools
+sudo apt install vim
+</code></pre>
+</li>
+<li>
+<p>Edit <code>/etc/xrdp/xrdp.ini</code>to add:</p>
+<p>​```ini
+port=vsock://-1:3389
+use_vsock=false</p>
+<pre><code>
+</code></pre>
+</li>
+<li>
+<p>Shutdown VM and admin Powershell</p>
+</li>
+<li>
+<p>Run in PS:</p>
+<pre><code class="language-powershell">Set-VM -VMName &lt;your_vm_name&gt;  -EnhancedSessionTransportType HvSocket
+</code></pre>
+</li>
+</ul>
+<p>Source: <a href="https://medium.com/@francescotonini/how-to-install-ubuntu-20-04-on-hyper-v-with-enhanced-session-b20a269a5fa7">How to install Ubuntu 20.04 on Hyper-V with enhanced session</a></p>
+<h2 id="authentication-required-to-refresh-system-repositories"><a class="header" href="#authentication-required-to-refresh-system-repositories">“Authentication required to refresh system repositories”</a></h2>
+<p>If this pops up constantly, create a file &quot;/etc/polkit-1/localauthority/50-local.d/46-allow-update-repo.pkla&quot;:</p>
+<pre><code class="language-ini">[Allow Package Management all Users]
+Identity=unix-user:*
+Action=org.freedesktop.packagekit.system-sources-refresh
+ResultAny=yes
+ResultInactive=yes
+ResultActive=yes
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="vs-code"><a class="header" href="#vs-code">VS Code</a></h1>
+<h2 id="making-the-shell-behave"><a class="header" href="#making-the-shell-behave">Making the shell behave</a></h2>
+<p>Disable the setting <code>Terminal &gt; Integrated: Allow Chords</code>.</p>
+<p>Put this in <code>.bashrc</code> to make ctrl-S work for forward command history search (don't interpret ctrl-s and ctrl-q as control flow keys).</p>
+<pre><code class="language-shell">stty -ixon
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </div>
+    </body>
+</html>

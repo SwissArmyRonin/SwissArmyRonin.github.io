@@ -1,0 +1,349 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>MSSQL Cookbooks - SwissArmyRonin</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="Things I had to Google twice ...">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> What's new</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> JS</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="VirtualDeveloperEnvironmentWithVagrant.html"><strong aria-hidden="true">2.1.</strong> Angular dev. env.</a></li><li class="chapter-item expanded "><a href="Node.html"><strong aria-hidden="true">2.2.</strong> Node.js & TypeScript</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Misc.</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="Assembler.html"><strong aria-hidden="true">3.1.</strong> Assembler</a></li><li class="chapter-item expanded "><a href="AWS.html"><strong aria-hidden="true">3.2.</strong> AWS</a></li><li class="chapter-item expanded "><a href="BashScripting.html"><strong aria-hidden="true">3.3.</strong> Bash scripting</a></li><li class="chapter-item expanded "><a href="CoolCSSLinks.html"><strong aria-hidden="true">3.4.</strong> CSS links</a></li><li class="chapter-item expanded "><a href="Docker.html"><strong aria-hidden="true">3.5.</strong> Docker</a></li><li class="chapter-item expanded "><a href="StoredProcedureExamples.html"><strong aria-hidden="true">3.6.</strong> Examples of stored procedures/functions</a></li><li class="chapter-item expanded "><a href="Git.html"><strong aria-hidden="true">3.7.</strong> Git</a></li><li class="chapter-item expanded "><a href="gpg-maven.html"><strong aria-hidden="true">3.8.</strong> GPG with Maven</a></li><li class="chapter-item expanded "><a href="JsonYaml.html"><strong aria-hidden="true">3.9.</strong> JSON/YAML</a></li><li class="chapter-item expanded "><a href="Maven.html"><strong aria-hidden="true">3.10.</strong> Maven</a></li><li class="chapter-item expanded "><a href="MiscNotes.html"><strong aria-hidden="true">3.11.</strong> Misc. Notes</a></li><li class="chapter-item expanded "><a href="MssqlCookbooks.html" class="active"><strong aria-hidden="true">3.12.</strong> MSSQL Cookbooks</a></li><li class="chapter-item expanded "><a href="OAuth2.html"><strong aria-hidden="true">3.13.</strong> OAuth2</a></li><li class="chapter-item expanded "><a href="ObsidianNotes.html"><strong aria-hidden="true">3.14.</strong> Obsidian</a></li><li class="chapter-item expanded "><a href="Certificates.html"><strong aria-hidden="true">3.15.</strong> OpenSSL</a></li><li class="chapter-item expanded "><a href="Python.html"><strong aria-hidden="true">3.16.</strong> Python</a></li><li class="chapter-item expanded "><a href="Rust.html"><strong aria-hidden="true">3.17.</strong> Rust</a></li><li class="chapter-item expanded "><a href="SsisNotes.html"><strong aria-hidden="true">3.18.</strong> SSIS Notes</a></li><li class="chapter-item expanded "><a href="TomcatSSL.html"><strong aria-hidden="true">3.19.</strong> Tomcat HTTPS</a></li><li class="chapter-item expanded "><a href="UbuntuHyperV.html"><strong aria-hidden="true">3.20.</strong> Ubuntu in Hyper-V</a></li><li class="chapter-item expanded "><a href="VS Code.html"><strong aria-hidden="true">3.21.</strong> VS Code</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">SwissArmyRonin</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="mssql-cookbooks"><a class="header" href="#mssql-cookbooks">MSSQL Cookbooks</a></h1>
+<ul>
+<li><a href="#expensive-queries">Expensive queries</a></li>
+<li><a href="#find-the-most-fragmented-indexes">Find the most fragmented indexes</a></li>
+<li><a href="#large-tables">Large tables</a></li>
+<li><a href="#open-connections">Open connections</a></li>
+<li><a href="#statistics">Statistics</a>
+<ul>
+<li><a href="#info-about-the-last-stats-update">Info about the last stats update</a></li>
+<li><a href="#update-the-stats-for-an-index-on-a-table">Update the stats for an index on a table</a></li>
+<li><a href="#update-all-stats-in-a-schema">Update all stats in a schema</a></li>
+<li><a href="#split_string-before-sql-server-2016">SPLIT_STRING before SQL Server 2016</a></li>
+</ul>
+</li>
+</ul>
+<hr />
+<p>Some useful MSSQL queries for daily maintenance.</p>
+<h2 id="expensive-queries"><a class="header" href="#expensive-queries">Expensive queries</a></h2>
+<pre><code class="language-sql">SELECT TOP 10 SUBSTRING(qt.TEXT, (qs.statement_start_offset/2)+1, ((CASE qs.statement_end_offset
+WHEN -1 THEN DATALENGTH(qt.TEXT)
+ELSE qs.statement_end_offset
+END - qs.statement_start_offset)/2)+1),
+qs.execution_count,
+qs.total_logical_reads,
+qs.last_logical_reads,
+qs.total_logical_writes,
+qs.last_logical_writes,
+qs.total_worker_time,
+qs.last_worker_time,
+qs.total_elapsed_time/1000000 total_elapsed_time_in_S,
+qs.last_elapsed_time/1000000 last_elapsed_time_in_S,
+qs.last_execution_time,
+qp.query_plan
+FROM sys.dm_exec_query_stats qs
+CROSS APPLY sys.dm_exec_sql_text
+(
+   qs.sql_handle
+)
+qt
+CROSS APPLY sys.dm_exec_query_plan(qs.plan_handle) qp
+ORDER BY qs.total_logical_reads DESC -- logical reads
+-- ORDER BY qs.total_logical_writes DESC -- logical writes
+-- ORDER BY qs.total_worker_time DESC -- CPU time
+</code></pre>
+<h2 id="find-the-most-fragmented-indexes"><a class="header" href="#find-the-most-fragmented-indexes">Find the most fragmented indexes</a></h2>
+<pre><code class="language-sql">SELECT dbschemas.[name] as 'Schema', dbtables.[name] as 'Table', dbindexes.[name] as 'Index', indexstats.avg_fragmentation_in_percent, indexstats.page_count
+FROM sys.dm_db_index_physical_stats (DB_ID(), NULL, NULL, NULL, NULL) AS indexstats
+INNER JOIN sys.tables dbtables on dbtables.[object_id] = indexstats.[object_id]
+INNER JOIN sys.schemas dbschemas on dbtables.[schema_id] = dbschemas.[schema_id]
+INNER JOIN sys.indexes AS dbindexes ON dbindexes.[object_id] = indexstats.[object_id]
+AND indexstats.index_id = dbindexes.index_id
+WHERE indexstats.database_id = DB_ID() --AND dbtables.[name] like 'WastePickup%'
+ORDER BY indexstats.avg_fragmentation_in_percent desc
+</code></pre>
+<h2 id="large-tables"><a class="header" href="#large-tables">Large tables</a></h2>
+<pre><code class="language-sql">SELECT
+    t.NAME AS TableName,
+    i.name as indexName,
+    p.[Rows],
+    sum(a.total_pages) as TotalPages,
+    sum(a.used_pages) as UsedPages,
+    sum(a.data_pages) as DataPages,
+    (sum(a.total_pages) * 8) / 1024 as TotalSpaceMB,
+    (sum(a.used_pages) * 8) / 1024 as UsedSpaceMB,
+    (sum(a.data_pages) * 8) / 1024 as DataSpaceMB
+FROM
+    sys.tables t
+INNER JOIN
+    sys.indexes i ON t.OBJECT_ID = i.object_id
+INNER JOIN
+    sys.partitions p ON i.object_id = p.OBJECT_ID AND i.index_id = p.index_id
+INNER JOIN
+    sys.allocation_units a ON p.partition_id = a.container_id
+WHERE
+    t.NAME NOT LIKE 'dt%' AND
+    i.OBJECT_ID &gt; 255 AND
+    i.index_id &lt;= 1
+GROUP BY
+    t.NAME, i.object_id, i.index_id, i.name, p.[Rows]
+ORDER BY
+--    object_name(i.object_id)
+  Rows desc
+</code></pre>
+<h2 id="open-connections"><a class="header" href="#open-connections">Open connections</a></h2>
+<pre><code class="language-sql">SELECT DB_NAME(dbid) as DBName, COUNT(dbid) as NumberOfConnections, loginame as LoginName
+FROM sys.sysprocesses
+WHERE dbid &gt; 0
+--AND status &lt;&gt; 'sleeping'
+GROUP BY dbid, loginame
+</code></pre>
+<h2 id="statistics"><a class="header" href="#statistics">Statistics</a></h2>
+<h3 id="info-about-the-last-stats-update"><a class="header" href="#info-about-the-last-stats-update">Info about the last stats update</a></h3>
+<pre><code class="language-sql">SELECT t.name AS Table_Name, i.name AS Index_Name, i.type_desc AS Index_Type ,
+STATS_DATE(i.object_id,i.index_id) AS Date_Updated
+FROM sys.indexes i
+JOIN sys.tables t ON t.object_id = i.object_id
+WHERE i.type &gt; 0
+ORDER BY Date_Updated ASC
+--t.name ASC ,i.type_desc ASC ,i.name ASC
+</code></pre>
+<h3 id="update-the-stats-for-an-index-on-a-table"><a class="header" href="#update-the-stats-for-an-index-on-a-table">Update the stats for an index on a table</a></h3>
+<pre><code class="language-sql">UPDATE STATISTICS table_name index_name
+</code></pre>
+<h3 id="update-all-stats-in-a-schema"><a class="header" href="#update-all-stats-in-a-schema">Update all stats in a schema</a></h3>
+<p>NB: This can take a long time (in excess of 20 minutes)</p>
+<pre><code class="language-sql">EXEC sp_updatestats
+</code></pre>
+<h3 id="split_string-before-sql-server-2016"><a class="header" href="#split_string-before-sql-server-2016">SPLIT_STRING before SQL Server 2016</a></h3>
+<pre><code class="language-sql">CREATE FUNCTION STRING_SPLIT ( 
+    @string NVARCHAR(MAX), 
+    @delimiter CHAR(1) 
+) 
+RETURNS @output TABLE([value] NVARCHAR(MAX)) 
+BEGIN 
+    DECLARE @start INT, @end INT 
+    SELECT @start = 1, @end = CHARINDEX(@delimiter, @string) 
+    WHILE @start &lt; LEN(@string) + 1 BEGIN 
+        IF @end = 0  
+            SET @end = LEN(@string) + 1
+       
+        INSERT INTO @output ([value])  
+        VALUES(SUBSTRING(@string, @start, @end - @start)) 
+        SET @start = @end + 1 
+        SET @end = CHARINDEX(@delimiter, @string, @start)        
+    END 
+    RETURN 
+END
+</code></pre>
+<p>Source: <a href="http://www.sqlservercentral.com/blogs/querying-microsoft-sql-server/2013/09/19/how-to-split-a-string-by-delimited-char-in-sql-server/">http://www.sqlservercentral.com/blogs/querying-microsoft-sql-server/2013/09/19/how-to-split-a-string-by-delimited-char-in-sql-server/</a></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="MiscNotes.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="OAuth2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="MiscNotes.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="OAuth2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
