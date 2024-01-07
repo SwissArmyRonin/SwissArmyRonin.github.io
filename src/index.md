@@ -4,12 +4,12 @@ You know how sometimes you hit a wall while developing, and that starts a long q
 
 ## Notes
 
+- (2023-10-14) [Python](Python.md)
 - (2023-09-23) [Bash scripting](BashScripting.md)
 - (2023-09-15) [Git](Git.md)
 - (2023-09-14) [VS Code](VS%20Code.md)
 - (2023-09-02) [Obsidian](ObsidianNotes.md)
 - (2023-06-14) [Docker](Docker.md)
-- (2023-06-02) [Python](Python.md)
 - (2023-04-06) [Rust](Rust.md)
 - (2023-01-27) [AWS](AWS.md)
 - (2022-12-07) [OpenSSL](Certificates.md)

@@ -171,12 +171,12 @@
 <p>You know how sometimes you hit a wall while developing, and that starts a long quest through forums and documentation to find the right solution? I decided that I should probably start documenting some of those answers, so I don't have to slay the same dragon twice.</p>
 <h2 id="notes"><a class="header" href="#notes">Notes</a></h2>
 <ul>
+<li>(2023-10-14) <a href="Python.html">Python</a></li>
 <li>(2023-09-23) <a href="BashScripting.html">Bash scripting</a></li>
 <li>(2023-09-15) <a href="Git.html">Git</a></li>
 <li>(2023-09-14) <a href="VS%20Code.html">VS Code</a></li>
 <li>(2023-09-02) <a href="ObsidianNotes.html">Obsidian</a></li>
 <li>(2023-06-14) <a href="Docker.html">Docker</a></li>
-<li>(2023-06-02) <a href="Python.html">Python</a></li>
 <li>(2023-04-06) <a href="Rust.html">Rust</a></li>
 <li>(2023-01-27) <a href="AWS.html">AWS</a></li>
 <li>(2022-12-07) <a href="Certificates.html">OpenSSL</a></li>
@@ -592,7 +592,38 @@ END
 </code></pre>
 <p>Source: <a href="http://www.sqlservercentral.com/blogs/querying-microsoft-sql-server/2013/09/19/how-to-split-a-string-by-delimited-char-in-sql-server/">http://www.sqlservercentral.com/blogs/querying-microsoft-sql-server/2013/09/19/how-to-split-a-string-by-delimited-char-in-sql-server/</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="python"><a class="header" href="#python">Python</a></h1>
+<h2 id="syncasync"><a class="header" href="#syncasync">Sync/Async</a></h2>
 <p>A simple walk-through of the interaction between sync and async: <a href="https://www.aeracode.org/2018/02/19/python-async-simplified">https://www.aeracode.org/2018/02/19/python-async-simplified</a></p>
+<h2 id="installing-pyenv-in-windows"><a class="header" href="#installing-pyenv-in-windows">Installing pyenv in Windows</a></h2>
+<pre><code class="language-powershell">Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+Invoke-WebRequest -UseBasicParsing -Uri &quot;https://raw.githubusercontent.com/pyenv-win/pyenv-win/master/pyenv-win/install-pyenv-win.ps1&quot; -OutFile &quot;./install-pyenv-win.ps1&quot;; &amp;&quot;./install-pyenv-win.ps1&quot;
+</code></pre>
+<ol>
+<li>
+<p><code>pyenv --version</code> to check if the installation was successful.</p>
+</li>
+<li>
+<p>Run <code>pyenv install -l</code> to check a list of Python versions supported by pyenv-win</p>
+</li>
+<li>
+<p>Run <code>pyenv install &lt;version&gt;</code> to install the supported version</p>
+</li>
+<li>
+<p>Run <code>pyenv global &lt;version&gt;</code> to set a Python version as the global version</p>
+</li>
+<li>
+<p>Check which Python version you are using and its path</p>
+<pre><code>&gt; pyenv version
+&lt;version&gt; (set by \path\to\.pyenv\pyenv-win\.python-version)
+</code></pre>
+</li>
+<li>
+<p>Check that Python is working</p>
+<pre><code>&gt; python -c &quot;import sys; print(sys.executable)&quot;
+\path\to\.pyenv\pyenv-win\versions\&lt;version&gt;\python.exe
+</code></pre>
+</li>
+</ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="rust"><a class="header" href="#rust">Rust</a></h1>
 <ul>
 <li><a href="Rust.html#cargo-plugins">Cargo plugins</a>

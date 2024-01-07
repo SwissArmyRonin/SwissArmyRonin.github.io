@@ -167,7 +167,38 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="python"><a class="header" href="#python">Python</a></h1>
+<h2 id="syncasync"><a class="header" href="#syncasync">Sync/Async</a></h2>
 <p>A simple walk-through of the interaction between sync and async: <a href="https://www.aeracode.org/2018/02/19/python-async-simplified">https://www.aeracode.org/2018/02/19/python-async-simplified</a></p>
+<h2 id="installing-pyenv-in-windows"><a class="header" href="#installing-pyenv-in-windows">Installing pyenv in Windows</a></h2>
+<pre><code class="language-powershell">Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+Invoke-WebRequest -UseBasicParsing -Uri &quot;https://raw.githubusercontent.com/pyenv-win/pyenv-win/master/pyenv-win/install-pyenv-win.ps1&quot; -OutFile &quot;./install-pyenv-win.ps1&quot;; &amp;&quot;./install-pyenv-win.ps1&quot;
+</code></pre>
+<ol>
+<li>
+<p><code>pyenv --version</code> to check if the installation was successful.</p>
+</li>
+<li>
+<p>Run <code>pyenv install -l</code> to check a list of Python versions supported by pyenv-win</p>
+</li>
+<li>
+<p>Run <code>pyenv install &lt;version&gt;</code> to install the supported version</p>
+</li>
+<li>
+<p>Run <code>pyenv global &lt;version&gt;</code> to set a Python version as the global version</p>
+</li>
+<li>
+<p>Check which Python version you are using and its path</p>
+<pre><code>&gt; pyenv version
+&lt;version&gt; (set by \path\to\.pyenv\pyenv-win\.python-version)
+</code></pre>
+</li>
+<li>
+<p>Check that Python is working</p>
+<pre><code>&gt; python -c &quot;import sys; print(sys.executable)&quot;
+\path\to\.pyenv\pyenv-win\versions\&lt;version&gt;\python.exe
+</code></pre>
+</li>
+</ol>
 
                     </main>
 
