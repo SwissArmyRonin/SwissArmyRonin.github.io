@@ -17,4 +17,4 @@ I need a machine running:
 If possible I'd like to make a prebaked box with those things, and then make derrived boxes with
 solutions and datasets for specific customers.
 
-[gimmick:Disqus](mads_hvelplund)
+[gimmick:Disqus](swissarmyronin-github-io)
