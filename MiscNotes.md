@@ -2,6 +2,18 @@
 
 This page contains a collection of unrelated notes pertaining to issues I have Googled more than once.
 
+## Echo multiline string
+
+```bash
+IFS='' read -r -d '' SCRIPT <<"EOF"
+#!/bin/bash
+ls -lA /
+EOF
+
+echo "$SCRIPT" > listroot.sh
+chmod +x listroot.sh
+```
+
 ## Maven release with local deploy
 
 Deploy to the local directory `./dist`:
