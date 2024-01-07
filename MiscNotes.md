@@ -2,6 +2,16 @@
 
 This page contains a collection of unrelated notes pertaining to issues I have Googled more than once.
 
+
+## Terraform docs for 0.12+
+
+```
+docker run --rm \
+  -v $(pwd):/data \
+  cytopia/terraform-docs \
+  terraform-docs-012 --sort-inputs-by-required --with-aggregate-type-defaults md . > README.md
+```
+
 ## Run command as admin
 
 To run a command as admin without the mouse:
