@@ -2,7 +2,10 @@
 
 ## Git helpers
 
-Install [github.com/mhvelplund/git-bash](https://github.com/mhvelplund/git-bash).
+UI: [github.com/mhvelplund/git-bash](https://github.com/mhvelplund/git-bash).
+
+Credentials: [Storing Git Credentials with Git Credential Helper](https://techexpertise.medium.com/storing-git-credentials-with-git-credential-helper-33d22a6b5ce7)
+
 
 ## Move files from one repository to another, preserving git history
 

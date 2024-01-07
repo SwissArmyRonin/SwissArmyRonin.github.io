@@ -4,14 +4,14 @@ You know how sometimes you hit a wall while developing, and that starts a long q
 
 ## Notes
 
-- (2022-16-14) [Misc. Notes](MiscNotes.md)
+- (2022-06-23) [Node.js & TypeScript](Node.md)
+- (2022-06-16) [Git](Git.md)
+- (2022-06-14) [Misc. Notes](MiscNotes.md)
 - (2022-06-03) [Bash scripting](BashScripting.md)
 - (2022-03-27) [Docker](Docker.md)
 - (2022-01-24) [Rust](Rust.md)
-- (2022-01-09) [Node.js & TypeScript](Node.md)
 - (2022-01-04) [OAuth2](OAuth2.md)
 - (2021-12-14) [JSON/YAML](JsonYaml.md)
-- (2021-04-13) [Git](Git.md)
 - (2020-06-07) [Ubuntu in Hyper-V](UbuntuHyperV.md)
 - (2019-11-05) [AWS](AWS.md)
 - (2019-09-18) [Examples of stored procedures/functions](StoredProcedureExamples.md)
