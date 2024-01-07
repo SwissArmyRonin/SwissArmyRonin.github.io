@@ -4,6 +4,7 @@ You know how sometimes you hit a wall while developing, and that starts a long q
 
 ## Notes
 
+- (2023-01-27) [AWS](AWS.md)
 - (2022-12-07) [OpenSSL](Certificates.md)
 - (2022-11-23) [Rust](Rust.md)
 - (2022-06-23) [Node.js & TypeScript](Node.md)
@@ -14,7 +15,6 @@ You know how sometimes you hit a wall while developing, and that starts a long q
 - (2022-01-04) [OAuth2](OAuth2.md)
 - (2021-12-14) [JSON/YAML](JsonYaml.md)
 - (2020-06-07) [Ubuntu in Hyper-V](UbuntuHyperV.md)
-- (2019-11-05) [AWS](AWS.md)
 - (2019-09-18) [Examples of stored procedures/functions](StoredProcedureExamples.md)
 - (2019-07-18) [Maven](Maven.md)
 - (2018-08-27) [Assembler](Assembler.md)
@@ -31,7 +31,7 @@ You know how sometimes you hit a wall while developing, and that starts a long q
 - StackOverflow: [mhvelplund](https://stackoverflow.com/cv/mhvelplund)
 - GitHub: [SwissArmyRonin](https://github.com/SwissArmyRonin) &amp; [mhvelplund](https://github.com/mhvelplund)
 - Twitter: [@SwissArmyRonin](https://twitter.com/SwissArmyRonin)
-- CV: [English](files/CV_en.pdf)
+- CV: [English](files/CV_en.pdf) (_outdated_)
 
 <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="a87b3f45-aa9b-4875-9744-74a02c0727a4"></div>
 <div style="float:right">

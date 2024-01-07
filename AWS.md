@@ -4,38 +4,16 @@ This page contains a collection of unrelated notes pertaining to AWS.
 
 ## Assume-role script
 
-Install `jq`. Set the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`, or the `AWS_PROFILE` environment variables to the user that should assume a role. 
+Set the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`, or the `AWS_PROFILE` environment variables to the user that should assume a role. 
 Set `ROLE_ARN` to the Arn of the role being assumed. Finally, create a "command line" build step.
 
 ```bash
-CREDENTIALS=$(aws sts assume-role --role-arn $ROLE_ARN --role-session-name teamcity  --duration-seconds 900)
-export AWS_ACCESS_KEY_ID=$(echo $CREDENTIALS | jq -r .Credentials.AccessKeyId)
-export AWS_SECRET_ACCESS_KEY=$(echo $CREDENTIALS | jq -r .Credentials.SecretAccessKey)
-export AWS_SESSION_TOKEN=$(echo $CREDENTIALS | jq -r .Credentials.SessionToken)
-echo Expiration: $(echo $CREDENTIALS | jq -r .Credentials.Expiration)
-```
-
-or 
-
-```bash
-#!/bin/bash
-
-ROLE_ARN=$1
-
-[ -z $(which aws) ] && echo "The 'aws' command was not found." &&  exit 1
-[ -z $(which jq) ] && echo "The 'jq' command was not found." && exit 1
-[ -z $ROLE_ARN ] && echo 'Usage: $(assume-role arn:aws:iam::123456789012:role/my-role)' && exit 1
-[ ! -z $AWS_PROFILE ] && echo "AWS_PROFILE=$AWS_PROFILE" >&2
-[ ! -z $AWS_ACCESS_KEY_ID ] && echo "AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID" >&2
-[ ! -z $AWS_SECRET_ACCESS_KEY ] && echo "AWS_SECRET_ACCESS_KEY=***" >&2
-[ ! -z $AWS_SESSION_TOKEN ] && echo "AWS_SESSION_TOKEN=***" >&2
-
-SESSION_NAME=${ROLE_ARN#*/}
-for VAR in $(aws sts assume-role --role-arn $ROLE_ARN --role-session $SESSION_NAME --output json | 
-   jq '.Credentials|{AWS_ACCESS_KEY_ID:.AccessKeyId,AWS_SECRET_ACCESS_KEY:.SecretAccessKey,AWS_SESSION_TOKEN:.SessionToken}' |
-   jq -r 'to_entries[] | [.key,.value] | join("=")'); do
-   echo export $VAR
-done
+export $(printf "AWS_ACCESS_KEY_ID=%s AWS_SECRET_ACCESS_KEY=%s AWS_SESSION_TOKEN=%s" \
+    $(aws sts assume-role \
+        --role-arn "${ROLE_ARN}" \
+        --role-session-name "${USER}" \
+        --query "Credentials.[AccessKeyId,SecretAccessKey,SessionToken]" \
+        --output text))
 ```
 
 ## Bulk log retention update in Powershell
