@@ -6,6 +6,7 @@ You know how sometimes you hit a wall while developing, and it starts a long que
 ## Notes
 
 * (2017-09-11) [Virtual Angular developer environment with Vagrant](VirtualDeveloperEnvironmentWithVagrant.md)
+* (2017-09-11) [Misc. Notes](MiscNotes.md)
 
 <!--## Work in progress-->
 
@@ -14,3 +15,5 @@ You know how sometimes you hit a wall while developing, and it starts a long que
 * Twitter: [@SwissArmyRonin](https://twitter.com/SwissArmyRonin) 
 * StackOverflow [mhvelplund](https://stackoverflow.com/cv/mhvelplund)
 * LinkedIn: [mhvelplund](https://www.linkedin.com/in/mhvelplund/)
+
+[gimmick:Disqus](swissarmyronin-github-io)
