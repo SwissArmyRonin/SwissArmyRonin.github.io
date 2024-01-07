@@ -2,6 +2,18 @@
 
 This page contains a collection of unrelated notes pertaining to issues I have Googled more than once.
 
+## Free S/MIME certificates
+
+[Actalis](https://extrassl.actalis.it/portal/uapub/freemail?lang=en) provides free S/MIME certifcates for non-commercial use.
+
+## Allow changing the password on first login via RDP
+
+Add a line to the RDP file with the text (or change the existing one):
+
+    enablecredsspsupport:i:0
+
+Afterwards, delete the line again. [Technet](https://technet.microsoft.com/en-us/library/ff393716) has a good explanation.
+
 ## Removing bloat ware from a new Windows machine
 
 [Removing bloat ware from a new Windows machine](http://osherove.com/blog/2017/9/29/removing-bloatware-from-a-new-windows-machine.html)
