@@ -115,4 +115,30 @@ NB: This can take a long time (in excess of 20 minutes)
 EXEC sp_updatestats
 ```
 
+### SPLIT_STRING before SQL Server 2016
+
+```sql
+CREATE FUNCTION STRING_SPLIT ( 
+    @string NVARCHAR(MAX), 
+    @delimiter CHAR(1) 
+) 
+RETURNS @output TABLE([value] NVARCHAR(MAX)) 
+BEGIN 
+    DECLARE @start INT, @end INT 
+    SELECT @start = 1, @end = CHARINDEX(@delimiter, @string) 
+    WHILE @start < LEN(@string) + 1 BEGIN 
+        IF @end = 0  
+            SET @end = LEN(@string) + 1
+       
+        INSERT INTO @output ([value])  
+        VALUES(SUBSTRING(@string, @start, @end - @start)) 
+        SET @start = @end + 1 
+        SET @end = CHARINDEX(@delimiter, @string, @start)        
+    END 
+    RETURN 
+END
+```
+
+Source: http://www.sqlservercentral.com/blogs/querying-microsoft-sql-server/2013/09/19/how-to-split-a-string-by-delimited-char-in-sql-server/
+
 [gimmick:Disqus](swissarmyronin-github-io)
