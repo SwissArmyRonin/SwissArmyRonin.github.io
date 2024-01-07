@@ -15,11 +15,11 @@ nvm install node  # Install the newest node
 nvm install --lts # Install the current LTS version
 
 # Set some defaults form npm init. See current settings with "npm config list | grep init"
-npm set init.author.name "Mads Hvelplund"
-npm set init.author.email "mads@swissarmyronin.dx"
-npm set init.author.url "https://your-url.com"
-npm set init.license "MIT"
-npm set init.version "1.0.0"
+npm set init-author-name "Mads Hvelplund"
+npm set init-author-email "mads@swissarmyronin.dx"
+npm set init-author-url "https://your-url.com"
+npm set init-license "MIT"
+npm set init-version "1.0.0"
 ```
 
 _Make sure that neither path for node and npm hit the ones installed locally by NVM!_

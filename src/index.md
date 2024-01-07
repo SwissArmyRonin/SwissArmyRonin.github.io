@@ -4,6 +4,7 @@ You know how sometimes you hit a wall while developing, and that starts a long q
 
 ## Notes
 
+- (2023-12-09) [Node.js & TypeScript](Node.md)
 - (2023-10-14) [Python](Python.md)
 - (2023-09-23) [Bash scripting](BashScripting.md)
 - (2023-09-15) [Git](Git.md)
@@ -13,7 +14,6 @@ You know how sometimes you hit a wall while developing, and that starts a long q
 - (2023-04-06) [Rust](Rust.md)
 - (2023-01-27) [AWS](AWS.md)
 - (2022-12-07) [OpenSSL](Certificates.md)
-- (2022-06-23) [Node.js & TypeScript](Node.md)
 - (2022-06-14) [Misc. Notes](MiscNotes.md)
 - (2022-01-04) [OAuth2](OAuth2.md)
 - (2021-12-14) [JSON/YAML](JsonYaml.md)
