@@ -1,11 +1,13 @@
 # Have skills, will travel
 
-You know how sometimes you hit a wall while developing, and it starts a long quest through forums and documentation to find the right solution? I decided that I should probably start documenting some of those answers, so I don't have to slay the same dragon twice.
+You know how sometimes you hit a wall while developing, and that starts a long quest through forums and documentation to find the right solution? I decided that I should probably start documenting some of those answers, so I don't have to slay the same dragon twice.
 
 ## Notes
 
+* (2019-07-18) [AWS](AWS.md)
+* (2019-07-18) [Bash scripting](BashScripting.md)
+* (2019-07-18) [Maven](Maven.md)
 * (2019-06-26) [Misc. Notes](MiscNotes.md)
-* (2018-09-15) [AWS](AWS.md)
 * (2018-08-27) [Assembly](Assembly.md)
 * (2018-08-10) [JSON/YAML](JsonYaml.md)
 * (2018-01-16) [MSSQL Cookbooks](MssqlCookbooks.md)
