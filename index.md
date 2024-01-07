@@ -33,8 +33,8 @@ You know how sometimes you hit a wall while developing, and that starts a long q
 - LinkedIn: [mhvelplund](https://dk.linkedin.com/in/mhvelplund)
 - StackOverflow: [mhvelplund](https://stackoverflow.com/cv/mhvelplund)
 - GitHub: [SwissArmyRonin](https://github.com/SwissArmyRonin) &amp; [mhvelplund](https://github.com/mhvelplund)
-- Twitter: [@SwissArmyRonin](https://twitter.com/SwissArmyRonin)
-- CV: [English](CV_en.pdf) (_outdated_)
+- Twitter/X: _Friends don't let friends support Elon Musk.__
+<!-- CV: [English](CV_en.pdf) -->
 
 <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="a87b3f45-aa9b-4875-9744-74a02c0727a4"></div>
 <div style="float:right">
