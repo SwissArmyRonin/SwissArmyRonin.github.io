@@ -1,5 +1,7 @@
 # Ubuntu in Hyper-V
 
+note: Don't do this. Just use WSL2. Hyper-V is unstable.
+
 Setup a quick Ubuntu workstation with support for extended sessions.
 
 * Quick-Create an Ubuntu 20 machine

@@ -1,5 +1,5 @@
 # Assembly
 
-Compilers written in Assembly for Lisp, Forth and C: http://git.savannah.nongnu.org/cgit/stage0.git/tree/stage2/
+Compilers written in Assembly for Lisp, Forth and C: https://github.com/mhvelplund/stage0/tree/master/stage2
 
 [gimmick:Disqus](swissarmyronin-github-io)

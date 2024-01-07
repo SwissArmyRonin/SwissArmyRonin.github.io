@@ -63,17 +63,6 @@ Afterwards, delete the line again. [Technet](https://technet.microsoft.com/en-us
 
 Download [JSmooth](http://jsmooth.sourceforge.net/). Only works if ``JAVA_HOME`` is set to a working JRE.
 
-## Move a feature branch from one product to another
-
-If, by accident, one has created a feature ``foo`` from the wrong product version branch (eg.: ``tmtand-3.1/develop``) and it really should have started from another product version branch (eg.: ``tmtand-3.2/develop``)), then it's easy to rebase the feature on the proper product version with:
-
-    git rebase --onto target-branch source-branch
-
-So in the case above, that would be:
-
-    git checkout tmtand-3.1/feature/foo
-    git rebase --onto tmtand-3.2/develop tmtand-3.1/develop
-
 ## SecurityException on binaries running from a network share
 
 Let's say I get a SecurityException when running my .NET console application from "\\vmware-host\Shared Folders". In this case, simply open a developer prompt and type:
@@ -88,26 +77,6 @@ Want to copy a file from one *Nix macine to another without the hassle of FTP?
 
     DestinationShell# nc -l -p 2020 > file.txt
     SourceShell# cat file.txt | nc dest.ip.address 2020
-
-## Working with multiple git repositories
-
-If your product consists of specific versions across multiple repositories, there are multiple options for managing that. I prefer [Gitslave](http://gitslave.sourceforge.net) or ``gits``, but while researching the issue, I came across a number of tools for the same problem:
-
-   * [gr -- A tool for managing multiple git repositories](http://mixu.net/gr/)
-   * [Alternatives To Git Submodule: Git Subtree](http://blogs.atlassian.com/2013/05/alternatives-to-git-submodule-git-subtree/)
-   * [git-repo](https://code.google.com/p/git-repo/)
-   * [giternal](https://github.com/patmaddox/giternal)
-   * [braid](https://github.com/cristibalan/braid)
-
-## Temp. Git ignore
-
-So, to temporarily ignore changes in a certain file, run:
-
-    git update-index --assume-unchanged <file>
-
-Then when you want to track changes again:
-
-    git update-index --no-assume-unchanged <file>
 
 ## TWiki syntax high-lighting
 
