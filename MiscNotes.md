@@ -2,6 +2,11 @@
 
 This page contains a collection of unrelated notes pertaining to issues I have Googled more than once.
 
+## GitHub 
+
+* Maven repository: https://cemerick.com/2010/08/24/hosting-maven-repos-on-github/
+* License overview: https://help.github.com/articles/licensing-a-repository/
+
 ## YAML
 
 Extra features: https://blog.daemonl.com/2016/02/yaml.html
