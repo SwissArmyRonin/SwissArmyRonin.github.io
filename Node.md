@@ -46,6 +46,6 @@ tsc && node index.js
 - [Make a Promise out of a Callback function in JavaScript](https://www.freecodecamp.org/news/how-to-make-a-promise-out-of-a-callback-function-in-javascript-d8ec35d1f981/)
 - Use node for shell scripting: [google/zx](https://github.com/google/zx)
 - [Set up a new TypeScript project](https://www.digitalocean.com/community/tutorials/typescript-new-project)
-- [How to Build an AWS Lambda Function in Typescript](files/How_to_Build_an_AWS_Lambda_Function_in_Typescript.pdf) (src: [scotch.io](https://web.archive.org/web/20201031135018/https://scotch.io/@nwayve/how-to-build-a-lambda-function-in-typescript))
+- [How to Build an AWS Lambda Function in Typescript](How_to_Build_an_AWS_Lambda_Function_in_Typescript.pdf) (src: [scotch.io](https://web.archive.org/web/20201031135018/https://scotch.io/@nwayve/how-to-build-a-lambda-function-in-typescript))
 
 [gimmick:Disqus](swissarmyronin-github-io)

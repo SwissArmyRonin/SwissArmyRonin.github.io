@@ -4,6 +4,8 @@ You know how sometimes you hit a wall while developing, and that starts a long q
 
 ## Notes
 
+- (2023-09-14) [VS Code](VS%20Code.md)
+- (2023-09-11) [Git](Git.md)
 - (2023-09-02) [Obsidian](ObsidianNotes.md)
 - (2023-06-14) [Docker](Docker.md)
 - (2023-06-02) [Python](Python.md)
@@ -12,7 +14,6 @@ You know how sometimes you hit a wall while developing, and that starts a long q
 - (2023-01-27) [AWS](AWS.md)
 - (2022-12-07) [OpenSSL](Certificates.md)
 - (2022-06-23) [Node.js & TypeScript](Node.md)
-- (2022-06-16) [Git](Git.md)
 - (2022-06-14) [Misc. Notes](MiscNotes.md)
 - (2022-01-04) [OAuth2](OAuth2.md)
 - (2021-12-14) [JSON/YAML](JsonYaml.md)
@@ -33,7 +34,7 @@ You know how sometimes you hit a wall while developing, and that starts a long q
 - StackOverflow: [mhvelplund](https://stackoverflow.com/cv/mhvelplund)
 - GitHub: [SwissArmyRonin](https://github.com/SwissArmyRonin) &amp; [mhvelplund](https://github.com/mhvelplund)
 - Twitter: [@SwissArmyRonin](https://twitter.com/SwissArmyRonin)
-- CV: [English](files/CV_en.pdf) (_outdated_)
+- CV: [English](CV_en.pdf) (_outdated_)
 
 <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="a87b3f45-aa9b-4875-9744-74a02c0727a4"></div>
 <div style="float:right">
