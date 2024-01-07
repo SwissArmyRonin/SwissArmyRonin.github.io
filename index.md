@@ -4,6 +4,7 @@ You know how sometimes you hit a wall while developing, and that starts a long q
 
 ## Notes
 
+- (2022-01-24) [Rust](Rust.md)
 - (2022-01-24) [Docker](Docker.md)
 - (2022-01-09) [Node.js & TypeScript](Node.md)
 - (2022-01-04) [OAuth2](OAuth2.md)
