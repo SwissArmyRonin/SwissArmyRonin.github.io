@@ -2,6 +2,10 @@
 
 This page contains a collection of unrelated notes pertaining to issues I have Googled more than once.
 
+## YAML
+
+Extra features: https://blog.daemonl.com/2016/02/yaml.html
+
 ## Free S/MIME certificates
 
 [Actalis](https://extrassl.actalis.it/portal/uapub/freemail?lang=en) provides free S/MIME certifcates for non-commercial use.

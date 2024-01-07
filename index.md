@@ -6,10 +6,10 @@ You know how sometimes you hit a wall while developing, and it starts a long que
 
 ## Notes
 
+* (2018-04-21) [Misc. Notes](MiscNotes.md)
 * (2018-01-16) [MSSQL Cookbooks](MssqlCookbooks.md)
 * (2018-01-16) [SSIS Notes](SsisNotes.md)
 * (2018-01-10) [Examples of stored procedures/functions](StoredProcedureExamples.md)
-* (2017-12-12) [Misc. Notes](MiscNotes.md)
 * (2017-12-04) [GPG with Maven](gpg-maven.md)
 * (2017-11-24) [Tomcat HTTPS](TomcatSSL.md)
 * (2017-09-11) [Virtual Angular developer environment with Vagrant](VirtualDeveloperEnvironmentWithVagrant.md)
