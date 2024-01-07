@@ -6,6 +6,20 @@
 
 This page contains a collection of unrelated notes pertaining to issues I have Googled more than once.
 
+## Start a process as a different user in Windows
+
+In PowerShell:
+
+```powershell
+Start-Process -FilePath "${env:ProgramFiles(x86)}\Google\Chrome\Application\chrome.exe" -Credential (Get-Credential)
+```
+
+Directly from a link, i.e. with the default CMD shell:
+
+```batch
+%windir%\System32\runas.exe /profile /u:domain\user "%programfiles(x86)%\Microsoft\Edge\Application\msedge.exe"
+```
+
 ## "God mode"
 
 In Windows, create a folder on the desktop and rename it to:
@@ -16,7 +30,7 @@ GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}
 
 ## Recommend VS Code plugin
 
-Create a file .vscode/extensions.json with a recommendation array of extension ids, e.g.:
+Create a file `.vscode/extensions.json` with a recommendation array of extension ids, e.g.:
 
 ```json
 {

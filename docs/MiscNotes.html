@@ -168,6 +168,7 @@
                     <main>
                         <h1 id="misc-notes"><a class="header" href="#misc-notes">Misc. Notes</a></h1>
 <ul>
+<li><a href="#start-a-process-as-a-different-user-in-windows">Start a process as a different user in Windows</a></li>
 <li><a href="#god-mode">&quot;God mode&quot;</a></li>
 <li><a href="#recommend-vs-code-plugin">Recommend VS Code plugin</a></li>
 <li><a href="#terraform-docs-for-012">Terraform docs for 0.12+</a></li>
@@ -192,12 +193,19 @@
 </ul>
 <hr />
 <p>This page contains a collection of unrelated notes pertaining to issues I have Googled more than once.</p>
+<h2 id="start-a-process-as-a-different-user-in-windows"><a class="header" href="#start-a-process-as-a-different-user-in-windows">Start a process as a different user in Windows</a></h2>
+<p>In PowerShell:</p>
+<pre><code class="language-powershell">Start-Process -FilePath &quot;${env:ProgramFiles(x86)}\Google\Chrome\Application\chrome.exe&quot; -Credential (Get-Credential)
+</code></pre>
+<p>Directly from a link, i.e. with the default CMD shell:</p>
+<pre><code class="language-batch">%windir%\System32\runas.exe /profile /u:domain\user &quot;%programfiles(x86)%\Microsoft\Edge\Application\msedge.exe&quot;
+</code></pre>
 <h2 id="god-mode"><a class="header" href="#god-mode">&quot;God mode&quot;</a></h2>
 <p>In Windows, create a folder on the desktop and rename it to:</p>
 <pre><code class="language-text">GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}
 </code></pre>
 <h2 id="recommend-vs-code-plugin"><a class="header" href="#recommend-vs-code-plugin">Recommend VS Code plugin</a></h2>
-<p>Create a file .vscode/extensions.json with a recommendation array of extension ids, e.g.:</p>
+<p>Create a file <code>.vscode/extensions.json</code> with a recommendation array of extension ids, e.g.:</p>
 <pre><code class="language-json">{
  &quot;recommendations&quot;: [&quot;ms-vscode.csharp&quot;, &quot;ms-mssql.mssql&quot;]
 }

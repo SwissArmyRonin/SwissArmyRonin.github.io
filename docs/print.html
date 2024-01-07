@@ -171,6 +171,8 @@
 <p>You know how sometimes you hit a wall while developing, and that starts a long quest through forums and documentation to find the right solution? I decided that I should probably start documenting some of those answers, so I don't have to slay the same dragon twice.</p>
 <h2 id="notes"><a class="header" href="#notes">Notes</a></h2>
 <ul>
+<li>(2024-01-05) <a href="MiscNotes.html">Misc. Notes</a></li>
+<li>(2023-12-09) <a href="Node.html">Node.js &amp; TypeScript</a></li>
 <li>(2023-10-14) <a href="Python.html">Python</a></li>
 <li>(2023-09-23) <a href="BashScripting.html">Bash scripting</a></li>
 <li>(2023-09-15) <a href="Git.html">Git</a></li>
@@ -180,8 +182,6 @@
 <li>(2023-04-06) <a href="Rust.html">Rust</a></li>
 <li>(2023-01-27) <a href="AWS.html">AWS</a></li>
 <li>(2022-12-07) <a href="Certificates.html">OpenSSL</a></li>
-<li>(2022-06-23) <a href="Node.html">Node.js &amp; TypeScript</a></li>
-<li>(2022-06-14) <a href="MiscNotes.html">Misc. Notes</a></li>
 <li>(2022-01-04) <a href="OAuth2.html">OAuth2</a></li>
 <li>(2021-12-14) <a href="JsonYaml.html">JSON/YAML</a></li>
 <li>(2020-06-07) <a href="UbuntuHyperV.html">Ubuntu in Hyper-V</a></li>
@@ -318,11 +318,11 @@ nvm install node  # Install the newest node
 nvm install --lts # Install the current LTS version
 
 # Set some defaults form npm init. See current settings with &quot;npm config list | grep init&quot;
-npm set init.author.name &quot;Mads Hvelplund&quot;
-npm set init.author.email &quot;mads@swissarmyronin.dx&quot;
-npm set init.author.url &quot;https://your-url.com&quot;
-npm set init.license &quot;MIT&quot;
-npm set init.version &quot;1.0.0&quot;
+npm set init-author-name &quot;Mads Hvelplund&quot;
+npm set init-author-email &quot;mads@swissarmyronin.dx&quot;
+npm set init-author-url &quot;https://your-url.com&quot;
+npm set init-license &quot;MIT&quot;
+npm set init-version &quot;1.0.0&quot;
 </code></pre>
 <p><em>Make sure that neither path for node and npm hit the ones installed locally by NVM!</em></p>
 <h2 id="setup-new-project"><a class="header" href="#setup-new-project">Setup new project</a></h2>
@@ -1110,6 +1110,7 @@ mvn release:perform -Darguments=-DaltDeploymentRepository=repo::default::file:di
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="misc-notes"><a class="header" href="#misc-notes">Misc. Notes</a></h1>
 <ul>
+<li><a href="MiscNotes.html#start-a-process-as-a-different-user-in-windows">Start a process as a different user in Windows</a></li>
 <li><a href="MiscNotes.html#god-mode">&quot;God mode&quot;</a></li>
 <li><a href="MiscNotes.html#recommend-vs-code-plugin">Recommend VS Code plugin</a></li>
 <li><a href="MiscNotes.html#terraform-docs-for-012">Terraform docs for 0.12+</a></li>
@@ -1134,12 +1135,19 @@ mvn release:perform -Darguments=-DaltDeploymentRepository=repo::default::file:di
 </ul>
 <hr />
 <p>This page contains a collection of unrelated notes pertaining to issues I have Googled more than once.</p>
+<h2 id="start-a-process-as-a-different-user-in-windows"><a class="header" href="#start-a-process-as-a-different-user-in-windows">Start a process as a different user in Windows</a></h2>
+<p>In PowerShell:</p>
+<pre><code class="language-powershell">Start-Process -FilePath &quot;${env:ProgramFiles(x86)}\Google\Chrome\Application\chrome.exe&quot; -Credential (Get-Credential)
+</code></pre>
+<p>Directly from a link, i.e. with the default CMD shell:</p>
+<pre><code class="language-batch">%windir%\System32\runas.exe /profile /u:domain\user &quot;%programfiles(x86)%\Microsoft\Edge\Application\msedge.exe&quot;
+</code></pre>
 <h2 id="god-mode"><a class="header" href="#god-mode">&quot;God mode&quot;</a></h2>
 <p>In Windows, create a folder on the desktop and rename it to:</p>
 <pre><code class="language-text">GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}
 </code></pre>
 <h2 id="recommend-vs-code-plugin"><a class="header" href="#recommend-vs-code-plugin">Recommend VS Code plugin</a></h2>
-<p>Create a file .vscode/extensions.json with a recommendation array of extension ids, e.g.:</p>
+<p>Create a file <code>.vscode/extensions.json</code> with a recommendation array of extension ids, e.g.:</p>
 <pre><code class="language-json">{
  &quot;recommendations&quot;: [&quot;ms-vscode.csharp&quot;, &quot;ms-mssql.mssql&quot;]
 }
