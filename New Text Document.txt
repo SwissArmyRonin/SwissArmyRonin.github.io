@@ -1,1 +1,0 @@
-www.sqlserver-dba.com/2015/09/sp_whoisactive-utility-for-sql-server-troubleshooting.html

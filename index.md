@@ -4,15 +4,16 @@ You know how sometimes you hit a wall while developing, and that starts a long q
 
 ## Notes
 
-* (2019-07-22) [AWS](AWS.md)
+* (2019-09-18) [Examples of stored procedures/functions](StoredProcedureExamples.md)
+* (2019-09-17) [Misc. Notes](MiscNotes.md)
+* (2019-08-12) [AWS](AWS.md)
 * (2019-07-22) [Bash scripting](BashScripting.md)
 * (2019-07-18) [Maven](Maven.md)
-* (2019-06-26) [Misc. Notes](MiscNotes.md)
 * (2018-08-27) [Assembly](Assembly.md)
 * (2018-08-10) [JSON/YAML](JsonYaml.md)
+* (2018-02-01) [CSS links](CoolCSSLinks.md)
 * (2018-01-16) [MSSQL Cookbooks](MssqlCookbooks.md)
 * (2018-01-16) [SSIS Notes](SsisNotes.md)
-* (2018-01-10) [Examples of stored procedures/functions](StoredProcedureExamples.md)
 * (2017-12-04) [GPG with Maven](gpg-maven.md)
 * (2017-11-24) [Tomcat HTTPS](TomcatSSL.md)
 * (2017-09-11) [Virtual Angular developer environment with Vagrant](VirtualDeveloperEnvironmentWithVagrant.md)
