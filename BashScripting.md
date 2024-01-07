@@ -16,6 +16,9 @@ ps -p $PID >&-
 
 ## Echo multiline string
 
+The example creates a small executable  script that dumps the contents of the root dir.
+
+<!--
 ```bash
 IFS='' read -r -d '' SCRIPT <<"EOF"
 #!/bin/bash
@@ -25,5 +28,16 @@ EOF
 echo "$SCRIPT" > listroot.sh
 chmod +x listroot.sh
 ```
+
+or ..
+-->
+```bash
+cat <<EOL > listroot.sh
+#!/bin/bash
+ls -lA /
+EOL
+chmod +x listroot.sh
+```
+
 
 [gimmick:Disqus](swissarmyronin-github-io)
