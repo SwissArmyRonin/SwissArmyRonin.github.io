@@ -4,8 +4,8 @@ You know how sometimes you hit a wall while developing, and that starts a long q
 
 ## Notes
 
+- (2023-09-15) [Git](Git.md)
 - (2023-09-14) [VS Code](VS%20Code.md)
-- (2023-09-11) [Git](Git.md)
 - (2023-09-02) [Obsidian](ObsidianNotes.md)
 - (2023-06-14) [Docker](Docker.md)
 - (2023-06-02) [Python](Python.md)
