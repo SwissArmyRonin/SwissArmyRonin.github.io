@@ -2,6 +2,10 @@
 
 This page contains a collection of unrelated notes pertaining to issues I have Googled more than once.
 
+## Removing bloat ware from a new Windows machine
+
+[Removing bloat ware from a new Windows machine](http://osherove.com/blog/2017/9/29/removing-bloatware-from-a-new-windows-machine.html)
+
 ## Turn a JAR file into an executable
 
 Download [JSmooth](http://jsmooth.sourceforge.net/). Only works if ``JAVA_HOME`` is set to a working JRE.
