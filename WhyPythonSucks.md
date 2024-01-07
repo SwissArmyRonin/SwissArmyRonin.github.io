@@ -1,5 +1,6 @@
 # Parseltounge is a stupid programming language
 
+- foot gun: <https://pylint.readthedocs.io/en/latest/user_guide/messages/warning/dangerous-default-value.html>
 - whitespace indentation
 - no privacy
   - underscore vars, methods, and files are just pretend private
@@ -17,3 +18,4 @@
 ## Sort of cool
 
 - Mixins
+- List comprehensions
