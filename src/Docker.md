@@ -2,6 +2,19 @@
 
 <!-- toc -->
 
+## See run command
+
+Use `runlike`:
+
+```
+$ pip install runlike
+$ docker ps | head -2
+CONTAINER ID   IMAGE          COMMAND     CREATED      STATUS                  PORTS   NAMES
+4ae8ac018784   bb4c3d7ef7cb   "/bin/sh"   7 days ago   Up 7 days (unhealthy)           frosty_visvesvaraya
+$ runlike 4ae8ac018784
+docker run --name=frosty_visvesvaraya --hostname=4ae8ac018784 --mac-address=02:42:ac:...
+```
+
 ## Dive
 
 [Dive](https://github.com/wagoodman/dive): A tool for exploring each layer in a docker image.
