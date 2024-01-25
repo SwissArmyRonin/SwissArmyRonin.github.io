@@ -15,7 +15,6 @@
   - [Bash scripting](BashScripting.md)
   - [Docker](Docker.md)
 - [Misc.]()
-  - [Certificates](Certificates.md)
   - [CSS links](CoolCSSLinks.md)
   - [Git](Git.md)
   - [GPG with Maven](gpg-maven.md)
