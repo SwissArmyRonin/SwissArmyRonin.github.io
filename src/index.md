@@ -4,7 +4,8 @@ You know how sometimes you hit a wall while developing, and that starts a long q
 
 ## Notes
 
-- (2024-01-25) [OpenSSL](Certificates.md)
+- (2024-03-21) [Kubernetes](Kubernetes.md)
+- (2024-01-25) [OpenSSL/Certificates](Certificates.md)
 - (2024-01-19) [Docker](Docker.md)
 - (2024-01-07) [Jupyter & Rust](JupyterRust.md)
 - (2024-01-07) [Python](Python.md)
