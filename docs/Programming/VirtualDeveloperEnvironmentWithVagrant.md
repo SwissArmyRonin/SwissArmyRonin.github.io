@@ -1,4 +1,4 @@
-# Virtual Angular developer environment with Vagrant 
+# Virtual Angular developer environment with Vagrant
 
 <!-- toc -->
 
@@ -12,7 +12,7 @@ Note: This tutorial ends up with a box running a preview of Windows 10 Enterpris
 
 ## The goal
 
-To get started I'm going to make something simple where I can find all the packages I need with [Chocolatey](https://chocolatey.org). 
+To get started I'm going to make something simple where I can find all the packages I need with [Chocolatey](https://chocolatey.org).
 
 I settled on building a development machine for Angular development.
 
@@ -77,7 +77,7 @@ The Windows 10 template does not include Chocolatey, so i added ``"./scripts/cho
       }
     ],
 
-Hint: See "[windows_10_chocolatey.json](examples/windows_10_chocolatey.json)" and "[vagrantfile-windows_10_chocolatey.template](examples/vagrantfile-windows_10_chocolatey.template)".
+Hint: See "[windows_10_chocolatey.json](../examples/windows_10_chocolatey.json)" and "[vagrantfile-windows_10_chocolatey.template](../examples/vagrantfile-windows_10_chocolatey.template)".
 
 Then I ran:
 
@@ -91,7 +91,7 @@ I moved the box file to "c:\HashCorp" and started a new command line in that dir
 
 ## Configure the Vagrant box
 
-With the base box defined, it's time to make images based on it. First I made a directory to store the virtual machine image. In the new directory I ran: 
+With the base box defined, it's time to make images based on it. First I made a directory to store the virtual machine image. In the new directory I ran:
 
     vagrant init windows10
 
@@ -120,4 +120,3 @@ That's it for now. I could try to add some of the plugins I use regularly in VS 
 Hint: It might also be practical to create a repository for base boxes: [How to set up a self-hosted "vagrant cloud" with versioned, self-packaged vagrant boxes](https://github.com/hollodotme/Helpers/blob/master/Tutorials/vagrant/self-hosted-vagrant-boxes-with-versioning.md)
 
 <!-- https://scotch.io/tutorials/how-to-create-a-vagrant-base-box-from-an-existing-one -->
-

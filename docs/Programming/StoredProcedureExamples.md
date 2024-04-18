@@ -8,7 +8,7 @@ These are based on scanning some tables and aggreagating data. The details are u
 
 ## WhoIsActive
 
-WhoIsActive is a useful stored procedure ([FILE](whoisactive.zip) _Feb. 1st, 2018_).
+WhoIsActive is a useful stored procedure ([FILE](../files/whoisactive.zip) _Feb. 1st, 2018_).
 
 Find Blocking leaders
 
