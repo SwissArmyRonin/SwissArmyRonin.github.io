@@ -33,13 +33,15 @@ You know how sometimes you hit a wall while developing, and that starts a long q
 ## Contact
 
 - LinkedIn: [mhvelplund](https://www.linkedin.com/in/mhvelplund)
-- StackOverflow: [mhvelplund](https://stackoverflow.com/cv/mhvelplund)
 - GitHub: [SwissArmyRonin](https://github.com/SwissArmyRonin) &amp; [mhvelplund](https://github.com/mhvelplund)
 - Twitter/X: 🚫 (_Friends don't let friends support Elon Musk._)
 
+<!-- 
+Expired :)
 <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="a87b3f45-aa9b-4875-9744-74a02c0727a4"></div>
 <div style="float:right">
 <a href="files/AWS Certified Solutions Architect - Associate certificate.pdf"><img src="img/AWS_Certified_Logo_SAA_294x230_Color.png" alt=""></a>
 </div>
 <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
-<script type="text/javascript" async src="//cdn.youracclaim.com/assets/utilities/embed.js"></script>
+<script type="text/javascript" async src="//cdn.youracclaim.com/assets/utilities/embed.js"></script> 
+-->
