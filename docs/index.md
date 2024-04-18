@@ -4,13 +4,13 @@ You know how sometimes you hit a wall while developing, and that starts a long q
 
 ## Notes
 
+- (2024-04-18) [Node.js & TypeScript](./Programming/Node.md)
 - (2024-03-21) [Kubernetes](./Miscellaneous/Kubernetes.md)
 - (2024-01-25) [OpenSSL/Certificates](./Miscellaneous/Certificates.md)
 - (2024-01-19) [Docker](./DevOps/Docker.md)
 - (2024-01-07) [Jupyter & Rust](./Programming/JupyterRust.md)
 - (2024-01-07) [Python](./Programming/Python.md)
 - (2024-01-05) [Misc. Notes](./Miscellaneous/MiscNotes.md)
-- (2023-12-09) [Node.js & TypeScript](./Programming/Node.md)
 - (2023-09-23) [Bash scripting](./DevOps/BashScripting.md)
 - (2023-09-15) [Git](./Miscellaneous/Git.md)
 - (2023-09-14) [VS Code](./Miscellaneous/VS%20Code.md)

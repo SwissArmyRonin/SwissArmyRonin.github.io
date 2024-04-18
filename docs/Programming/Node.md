@@ -1,12 +1,20 @@
 # Node.js
 
+## TS & ZX
+
+Using `zx` with TypeScript, ESM and top-level `await`: <https://www.codejam.info/2023/04/zx-typescript-esm.html>
+
+## Bundle JS app
+
+Compile a Node.js project into a single file. Supports TypeScript, binary addons, dynamic requires: [npmjs.com/@vercel/ncc]
+
 ## Test server for OpenAPI specs
 
-A Node package that returns the examples from the API as responses: <https://www.npmjs.com/package/@openapi-generator-plus/typescript-express-example-server-generator>.
+A Node package that returns the examples from the API as responses: [@openapi-generator-plus/typescript-express-example-server-generator].
 
 ## Installing node.js
 
-Source: [Set up your Node.js development environment with WSL 2](https://docs.microsoft.com/en-us/windows/nodejs/setup-on-wsl2)
+Source: [Set up your Node.js development environment with WSL 2]
 
 ```shell
 # Get Node version manager. Check for newer release at https://github.com/nvm-sh/nvm
@@ -42,7 +50,17 @@ tsc && node index.js
 
 ## Misc
 
-- [Make a Promise out of a Callback function in JavaScript](https://www.freecodecamp.org/news/how-to-make-a-promise-out-of-a-callback-function-in-javascript-d8ec35d1f981/)
-- Use node for shell scripting: [google/zx](https://github.com/google/zx)
-- [Set up a new TypeScript project](https://www.digitalocean.com/community/tutorials/typescript-new-project)
-- [How to Build an AWS Lambda Function in Typescript](../files/How_to_Build_an_AWS_Lambda_Function_in_Typescript.pdf) (src: [scotch.io](https://web.archive.org/web/20201031135018/https://scotch.io/@nwayve/how-to-build-a-lambda-function-in-typescript))
+- [Make a Promise out of a Callback function in JavaScript]
+- Use node for shell scripting: [google/zx]
+- [Set up a new TypeScript project]
+- [How to Build an AWS Lambda Function in Typescript] (src: [scotch.io])
+
+<!-- Links -->
+[@openapi-generator-plus/typescript-express-example-server-generator]: https://www.npmjs.com/package/@openapi-generator-plus/typescript-express-example-server-generator
+[How to Build an AWS Lambda Function in Typescript]: ../files/How_to_Build_an_AWS_Lambda_Function_in_Typescript.pdf
+[Make a Promise out of a Callback function in JavaScript]: https://www.freecodecamp.org/news/how-to-make-a-promise-out-of-a-callback-function-in-javascript-d8ec35d1f981/
+[npmjs.com/@vercel/ncc]: https://www.npmjs.com/package/@vercel/ncc
+[scotch.io]: <https://web.archive.org/web/20201031135018/https://scotch.io/@nwayve/how-to-build-a-lambda-function-in-typescript>
+[Set up a new TypeScript project]: <https://www.digitalocean.com/community/tutorials/typescript-new-project>
+[Set up your Node.js development environment with WSL 2]: https://docs.microsoft.com/en-us/windows/nodejs/setup-on-wsl2
+Use node for shell scripting: [google/zx]: <https://github.com/google/zx>
