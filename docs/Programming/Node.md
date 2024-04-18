@@ -45,7 +45,7 @@ npm init -y
 npm i typescript --save-dev
 npx --yes tsc --init
 echo "console.log('Hello World');" > index.ts
-tsc && node index.js
+npm install && tsc && node index.js
 ```
 
 ## Misc
@@ -63,4 +63,4 @@ tsc && node index.js
 [scotch.io]: <https://web.archive.org/web/20201031135018/https://scotch.io/@nwayve/how-to-build-a-lambda-function-in-typescript>
 [Set up a new TypeScript project]: <https://www.digitalocean.com/community/tutorials/typescript-new-project>
 [Set up your Node.js development environment with WSL 2]: https://docs.microsoft.com/en-us/windows/nodejs/setup-on-wsl2
-Use node for shell scripting: [google/zx]: <https://github.com/google/zx>
+[google/zx]: https://github.com/google/zx
