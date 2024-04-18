@@ -1,4 +1,4 @@
-# Have skills, will travel
+# What's new
 
 You know how sometimes you hit a wall while developing, and that starts a long quest through forums and documentation to find the right solution? I decided that I should probably start documenting some of those answers, so I don't have to slay the same dragon twice.
 
