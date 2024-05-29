@@ -1,6 +1,16 @@
-# Bash scripting
+# Shell scripting
 
 <!-- toc -->
+
+## Shell utilities
+
+* [fzf](https://github.com/junegunn/fzf): Fuzzy find.
+* [fd](https://github.com/sharkdp/fd): User-friendly `find`.
+* [rg](https://github.com/BurntSushi/ripgrep): RipGrep.
+* [bat](https://github.com/sharkdp/bat): Syntax highlight `cat`.
+
+[4 Useful fzf Tricks for Your Terminal](https://pragmaticpineapple.com/four-useful-fzf-tricks-for-your-terminal/)
+
 
 ## Fancy Fish-like Bash
 
