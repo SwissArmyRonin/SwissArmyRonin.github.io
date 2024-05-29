@@ -11,6 +11,11 @@
 
 [4 Useful fzf Tricks for Your Terminal](https://pragmaticpineapple.com/four-useful-fzf-tricks-for-your-terminal/)
 
+```shell title="Example config"
+sudo apt install bat fd-find
+export FZF_DEFAULT_OPTS="--preview 'batcat -f {}'"
+export FZF_DEFAULT_COMMAND="fdfind --type f"
+```
 
 ## Fancy Fish-like Bash
 
