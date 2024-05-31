@@ -4,6 +4,7 @@ You know how sometimes you hit a wall while developing, and that starts a long q
 
 ## Notes
 
+- (2024-05-31) [OAuth2](./Miscellaneous/OAuth2.md)
 - (2024-05-29) [Shell scripting](./DevOps/BashScripting.md)
 - (2024-04-18) [Node.js & TypeScript](./Programming/Node.md)
 - (2024-03-21) [Kubernetes](./Miscellaneous/Kubernetes.md)
@@ -17,7 +18,6 @@ You know how sometimes you hit a wall while developing, and that starts a long q
 - (2023-09-02) [Obsidian](./Miscellaneous/ObsidianNotes.md)
 - (2023-04-06) [Rust](./Programming/Rust.md)
 - (2023-01-27) [AWS](./DevOps/AWS.md)
-- (2022-01-04) [OAuth2](./Miscellaneous/OAuth2.md)
 - (2021-12-14) [JSON/YAML](./Miscellaneous/JsonYaml.md)
 - (2020-06-07) [Ubuntu in Hyper-V](./Miscellaneous/UbuntuHyperV.md)
 - (2019-09-18) [Examples of stored procedures/functions](./Programming/StoredProcedureExamples.md)
