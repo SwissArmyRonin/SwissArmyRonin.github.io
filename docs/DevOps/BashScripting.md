@@ -9,7 +9,10 @@
 * [rg](https://github.com/BurntSushi/ripgrep): RipGrep.
 * [bat](https://github.com/sharkdp/bat): Syntax highlight `cat`.
 
-[4 Useful fzf Tricks for Your Terminal](https://pragmaticpineapple.com/four-useful-fzf-tricks-for-your-terminal/)
+### FZF & friends
+
+* [4 Useful fzf Tricks for Your Terminal](https://pragmaticpineapple.com/four-useful-fzf-tricks-for-your-terminal/)
+* [Find anything you need with fzf, the Linux fuzzy finder tool](https://www.redhat.com/sysadmin/fzf-linux-fuzzy-finder)
 
 ```shell title="Example config"
 sudo apt install bat fd-find
