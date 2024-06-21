@@ -4,6 +4,7 @@ You know how sometimes you hit a wall while developing, and that starts a long q
 
 ## Notes
 
+- (2024-06-21) [Python](./Programming/Python.md)
 - (2024-05-31) [OAuth2](./Miscellaneous/OAuth2.md)
 - (2024-05-29) [Shell scripting](./DevOps/BashScripting.md)
 - (2024-04-18) [Node.js & TypeScript](./Programming/Node.md)
@@ -11,7 +12,6 @@ You know how sometimes you hit a wall while developing, and that starts a long q
 - (2024-01-25) [OpenSSL/Certificates](./Miscellaneous/Certificates.md)
 - (2024-01-19) [Docker](./DevOps/Docker.md)
 - (2024-01-07) [Jupyter & Rust](./Programming/JupyterRust.md)
-- (2024-01-07) [Python](./Programming/Python.md)
 - (2024-01-05) [Misc. Notes](./Miscellaneous/MiscNotes.md)
 - (2023-09-15) [Git](./Miscellaneous/Git.md)
 - (2023-09-14) [VS Code](./Miscellaneous/VS%20Code.md)
