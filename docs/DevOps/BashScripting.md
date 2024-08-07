@@ -14,15 +14,23 @@
 * [4 Useful fzf Tricks for Your Terminal](https://pragmaticpineapple.com/four-useful-fzf-tricks-for-your-terminal/)
 * [Find anything you need with fzf, the Linux fuzzy finder tool](https://www.redhat.com/sysadmin/fzf-linux-fuzzy-finder)
 
-```shell title="Example config"
+```shell title="Install components"
 sudo apt install bat fd-find
-export FZF_DEFAULT_OPTS="--preview 'batcat -f {}'"
-export FZF_DEFAULT_COMMAND="fdfind --type f"
 ```
+
+```shell title="Add to .bashrc"
+export FZF_DEFAULT_COMMAND="fdfind --type f"
+source /usr/share/doc/fzf/examples/completion.bash
+```
+
+Now `ctrl-r` will use fzf to search through your history, and `ctrl-t` will open a file finder in the shell with
+preview. `alt-c` will open a directory browser, but the shortcut might conflict with a short cut in VS Code, which will
+need to be deleted.
 
 ## Fancy Fish-like Bash
 
 Install [`ble.sh`](https://github.com/akinomyoga/ble.sh):
+
 ```shell
 git clone --recursive https://github.com/akinomyoga/ble.sh.git
 make -C ble.sh

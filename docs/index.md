@@ -1,13 +1,15 @@
 # What's new
 
-You know how sometimes you hit a wall while developing, and that starts a long quest through forums and documentation to find the right solution? I decided that I should probably start documenting some of those answers, so I don't have to slay the same dragon twice.
+You know how sometimes you hit a wall while developing, and that starts a long quest through forums and documentation to
+find the right solution? I decided that I should probably start documenting some of those answers, so I don't have to
+slay the same dragon twice.
 
 ## Notes
 
+- (2024-08-07) [Shell scripting](./DevOps/BashScripting.md)
+- (2024-08-07) [Node.js & TypeScript](./Programming/Node.md)
 - (2024-06-21) [Python](./Programming/Python.md)
 - (2024-05-31) [OAuth2](./Miscellaneous/OAuth2.md)
-- (2024-05-29) [Shell scripting](./DevOps/BashScripting.md)
-- (2024-04-18) [Node.js & TypeScript](./Programming/Node.md)
 - (2024-03-21) [Kubernetes](./Miscellaneous/Kubernetes.md)
 - (2024-01-25) [OpenSSL/Certificates](./Miscellaneous/Certificates.md)
 - (2024-01-19) [Docker](./DevOps/Docker.md)
@@ -34,7 +36,7 @@ You know how sometimes you hit a wall while developing, and that starts a long q
 
 - LinkedIn: [mhvelplund](https://www.linkedin.com/in/mhvelplund)
 - GitHub: [SwissArmyRonin](https://github.com/SwissArmyRonin) &amp; [mhvelplund](https://github.com/mhvelplund)
-- Twitter/X: 🚫 (_Friends don't let friends support Elon Musk._)
+- Twitter/X: 🚫 (_Friends don't let friends support [Elon Musk](https://www.google.com/search?q=elon+musk+is+a+clown&udm=2)._)
 
 <!-- 
 Expired :)

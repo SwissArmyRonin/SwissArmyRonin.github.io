@@ -1,16 +1,22 @@
 # Node.js
 
-## TS & ZX
+## Misc
 
-Using `zx` with TypeScript, ESM and top-level `await`: <https://www.codejam.info/2023/04/zx-typescript-esm.html>
+- [Make a Promise out of a Callback function in JavaScript]
+- Use node for shell scripting: [google/zx]
+- [Set up a new TypeScript project]
+- [How to Build an AWS Lambda Function in Typescript] (src: [scotch.io])
+- [How to fix "__dirname is not defined in ES module scope"]
+- [Using `zx` with TypeScript, ESM and top-level `await`]
+- Compile a Node.js project into a single file: [npmjs.com/@vercel/ncc]
+- Test server for OpenAPI specs: [@openapi-generator-plus/typescript-express-example-server-generator].
 
-## Bundle JS app
-
-Compile a Node.js project into a single file. Supports TypeScript, binary addons, dynamic requires: [npmjs.com/@vercel/ncc]
-
-## Test server for OpenAPI specs
-
-A Node package that returns the examples from the API as responses: [@openapi-generator-plus/typescript-express-example-server-generator].
+<!--
+https://github.com/teomrd/scripter
+https://www.sitepoint.com/google-zx-write-node-shell-scripts/
+https://github.com/simonplend/node-shell-scripting-with-zx>
+https://blog.logrocket.com/building-typescript-cli-node-js-commander/
+-->
 
 ## Installing node.js
 
@@ -48,19 +54,14 @@ echo "console.log('Hello World');" > index.ts
 npm install && tsc && node index.js
 ```
 
-## Misc
-
-- [Make a Promise out of a Callback function in JavaScript]
-- Use node for shell scripting: [google/zx]
-- [Set up a new TypeScript project]
-- [How to Build an AWS Lambda Function in Typescript] (src: [scotch.io])
-
 <!-- Links -->
 [@openapi-generator-plus/typescript-express-example-server-generator]: https://www.npmjs.com/package/@openapi-generator-plus/typescript-express-example-server-generator
+[google/zx]: https://github.com/google/zx
 [How to Build an AWS Lambda Function in Typescript]: ../files/How_to_Build_an_AWS_Lambda_Function_in_Typescript.pdf
+[How to fix "__dirname is not defined in ES module scope"]: https://flaviocopes.com/fix-dirname-not-defined-es-module-scope/
 [Make a Promise out of a Callback function in JavaScript]: https://www.freecodecamp.org/news/how-to-make-a-promise-out-of-a-callback-function-in-javascript-d8ec35d1f981/
 [npmjs.com/@vercel/ncc]: https://www.npmjs.com/package/@vercel/ncc
 [scotch.io]: <https://web.archive.org/web/20201031135018/https://scotch.io/@nwayve/how-to-build-a-lambda-function-in-typescript>
 [Set up a new TypeScript project]: <https://www.digitalocean.com/community/tutorials/typescript-new-project>
 [Set up your Node.js development environment with WSL 2]: https://docs.microsoft.com/en-us/windows/nodejs/setup-on-wsl2
-[google/zx]: https://github.com/google/zx
+[Using `zx` with TypeScript, ESM and top-level `await`]: https://www.codejam.info/2023/04/zx-typescript-esm.html
