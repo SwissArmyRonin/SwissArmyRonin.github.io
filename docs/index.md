@@ -6,6 +6,7 @@ slay the same dragon twice.
 
 ## Notes
 
+- (2024-10-15) [CLI tools](./DevOps/CLI.md)
 - (2024-08-07) [Shell scripting](./DevOps/BashScripting.md)
 - (2024-08-07) [Node.js & TypeScript](./Programming/Node.md)
 - (2024-06-21) [Python](./Programming/Python.md)
