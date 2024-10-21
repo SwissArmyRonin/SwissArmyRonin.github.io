@@ -2,6 +2,49 @@
 
 <!-- toc -->
 
+## Move files from one repository to another, preserving git history
+
+_Based on Ayushya Jaiswal's excellent article on [Move files from one repository to another, preserving git
+history](https://medium.com/@XanderGrzy/how-to-move-files-from-one-git-repo-to-another-preserving-history-2e81e3e3c8b7)._
+
+In the example below, we want to extract a folder (`code/src/utils`) from a mono-repo (`repo1`) into its own repo (`repo2`), 
+preserving the git history.
+
+```shell
+git clone git@github.com:example/test.git repo1
+git clone git@github.com:example/test.git repo2
+cd repo2
+git remote rm origin
+git filter-branch --subdirectory-filter code/src/utils -- --all
+git reset --hard
+git gc --aggressive 
+git prune
+git clean -xfd
+```
+
+Now only the filtered folder is left, and it's at the root of repo2. If it's going into another repo with existing
+files, we can move the things to a sub-folder and commit them before proceeding, but in this case we want them in the
+root.
+
+Next, we push them to the new remote repo (which was created ahead of time and left empty):
+
+```shell
+git remote add origin git@github.com:example/test-extrusion.git
+git branch -M main
+git push -u origin main
+```
+
+Finally, we should clean up the old repo:
+
+```shell
+cd ../repo1
+rm -rf code/src/utils
+git add -A
+git commit
+```
+
+Obviously, there might be more refactoring needed, but this is the basic idea.
+
 ## Summarize changes
 
 ```shell
@@ -32,10 +75,6 @@ Delete them with `git-filter-repo` (src: <https://stackoverflow.com/a/61602985/5
 UI: [github.com/mhvelplund/git-bash](https://github.com/mhvelplund/git-bash).
 
 Credentials: [Storing Git Credentials with Git Credential Helper](https://techexpertise.medium.com/storing-git-credentials-with-git-credential-helper-33d22a6b5ce7)
-
-## Move files from one repository to another, preserving git history
-
-Excellent article [here](https://medium.com/@ayushya/move-directory-from-one-repository-to-another-preserving-git-history-d210fa049d4b).
 
 ## Move a feature branch from one product to another
 
