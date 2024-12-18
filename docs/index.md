@@ -6,6 +6,7 @@ slay the same dragon twice.
 
 ## Notes
 
+- (2024-12-18) [Jupyter](./Programming/Jupyter.md)
 - (2024-10-21) [Git](./Miscellaneous/Git.md)
 - (2024-10-15) [CLI tools](./DevOps/CLI.md)
 - (2024-08-07) [Shell scripting](./DevOps/BashScripting.md)
@@ -15,7 +16,6 @@ slay the same dragon twice.
 - (2024-03-21) [Kubernetes](./Miscellaneous/Kubernetes.md)
 - (2024-01-25) [OpenSSL/Certificates](./Miscellaneous/Certificates.md)
 - (2024-01-19) [Docker](./DevOps/Docker.md)
-- (2024-01-07) [Jupyter & Rust](./Programming/JupyterRust.md)
 - (2024-01-05) [Misc. Notes](./Miscellaneous/MiscNotes.md)
 - (2023-09-14) [VS Code](./Miscellaneous/VS%20Code.md)
 - (2023-09-02) [Obsidian](./Miscellaneous/ObsidianNotes.md)
