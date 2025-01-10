@@ -6,12 +6,12 @@ slay the same dragon twice.
 
 ## Notes
 
+- (2025-10-01) [Python](./Programming/Python.md)
 - (2024-12-18) [Jupyter](./Programming/Jupyter.md)
 - (2024-10-21) [Git](./Miscellaneous/Git.md)
 - (2024-10-15) [CLI tools](./DevOps/CLI.md)
 - (2024-08-07) [Shell scripting](./DevOps/BashScripting.md)
 - (2024-08-07) [Node.js & TypeScript](./Programming/Node.md)
-- (2024-06-21) [Python](./Programming/Python.md)
 - (2024-05-31) [OAuth2](./Miscellaneous/OAuth2.md)
 - (2024-03-21) [Kubernetes](./Miscellaneous/Kubernetes.md)
 - (2024-01-25) [OpenSSL/Certificates](./Miscellaneous/Certificates.md)

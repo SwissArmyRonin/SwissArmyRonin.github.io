@@ -1,6 +1,17 @@
 
 # Python
 
+## List the loggers and make some of them shut up
+
+```python
+# List loggers
+loggers = [logging.getLogger(name) for name in logging.root.manager.loggerDict]
+print(loggers)
+
+# STFU Py4J
+logging.getLogger("py4j.clientserver").setLevel(logging.ERROR)  
+```
+
 ## Decorative Python
 
 Primer on Python Decorators: <https://realpython.com/primer-on-python-decorators/>
