@@ -36,6 +36,7 @@ theme:
 plugins:
   - search
   - git-authors
+  - awesome-pages
 
 markdown_extensions:
   - pymdownx.highlight:

@@ -2,3 +2,4 @@
 mkdocs
 mkdocs-material[imaging]
 mkdocs-git-authors-plugin
+mkdocs-awesome-pages-plugin
