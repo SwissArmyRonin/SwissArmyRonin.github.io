@@ -1,6 +1,14 @@
 
 # Python
 
+## Start an ad-hoc web server
+
+Run:
+
+```shell
+python -m http.server --directory <directory>
+```
+
 ## List the loggers and make some of them shut up
 
 ```python
