@@ -1,6 +1,19 @@
 
 # Python
 
+## Dataclass from dict
+
+Source: <https://stackoverflow.com/a/54769644/511976>
+
+```python
+def dataclass_from_dict(klass, d):
+    try:
+        fieldtypes = {f.name: f.type for f in fields(klass)}
+        return klass(**{f: dataclass_from_dict(fieldtypes[f], d[f]) for f in d})
+    except Exception:
+        return d  # Not a dataclass field
+```
+
 ## Start an ad-hoc web server
 
 Run:
