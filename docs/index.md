@@ -6,7 +6,7 @@ slay the same dragon twice.
 
 ## Notes
 
-- (2025-03-13) [Python](./Programming/Python.md)
+- (2025-06-30) [Python](./Programming/Python.md)
 - (2024-12-18) [Jupyter](./Programming/Jupyter.md)
 - (2024-10-21) [Git](./Miscellaneous/Git.md)
 - (2024-10-15) [CLI tools](./DevOps/CLI.md)
