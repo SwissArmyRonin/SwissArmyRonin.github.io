@@ -1,6 +1,15 @@
 
 # Python
 
+## Progamatically list installed packages
+
+```python
+import pkg_resources
+
+for package_name in [package.key for package in pkg_resources.working_set]:
+    print(f"{package_name}: {pkg_resources.get_distribution(package_name).version}")
+```
+
 ## Dataclass from dict
 
 Source: <https://stackoverflow.com/a/54769644/511976>
