@@ -6,6 +6,7 @@ slay the same dragon twice.
 
 ## Notes
 
+- (2025-08-09) [Rust](./Programming/Rust.md)
 - (2025-06-30) [Python](./Programming/Python.md)
 - (2024-12-18) [Jupyter](./Programming/Jupyter.md)
 - (2024-10-21) [Git](./Miscellaneous/Git.md)
@@ -19,7 +20,6 @@ slay the same dragon twice.
 - (2024-01-05) [Misc. Notes](./Miscellaneous/MiscNotes.md)
 - (2023-09-14) [VS Code](./Miscellaneous/VS%20Code.md)
 - (2023-09-02) [Obsidian](./Miscellaneous/ObsidianNotes.md)
-- (2023-04-06) [Rust](./Programming/Rust.md)
 - (2023-01-27) [AWS](./DevOps/AWS.md)
 - (2021-12-14) [JSON/YAML](./Miscellaneous/JsonYaml.md)
 - (2020-06-07) [Ubuntu in Hyper-V](./Miscellaneous/UbuntuHyperV.md)
@@ -39,12 +39,12 @@ slay the same dragon twice.
 - GitHub: [SwissArmyRonin](https://github.com/SwissArmyRonin) &amp; [mhvelplund](https://github.com/mhvelplund)
 - Twitter/X: 🚫 (_Friends don't let friends support [Elon Musk](https://www.google.com/search?q=elon+musk+is+a+clown&udm=2)._)
 
-<!-- 
+<!--
 Expired :)
 <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="a87b3f45-aa9b-4875-9744-74a02c0727a4"></div>
 <div style="float:right">
 <a href="files/AWS Certified Solutions Architect - Associate certificate.pdf"><img src="img/AWS_Certified_Logo_SAA_294x230_Color.png" alt=""></a>
 </div>
 <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
-<script type="text/javascript" async src="//cdn.youracclaim.com/assets/utilities/embed.js"></script> 
+<script type="text/javascript" async src="//cdn.youracclaim.com/assets/utilities/embed.js"></script>
 -->

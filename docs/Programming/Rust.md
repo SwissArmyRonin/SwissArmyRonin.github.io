@@ -2,6 +2,12 @@
 
 <!-- toc -->
 
+## Libs
+
+- [env_logger](https://crates.io/crates/env_logger)
+- [anyhow](https://crates.io/crates/anyhow)
+- [thiserror](https://crates.io/crates/thiserror)
+
 ## Cargo plugins
 
 ### Explore further
@@ -36,8 +42,8 @@ Run: `cargo +nightly udeps`
 
 Finds unused dependencies.
 
-* +remove cruft
-* -might have false positives
+- +remove cruft
+- -might have false positives
 
 #### cargo-deb
 
@@ -67,9 +73,9 @@ Find the minimum supported rust version for a crate.
 
 Install: `cargo install cargo-nextest --locked`
 
-* +slightly faster
-* +pretty output
-* -one test succeeded in normal cargo test but had to be modified in cargo-nextest?
+- +slightly faster
+- +pretty output
+- -one test succeeded in normal cargo test but had to be modified in cargo-nextest?
 
 #### cargo-auditable
 
@@ -79,8 +85,8 @@ Meh ... embeds dependency manifest in binary. Allows you to check later with aud
 
 <https://crates.io/crates/cargo-deny>
 
-* -overlaps with audit on advisories
-* -alarmist
+- -overlaps with audit on advisories
+- -alarmist
 
 ### Nah
 
@@ -96,8 +102,8 @@ Great idea but seems pretty useless at the moment.
 
 `cargo semver-checks check-release --baseline-rev main`
 
-* +can check for breaking changes in CI
-* -doesn't work from workspaces.
+- +can check for breaking changes in CI
+- -doesn't work from workspaces.
 
 ## Self signed CA problem
 
@@ -105,7 +111,7 @@ Sometimes you need to access a system with a self-signed root CA via SSL, and yo
 
 ```
 No response received: error trying to connect: error:1416F086:SSL
-routines:tls_process_server_certificate:certificate verify failed:ssl/statem/statem_clnt.c:1919:: 
+routines:tls_process_server_certificate:certificate verify failed:ssl/statem/statem_clnt.c:1919::
 self signed certificate in certificate chain
 ```
 
@@ -137,5 +143,5 @@ This should replace the system CA with your ammended CA.
 
 ## Lambda links
 
-* Official [aws-lambda-rust-runtime](https://github.com/awslabs/aws-lambda-rust-runtime)
-* [Using Rust Lambdas in Production](https://www.cvpartner.com/blog/using-rust-lambdas-in-production)
+- Official [aws-lambda-rust-runtime](https://github.com/awslabs/aws-lambda-rust-runtime)
+- [Using Rust Lambdas in Production](https://www.cvpartner.com/blog/using-rust-lambdas-in-production)
