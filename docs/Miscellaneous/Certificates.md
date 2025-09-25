@@ -2,6 +2,23 @@
 
 <!-- toc -->
 
+## Verify a remote certicate
+
+Create a function:
+
+```shell
+verify_ssl() {
+    local host=${1:?Please provide a host to verify}
+    openssl verify -text <(openssl s_client -connect "${host}:443")
+}
+```
+
+Now verify SSL certs with:
+
+```
+```
+
+
 ## Get remote certificate
 
 ```shell
