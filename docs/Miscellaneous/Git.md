@@ -2,6 +2,10 @@
 
 <!-- toc -->
 
+## Delete a file from the history
+
+<https://nicolaiarocci.com/how-to-remove-a-file-from-git-history/>
+
 ## Move files from one repository to another, preserving git history
 
 _Based on Ayushya Jaiswal's excellent article on [Move files from one repository to another, preserving git
